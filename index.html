@@ -31,6 +31,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://usebasin.com/f/06dcf3d4ebaf/ahoy.js" async defer></script>
+
 </head>
 
 <body>
@@ -65,6 +66,7 @@
                     <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
+                   <!-- contact form -->
                     <form id="signupform" accept-charset="UTF-8" action="https://usebasin.com/f/06dcf3d4ebaf" method="POST">
                         <div class="form-group">
                             <label for="fullname">Full Name</label>
@@ -73,7 +75,10 @@
             
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="text" name="email" placeholder="Email Address" id="email" required>
+                            <input type="email" name="email" placeholder="Email Address" id="email" required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                title="Please provide a valid email address"
+                            >
                         </div>
                            
                         <div class="form-group">
@@ -84,6 +89,7 @@
                             <button type="submit" class="submit btn btn-primary btn-shadow btn-gradient disabled">Send Message</button>
                         </div>
                     </form>
+                    <!-- /contact form -->
                 </div>
             </div>
         </div>

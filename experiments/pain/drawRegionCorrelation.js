@@ -59,7 +59,7 @@ function drawTable(keywords) {
 
 function drawChart(keywords) {
 
-    var requestString = 'http://trendydots-api-trendydots.193b.starter-ca-central-1.openshiftapps.com/googleCorrelateInterestOverTime?'
+    var requestString = 'https://trendydots-api-trendydots.193b.starter-ca-central-1.openshiftapps.com/googleCorrelateInterestOverTime?'
     // set keywords
     for (var i = 0; i < keywords.length; i++) {
         if(keywords[i].mid){
@@ -134,7 +134,7 @@ function drawChart(keywords) {
 
 function drawMap(keywords, geocode) {
 
-    var requestString = 'http://trendydots-api-trendydots.193b.starter-ca-central-1.openshiftapps.com/googleCorrelateInterestByRegion?'
+    var requestString = 'https://trendydots-api-trendydots.193b.starter-ca-central-1.openshiftapps.com/googleCorrelateInterestByRegion?'
     // set keywords
     for (var i = 0; i < keywords.length; i++) {
         if(keywords[i].mid){

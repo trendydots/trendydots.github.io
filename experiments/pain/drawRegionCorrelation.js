@@ -12,7 +12,7 @@ function drawKeywordList(keywords) {
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
-                                        <img src="../../../images/google-logo.png" style="height: 1.6em"/>
+                                        <img src="./images/google-logo.png" style="height: 1.6em"/>
                                     </span>   
                                 </div>
 

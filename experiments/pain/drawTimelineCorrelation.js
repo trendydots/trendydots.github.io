@@ -6,8 +6,6 @@ function drawKeywordList(keywords) {
         var keywordListTags = '';
         keywords.forEach(function (element, index) {
             keywordListTags += `
-                    <div class="form-group form-group-sm">
-                        <label for="keywords`+index+`">Keywords[`+index+`]</label>
                         <div class="form-group form-group-sm">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -19,7 +17,6 @@ function drawKeywordList(keywords) {
                                 <input type="text" class="form-control" id="keywords`+index+`" disabled placeholder="Keyword" value="`+element.word+`">
                             </div>
                         </div>
-                    </div>
                 `
         });
         return keywordListTags;

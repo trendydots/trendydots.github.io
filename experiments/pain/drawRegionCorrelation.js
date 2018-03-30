@@ -56,7 +56,7 @@ function drawTable(keywords) {
         return tableContent;
     })
 }
-
+/*
 function drawChart(keywords) {
 
     var requestString = 'https://trendydots-api-trendydots.193b.starter-ca-central-1.openshiftapps.com/googleCorrelateInterestOverTime?'
@@ -79,7 +79,6 @@ function drawChart(keywords) {
     
     $.get(requestString, function (result) {
         csvData = result.csvOfValues;
-        console.dir(csvData);
         
         for(var i=0; i<csvData[0].length; i++) {
             for(var j=0; j<keywords.length; j++)
@@ -110,13 +109,7 @@ function drawChart(keywords) {
                         side: 'bottom'
                     }
                 },
-            },
-            /*
-            backgroundColor: {
-                fill: 'whitesmoke',
-                fillOpacity: 1
-            },
-            */
+            }
 
         };
 
@@ -131,7 +124,7 @@ function drawChart(keywords) {
 
     });
 };
-
+*/
 function drawMap(keywords, geocode) {
 
     var requestString = 'https://trendydots-api-trendydots.193b.starter-ca-central-1.openshiftapps.com/googleCorrelateInterestByRegion?'
@@ -160,7 +153,7 @@ function drawMap(keywords, geocode) {
     
     $.get(requestString, function (result) {
         csvData = result.csvOfValues;
-        console.dir(csvData);
+        
         
         for(var i=0; i<csvData[0].length; i++) {
             for(var j=0; j<keywords.length; j++)
@@ -199,23 +192,17 @@ function drawMap(keywords, geocode) {
             var label = htmlLabel.reduce(function(accummulator, region) {
                 return accummulator + region;
             })
-            console.log(label);
             row.push(label); // add label
             geoChartData.push(row);
         };
         
-        console.dir(geoChartData);
         var data = google.visualization.arrayToDataTable(geoChartData);
         
         var options = {
             tooltip: {isHtml: true},
             region: geocode,
             displayMode: 'markers',
-            /*
-            defaultColor: '#ffffff',
-            backgroundColor: {fill: '#ffffff', stroke: '#00000' },
-            datalessRegionColor: '#ffffff',
-            */
+            colorAxis: {colors: ['#fdfdfd', 'orange']}, // orange to blue
             width: '100%',
             height: 700,
             lineWidth: 10,
@@ -294,11 +281,11 @@ dbRefObject.once('value').then(function(snapshot){
     
     
     $('#dateFrom').change(function() {
-        drawChart(drawMap(reportInput.keywords, reportInput.geo));
+        drawMap(reportInput.keywords, reportInput.geo);
     });
 
     $('#dateTo').change(function() {
-        drawChart(drawMap(reportInput.keywords, reportInput.geo));
+        drawMap(reportInput.keywords, reportInput.geo);
     });
 
     

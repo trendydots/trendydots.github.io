@@ -15,56 +15,61 @@
             width: 100%;
             color: black;
         }
-
-        thead, tbody, tr, td, th { display: block; }
-
+        
+        thead,
+        tbody,
+        tr,
+        td,
+        th {
+            display: block;
+        }
+        
         tr:after {
             content: ' ';
             display: block;
             visibility: hidden;
             clear: both;
         }
-
+        
         thead th {
             height: 70px;
-
             /*text-align: left;*/
         }
-
+        
         tbody {
             height: calc(100vh - 180px);
             overflow-y: auto;
         }
-
-        tbody td, thead th {
+        
+        tbody td,
+        thead th {
             width: 19.7%;
             float: left;
         }
         
-        .nav-link{
+        .nav-link {
             font-weight: 600;
         }
     </style>
-    
+
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCKyiWv30D1r2ScgkTQjFKDyL-J-1Bh0CA",
-        authDomain: "trendydots-33fe1.firebaseapp.com",
-        databaseURL: "https://trendydots-33fe1.firebaseio.com",
-        projectId: "trendydots-33fe1",
-        storageBucket: "trendydots-33fe1.appspot.com",
-        messagingSenderId: "921118795436"
-      };
-        
-      firebase.initializeApp(config);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCKyiWv30D1r2ScgkTQjFKDyL-J-1Bh0CA",
+            authDomain: "trendydots-33fe1.firebaseapp.com",
+            databaseURL: "https://trendydots-33fe1.firebaseio.com",
+            projectId: "trendydots-33fe1",
+            storageBucket: "trendydots-33fe1.appspot.com",
+            messagingSenderId: "921118795436"
+        };
 
+        firebase.initializeApp(config);
     </script>
 </head>
 
 <body>
-   <!--
+    <!--
     <style xmlns="http://www.w3.org/2000/svg">
        path { stroke:#000; } 
     </style>
@@ -98,36 +103,36 @@
                         <div class="form-group col-6">
                             <label for="dateTo">End Date</label>
                             <input id="dateTo" class="form-control-sm" type="date" />
-                        </div>     
-                    </div>      
+                        </div>
+                    </div>
                 </div>
-                <div id="keywordList" class="col">                    
+                <div id="keywordList" class="col">
                 </div>
 
             </div>
             <div style="box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2); height: 100%; width: 64%; padding-left: 10px; padding-top: 10px">
-               <ul class="nav nav-tabs" style="margin-left: 10px; margin-top: 10px">
-                  
+                <ul class="nav nav-tabs" style="margin-left: 10px; margin-top: 10px">
+
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#dataMap">Map</a>
                     </li>
-                  
+
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#data">Data</a>
                     </li>
-                  
+
                 </ul>
                 <div id="myTabContent" class="tab-content" style="height:  calc(100% - 49px); overflow:  auto;">
-                   
+
                     <div class="tab-pane fade show active" id="dataMap" style="width: 90%; margin:5%; text-align: center">
-                        <img src="./images/loader3.gif" style="height: 10em"/>
+                        <img src="./images/loader3.gif" style="height: 10em" />
                     </div>
-                    
+
                     <div class="tab-pane fade" id="data">
                         <table id="trendyTable" class="table table-hover">
                         </table>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -135,27 +140,40 @@
 
     <div style="position: absolute; display: flex; padding:0; bottom: 0; height:84px; /* width: calc(36% + 209px);*/ width: 100%; margin: 0; z-index: 2">
         <div class="row no-gutters" style="width: 36%; background: #FDE8B4; color: #070707;">
-            <div class="col-4" >
+            <div class="col-4">
                 <a class="btn-lg" style="display: block" href="http://www.trendydots.com"> www.trendydots.com </a>
             </div>
             <div class="col-4">
-                
+
             </div>
             <div class="col-4">
-                
+
             </div>
         </div>
-        <button id="download_csv" type="button" class="btn btn-primary btn-lg" style="width: 209px" data-toggle="tooltip" data-placement="bottom" title="The dataset was compiled from Google Trends API" data-original-title="The dataset was compiled from Google Trends API">Download CSV</button>     
-        <button id="" type="button" class="btn btn-primary btn-lg" style="background: black; width: 209px; right: 0px; position: absolute" data-toggle="tooltip" data-placement="bottom" title="Explore the evolution in time" data-original-title="Explore the evolution in time" onClick="window.location.href='timelineCorrelation.html'">Timeline Data</button>     
- 
+        <button id="download_csv" type="button" class="btn btn-primary btn-lg" style="width: 209px" data-toggle="tooltip" data-placement="bottom" title="The dataset was compiled from Google Trends API" data-original-title="The dataset was compiled from Google Trends API">Download CSV</button>
+        <button id="" type="button" class="btn btn-primary btn-lg" style="background: black; width: 209px; right: 0px; position: absolute" data-toggle="tooltip" data-placement="bottom" title="Explore the evolution in time" data-original-title="Explore the evolution in time" onClick="window.location.href='timelineCorrelation.html'">Timeline Data</button>
+
     </div>
-        
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="drawRegionCorrelation.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113784035-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-113784035-1');
+    </script>
+
 </body>
 
 </html>

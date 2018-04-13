@@ -1,6 +1,5 @@
 var csvData = [];
 var csvContent = "data:text/csv;charset=utf-8,";
-
 function drawKeywordList(keywords) {
     $('#keywordList').html(function() {
         var keywordListTags = '';
@@ -53,78 +52,10 @@ function drawTable(keywords) {
         return tableContent;
     })
 }
-/*
-function drawChart(keywords) {
 
-    var requestString = 'https://trendydots-api-trendydots.193b.starter-ca-central-1.openshiftapps.com/googleCorrelateInterestOverTime?'
-    // set keywords
-    for (var i = 0; i < keywords.length; i++) {
-        if(keywords[i].mid){
-            requestString += '&keywords=' + keywords[i].mid; // semantic lookup first
-        } else {
-            if(keywords[i].word) {
-                requestString += '&keywords=' + keywords[i].word; // if semantinc lookup is not possible, try full text lookup
-            }
-        }
-        
-    };
-    // set startTime
-    requestString += '&startTime=' + $('#dateFrom').val();
-    
-    // set endTime
-    requestString += '&endTime=' + $('#dateTo').val();
-    
-    $.get(requestString, function (result) {
-        csvData = result.csvOfValues;
-        
-        for(var i=0; i<csvData[0].length; i++) {
-            for(var j=0; j<keywords.length; j++)
-            if(csvData[0][i] === keywords[j].mid){
-                csvData[0][i] = keywords[j].word
-            }
-        }
-        
-        var data = google.visualization.arrayToDataTable(result.csvOfValues);
-        
-        var options = {
-            chart: {
-                title: '',
-                subtitle: ''
-            },
-            animation: {
-                duration: 1000,
-                easing: 'out',
-            },
-            "legend": {
-                position: 'bottom'
-            },
-            width: '100%',
-            height: 500,
-            axes: {
-                x: {
-                    0: {
-                        side: 'bottom'
-                    }
-                },
-            }
-
-        };
-
-        var chart = new google.charts.Line(document.getElementById('chart'));
-        //var chart = new google.visualization.LineChart(document.getElementById('line_top_x'));
-
-        chart.draw(data, google.charts.Line.convertOptions(options));
-        //chart.draw(data, options);
-
-        $('#download_csv').show();
-        drawTable(keywords);
-
-    });
-};
-*/
 function drawMap(keywords, geocode) {
 
-    var requestString = 'https://trendydots-api-trendydots.193b.starter-ca-central-1.openshiftapps.com/googleCorrelateInterestByRegion?'
+    var requestString = openshiftURL + '/googleCorrelateInterestByRegion?'
     // set keywords
     for (var i = 0; i < keywords.length; i++) {
         if(keywords[i].mid){

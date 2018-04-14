@@ -180,7 +180,7 @@ var today = now.getFullYear()+"-"+(month)+"-"+(day);
 $('#dateTo').val(today);
 
 //Create database reference
-var dbRefObject = firebase.database().ref().child("14413ec9-ce06-4880-aafc-2a0d7a06ed87");
+var dbRefObject = firebase.database().ref("0KGb8KislQaiamFsFVqsVOQAf7I2/reports").child("-LA2abBeEOgBnmLMoJvn");
     
 //Listen to object changes
 dbRefObject.once('value').then(function(snapshot){

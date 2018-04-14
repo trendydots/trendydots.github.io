@@ -1,0 +1,79 @@
+{
+    "18ec0160-fd85-48b1-bf72-3ea0d61ffe3a": {
+        "title": "Global intertest in  Data Science",
+        "statement": "The cummulated Google searches for Data Science, AI, Machine Learning and Big Data between 2004 - Present",
+        "dataSource": "Google Global Trends",
+        "keywords": [
+            {
+                "word": "Data Science"
+        },
+            {
+                "mid": "/m/01hyh_" ,
+                "word": "Machine Learning"
+        },
+            {
+                "mid": "/m/0mkz" ,
+                "word": "AI"
+        },
+            {
+                "mid": "/m/0h1fn8h" ,
+                "word": "Deep Learning"
+        }],
+        "reportTypes": [ "correlateOverTime" , "csvDownload" , "correlateByRegion" ],
+        "startTime": "2004-01-01" ,
+        "endtTime": "2018-01-01" ,
+        "geo": "IT"
+    },
+    "3ec93841-ce06-4880-aafc-2a0d7a06ed87": {
+        "title": "Autrian intertest in banks",
+        "statement": "The cummulated Google searches In Austria for Erste Group Bank, UniCredit Bank Austria AG, Raiffeisen Bank International AG , BWAG PSK, Oesterreichische Kontrollbank AG,  between 2004 - Present",
+        "dataSource": "Google Global Trends",
+        "keywords": [
+            {
+                "mid": "/m/03v_93" ,
+                "word": "Erste Group Bank"
+        },
+            {
+                "mid": "/m/09hbvr" ,
+                "word": "UniCredit Bank Austria AG"
+        },
+            {
+                "mid": "/g/1229kfrj" ,
+                "word": "Raiffeisen Bank International AG"
+        },
+            {
+                "mid": "/m/08snpt" ,
+                "word": "BWAG PSK"
+        }],
+        "reportTypes": [ "correlateOverTime" , "csvDownload" , "correlateByRegion" ],
+        "startTime": "2004-01-01" ,
+        "endtTime": "2018-01-01" ,
+        "geo": "AT"
+    },
+    "14413ec9-ce06-4880-aafc-2a0d7a06ed87": {
+        "title": "European pain treatment",
+        "statement": "The cummulated Google searches In Europe for Nurofen, Ibuprofen, Headake and Pain between 2004 - Present",
+        "dataSource": "Google Global Trends",
+        "keywords": [
+            {
+                "mid": "/m/06lx8c" ,
+                "word": "Nurofen"
+        },
+            {
+                "mid": "/m/014d3g" ,
+                "word": "Ibuprofen"
+        },
+            {
+                "mid": "/m/062t2" ,
+                "word": "Pain"
+        },
+            {
+                "mid": "/m/0j5fv" ,
+                "word": "Headache"
+        }],
+        "reportTypes": [ "correlateOverTime" , "csvDownload" , "correlateByRegion" ],
+        "startTime": "2004-01-01" ,
+        "endtTime": "2018-01-01" ,
+        "geo": "EU"
+    }
+}

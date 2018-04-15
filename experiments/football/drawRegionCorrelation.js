@@ -153,6 +153,16 @@ function drawMap(keywords, geocode) {
     });
 };
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+};
+
 $('#download_csv').click(function () {
     console.log('I was clicked');
 
@@ -178,10 +188,12 @@ var month = ("0" + (now.getMonth() + 1)).slice(-2);
 var today = now.getFullYear()+"-"+(month)+"-"+(day);
 
 $('#dateTo').val(today);
-
+var domain = getParameterByName("domain");
+var reportID = getParameterByName("reportID");
 //Create database reference
-var dbRefObject = firebase.database().ref("0KGb8KislQaiamFsFVqsVOQAf7I2/reports").child("-LA2hVUQGPWcrG8xXdHT");
-    
+//var dbRefObject = firebase.database().ref("0KGb8KislQaiamFsFVqsVOQAf7I2/reports").child("-LA2hVUQGPWcrG8xXdHT");
+var dbRefObject = firebase.database().ref(domain + "/reports").child(reportID);
+       
 //Listen to object changes
 dbRefObject.once('value').then(function(snapshot){
     console.log("firebase data :)")

@@ -1,7 +1,8 @@
 var csvData = [];
 var csvContent = "data:text/csv;charset=utf-8,";
+
 function drawKeywordList(keywords) {
-    $('#keywordList').html(function() {
+    $('#keywordList').html(function () {
         var keywordListTags = '';
         keywords.forEach(function (element, index) {
             keywordListTags += `
@@ -13,7 +14,7 @@ function drawKeywordList(keywords) {
                                     </span>   
                                 </div>
 
-                                <input type="text" class="form-control" id="keywords`+index+`" disabled placeholder="Keyword" value="`+element.word+`">
+                                <input type="text" class="form-control" id="keywords` + index + `" disabled placeholder="Keyword" value="` + element.word + `">
                             </div>
                         </div>    
                 `
@@ -23,31 +24,34 @@ function drawKeywordList(keywords) {
 }
 
 function drawTable(keywords) {
-    
-    $('#trendyTable').html(function(){
+
+    $('#trendyTable').html(function () {
         // build table header
         var tableHeader = `<thead> 
-                            <tr>`;  // table header tags
-        tableHeader += '<th scope="col"> Time </th>' // table header elements
+                            <tr>`; // table header tags
+        tableHeader += '<th scope="col"> Region </th>' // table header elements
         keywords.forEach(function (element) {
             tableHeader += '<th scope="col">' + element.word + '</th>' // table header elements
         });
         tableHeader += `</tr>
                         </thead>`; // table header closing tags
-        
+
         // build table body
-        var tableBody = `<tbody>`; 
-        
-        for (var i=1; i<csvData.length; i++) {
+        var tableBody = `<tbody>`;
+
+        for (var i = 1; i < csvData.length; i++) {
             tableBody += '<tr>';
-            csvData[i].forEach(function(element) {
-                tableBody +='<td> '+ element +' </td>'; // table body elements
+            csvData[i].forEach(function (element, index) {
+                if(index > 0) {
+                    tableBody += '<td> ' + element + ' </td>'; // table body elements
+                }
+                
             });
             tableBody += '</tr>';
         }
-        
+
         tableBody += `</tbody>`; // table body closing tag
-        
+
         var tableContent = tableHeader + tableBody; // put the table html together
         return tableContent;
     })
@@ -56,81 +60,100 @@ function drawTable(keywords) {
 function drawMap(keywords, geocode) {
 
     var requestString = openshiftURL + '/googleCorrelateInterestByRegion?'
-    // set keywords
+        // set keywords
     for (var i = 0; i < keywords.length; i++) {
-        if(keywords[i].mid){
+        if (keywords[i].mid) {
             requestString += '&keywords=' + keywords[i].mid; // semantic lookup first
         } else {
-            if(keywords[i].word) {
+            if (keywords[i].word) {
                 requestString += '&keywords=' + keywords[i].word; // if semantinc lookup is not possible, try full text lookup
             }
         }
-        
+
     };
     // set startTime
     requestString += '&startTime=' + $('#dateFrom').val();
-    
+
     // set endTime
     requestString += '&endTime=' + $('#dateTo').val();
-    
-    if(geocode) {
-         // set geocode
+
+    if (geocode) {
+        // set geocode
         requestString += '&geocode=' + geocode;
     }
-   
-    
+
+
     $.get(requestString, function (result) {
         csvData = result.csvOfValues;
-        
-        
-        for(var i=0; i<csvData[0].length; i++) {
-            for(var j=0; j<keywords.length; j++)
-            if(csvData[0][i] === keywords[j].mid){
-                csvData[0][i] = keywords[j].word
+
+
+        for (var i = 0; i < csvData[0].length; i++) {
+            for (var j = 0; j < keywords.length; j++)
+                if (csvData[0][i] === keywords[j].mid) {
+                    csvData[0][i] = keywords[j].word
+                }
+        };
+
+        //geoChartData = [ [ 'State', 'Average Value', {role: 'tooltip', p:{html:true}}] ];
+        geoChartData = [['Lat', 'Long','State', 'Average Value', {
+            role: 'tooltip',
+            p: {
+                html: true
+            }
+        }]];
+
+
+
+        for (var i = 1; i < csvData.length; i++) {
+            var row = [];
+ 
+            var geoCodedCountry = countries.find(function (country) {
+                return country["country"].toLowerCase() === csvData[i][0].toLowerCase();
+            });
+            //console.log('geocode', geoCodedCountry, ' for ', csvData[i][0]);
+            if (geoCodedCountry) {
+
+                row.push(geoCodedCountry["latitude"]); //add geo lat
+                row.push(geoCodedCountry["longitude"]); //add geo long
+                row.push(csvData[i][1]); //add geo label
+
+                var averageValue = 0;
+                var htmlLabel = [];
+                htmlLabel = csvData[0].slice(0); // add headers to array
+                
+                for (var j = 2; j < csvData[i].length; j++) {
+                    averageValue += csvData[i][j];
+                    if (j < csvData[i].length - 1) {
+                        htmlLabel[j] = '<li style="border-bottom:1px solid #eee;">' + htmlLabel[j] + ':<i style="color: #000; font-weight: 900">' + csvData[i][j] + '</i></li>';
+                    } else {
+                        htmlLabel[j] = '<li>' + htmlLabel[j] + ':<i style="color: #000; font-weight: 900">' + csvData[i][j] + '</i></li>';
+                    }
+                };
+               
+                averageValue = Math.floor(averageValue / (csvData[i].length - 1));
+                row.push(averageValue); // add average value
+
+                delete htmlLabel[0];
+                delete htmlLabel[1];
+                var label = htmlLabel.reduce(function (accummulator, region) {
+                    return accummulator + region;
+                });
+                row.push(label); // add label
+                geoChartData.push(row);
             }
         };
-                
-        geoChartData = [ [ 'State', 'Average Value', {role: 'tooltip', p:{html:true}}] ];
-        
-        
-        
-        for (var i=1; i<csvData.length; i++) {
-            var row = [];
-            
-            var htmlLabel = [];
-            htmlLabel = csvData[0].slice(0); // add headers to array
-            
-            row.push(csvData[i][0]); //add geo label
-            
-            var averageValue = 0;
-            
-            for(var j=1; j<csvData[i].length; j++) {
-                averageValue += csvData[i][j];
-                if(j< csvData[i].length - 1){
-                    htmlLabel[j] = '<li style="border-bottom:1px solid #eee;">' + htmlLabel[j] + ':<i style="color: #000; font-weight: 900">' + csvData[i][j] + '</i></li>'; 
-                } else {
-                     htmlLabel[j] = '<li>' + htmlLabel[j] + ':<i style="color: #000; font-weight: 900">' + csvData[i][j] + '</i></li>';
-                }
-                           };
-            
-            averageValue = Math.floor(averageValue/(csvData[i].length-1));
-            row.push(averageValue); // add average value
-            
-            delete htmlLabel[0];
-            var label = htmlLabel.reduce(function(accummulator, region) {
-                return accummulator + region;
-            })
-            row.push(label); // add label
-            geoChartData.push(row);
-        };
-        
+
         var data = google.visualization.arrayToDataTable(geoChartData);
-        
+
         var options = {
-            tooltip: {isHtml: true},
+            tooltip: {
+                isHtml: true
+            },
             region: geocode,
             displayMode: 'markers',
-            colorAxis: {colors: ['#8bcaff', '#ffeb00', 'orange']}, // orange to blue
+            colorAxis: {
+                colors: ['#8bcaff', '#ffeb00', 'orange']
+            }, // orange to blue
             width: '100%',
             height: 700,
             lineWidth: 10,
@@ -138,15 +161,15 @@ function drawMap(keywords, geocode) {
 
         var chart = new google.visualization.GeoChart(document.getElementById('dataMap'));
         //var chart = new google.visualization.LineChart(document.getElementById('line_top_x'));
-        google.visualization.events.addListener(chart, 'ready', function(){
+        google.visualization.events.addListener(chart, 'ready', function () {
             console.log('I just drown now');
-             $('path').attr('stroke', '#a0a0a0');
+            $('path').attr('stroke', '#a0a0a0');
         });
-        
+
         chart.draw(data, options);
         //chart.draw(data, options);
 
-       
+
         $('#download_csv').show();
         drawTable(keywords);
 
@@ -175,22 +198,22 @@ $('#dateFrom').val('2004-01-01');
 var now = new Date();
 var day = ("0" + now.getDate()).slice(-2);
 var month = ("0" + (now.getMonth() + 1)).slice(-2);
-var today = now.getFullYear()+"-"+(month)+"-"+(day);
+var today = now.getFullYear() + "-" + (month) + "-" + (day);
 
 $('#dateTo').val(today);
 
 //Create database reference
 var dbRefObject = firebase.database().ref("0KGb8KislQaiamFsFVqsVOQAf7I2/reports").child("-LA2abBeEOgBnmLMoJvn");
-    
+
 //Listen to object changes
-dbRefObject.once('value').then(function(snapshot){
+dbRefObject.once('value').then(function (snapshot) {
     console.log("firebase data :)")
     var reportInput = snapshot.val();
 
     $('#reportTitle').html(reportInput.title);
     $('#reportStatement').html(reportInput.statement);
     $('#reportDataSource').html(reportInput.dataSource);
-    
+
     drawKeywordList(reportInput.keywords);
     /*
     google.charts.load('upcoming', {
@@ -198,24 +221,23 @@ dbRefObject.once('value').then(function(snapshot){
         'mapsApiKey': 'AIzaSyBEvM0TVolKimQl-FnIZ6GHcvWGGG_9dsc'
     });
      */
-     google.charts.load('current', {
-       'packages': ['geochart'],
-       // Note: you will need to get a mapsApiKey for your project.
-       // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-       'mapsApiKey': 'AIzaSyBEvM0TVolKimQl-FnIZ6GHcvWGGG_9dsc'// 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
-     });
-    
-     google.charts.setOnLoadCallback(drawMap(reportInput.keywords, reportInput.geo));
-    
-    
-    $('#dateFrom').change(function() {
+    google.charts.load('current', {
+        'packages': ['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyBEvM0TVolKimQl-FnIZ6GHcvWGGG_9dsc' // 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+    });
+
+    google.charts.setOnLoadCallback(drawMap(reportInput.keywords, reportInput.geo));
+
+
+    $('#dateFrom').change(function () {
         drawMap(reportInput.keywords, reportInput.geo);
     });
 
-    $('#dateTo').change(function() {
+    $('#dateTo').change(function () {
         drawMap(reportInput.keywords, reportInput.geo);
     });
 
-    
+
 });
-

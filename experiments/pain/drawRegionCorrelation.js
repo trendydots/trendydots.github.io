@@ -202,7 +202,7 @@ dbRefObject.once('value').then(function(snapshot){
        'packages': ['geochart'],
        // Note: you will need to get a mapsApiKey for your project.
        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-       'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+       'mapsApiKey': 'AIzaSyBEvM0TVolKimQl-FnIZ6GHcvWGGG_9dsc'// 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
      });
     
      google.charts.setOnLoadCallback(drawMap(reportInput.keywords, reportInput.geo));

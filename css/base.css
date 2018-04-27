@@ -878,6 +878,12 @@ button:focus {
         font-size: 4vw;
     }
 }
+
+@media screen and (max-width: 425px), screen and (max-height: 39.9em) {
+	body {
+		font-size: 0.8em
+	}
+}
 /*
 @media screen and (max-width: 425px), screen and (max-height: 39.9em) {
 	.js .section__title span,

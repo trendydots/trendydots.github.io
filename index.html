@@ -1,492 +1,92 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-
-<head>
-    <meta charset="UTF-8" />
-
-   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-
-    <title>Trendy Dots</title>
-    <meta name="description" content="An implementation of Gil Huybrecht's Outdoors design" />
-    <meta name="keywords" content="template, web design, html, javascript, layout, css, slide out" />
-    <meta name="author" content="Codrops" />
-    <link rel="shortcut icon" href="logo.png">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <style>
-        .input-group {
-            position: relative;
-            /* padding-top: 20px; */
-            margin-top: 20px;
-        }
-        
-        .input-group:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        
-        .input-group input {
-            border: none;
-            border-bottom: solid 1px #ccc;
-            width: 100%;
-            padding: 10px 0;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .input-group input:focus {
-            outline: none;
-            border-color: #ffcf07;
-            box-shadow: 0 1px 0 0 #ffcf07;
-        }
-        
-        .input-group label {
-            position: absolute;
-            top: 30px;
-            left: 0;
-            color: #aaa;
-            font-weight: 300;
-            transition: transform 0.2s ease, color 0.2s ease;
-        }
-        
-        .input-group label:hover {
-            cursor: text;
-        }
-        
-        .input-group input:focus + label {
-            color: #ffcf07;
-        }
-        
-        .input-group input:focus + label,
-        .input-group input.active + label {
-            transform: translateY(-30px);
-        }
-
-    </style>
-
-    <script>
-        document.documentElement.className = "js";
-        var supportsCssVars = function() {
-            var e, t = document.createElement("style");
-            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
-        };
-        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
-
-    </script>
-    <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://usebasin.com/f/06dcf3d4ebaf/ahoy.js" async defer></script>
-    
-    <link rel="stylesheet" type="text/css" href="css/jquery-eu-cookie-law-popup.css"/>
-    <script src="js/jquery-eu-cookie-law-popup.js"></script>
+<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJlae4bb90ae6e1725208d16352ceeb88e0"/>
+  <meta charset="utf-8">
+  <title>undefined</title>
+  <meta name="generator" content="Google Web Designer 3.0.1.0319">
+  <style type="text/css" id="gwd-text-style">p{margin:0px}h1{margin:0px}h2{margin:0px}h3{margin:0px}</style>
+  <style type="text/css">html,body{width:100%;height:100%;margin:0px}body{background-color:#f5f4f2;transform:matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);-webkit-transform:matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);-moz-transform:matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);perspective:1400px;-webkit-perspective:1400px;-moz-perspective:1400px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d}.input-group input{border-top:none;border-right:none;border-left:none;border-image:initial;border-bottom:1px solid #ccc;width:100%;padding:10px 0px;transition:border-color .2s ease,box-shadow .2s ease;-webkit-transition:border-color .2s ease,box-shadow .2s ease;-moz-transition:border-color .2s ease,box-shadow .2s ease;font-size:16px;margin-bottom:15px}button{border:0px;background:none;margin:0px;padding:0px;font-family:inherit;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:16px}.gwd-div-1sxe{position:absolute;background-image:none;background-color:#fff;left:0px;width:50%;top:0px;box-shadow:rgba(0,0,0,0.2) 0 1.5em 85px 0;min-height:700px}.gwd-img-1998{position:absolute;top:0px;width:50%;right:0px}.gwd-div-1kug{position:absolute;left:0px;top:0px;width:100%;height:60px}.gwd-img-n42l{position:absolute;height:30px;width:40px;left:60px;top:30px}.gwd-p-nsz4{position:absolute;font-family:Montserrat;font-weight:bold;left:110px;font-size:1.35rem;top:32px}.gwd-div-9729{position:absolute;left:0px;width:100%;background-image:none;background-color:#fff;height:400px;top:60px}.gwd-p-6mvh{position:absolute;top:61px;font-family:Montserrat;font-weight:700;font-size:5vw;left:60px}.gwd-p-1em6{position:absolute;font-family:Montserrat;margin-right:60px;left:60px;font-weight:300;top:185px}.gwd-span-1nog{font-size:16px}.gwd-div-1ej3{position:absolute;background-image:none;background-color:#000;top:414px;height:400px;width:350px;left:calc(50% - 30px)}.gwd-div-16oi{position:absolute;width:2px;height:100px;left:682px;top:460px}.gwd-div-1rdk{position:absolute;width:154px;height:151px;top:494px;left:30%;color:white}.gwd-div-3afy{position:absolute;background-image:none;left:20%;top:20%;width:60%;height:60%;background-color:#000}.gwd-p-1cu1{position:absolute;font-family:Montserrat;font-size:14px;font-weight:bold;top:13px;color:white;left:0px;width:100%}.gwd-p-18oe{position:absolute;font-family:Montserrat;font-size:14px;color:#fff;font-weight:300;top:40px;left:0px;width:100%}.gwd-p-1qr0{position:absolute;top:136px;font-family:Montserrat;font-size:14px;font-weight:bold;color:#fff;left:0px;width:100%}.gwd-p-exsd{position:absolute;font-family:Montserrat;font-size:14px;color:#fff;font-weight:300;top:163px;left:0px;width:100%}.gwd-img-1uan{position:absolute;left:0px;width:50%;top:730px}.gwd-div-mx5a{position:absolute;height:437px;top:919px;background-image:none;right:0px;width:50%;box-shadow:rgba(0,0,0,0.2) 0 1.5em 85px 0;background-color:#fff;min-height:600px}.gwd-div-4bf6{top:1322px;left:calc(50% - 320px) !important}.gwd-div-s0or{top:1809px;right:50%;margin-right:-25%}.gwd-form-11dq{font-family:Montserrat;position:absolute;top:222px;font-size:16px;left:60px;width:calc(100% - 120px)}.gwd-img-14i0{position:absolute;top:2260px;width:50%;right:0px}.gwd-img-1a3v{position:absolute;width:50%;height:431.19px;top:1612px;left:0px}.gwd-div-25b1{position:absolute;left:0px;width:100%;height:60px;border-image-source:none;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-color:transparent;background-image:none;background-color:#fff;box-shadow:rgba(0,0,0,0.2) 0 1.5em 85px 0;top:2804px}.gwd-p-g9j6{position:absolute;top:20px;font-family:Montserrat;left:10%}.gwd-p-1glz{position:absolute;top:20px;font-family:Montserrat;right:10%}.gwd-div-1521{top:120px}.gwd-span-qcoj{font-size:18px}</style>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet" type="text/css">
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script async="" defer="" src="//usebasin.com/f/06dcf3d4ebaf/ahoy.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/jquery-eu-cookie-law-popup.css"/>
+    <script src="./js/jquery-eu-cookie-law-popup.js"></script>
     
 </head>
 
-<body class="loading eupopup eupopup-bottom eupopup-style-compact">
-    <svg class="hidden">
-        <symbol id="icon-arrow" viewBox="0 0 24 24">
-            <title>arrow</title>
-            <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
-        </symbol>
-        <symbol id="icon-drop" viewBox="0 0 24 24">
-            <title>drop</title>
-            <path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
-            <path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
-        </symbol>
-        <symbol id="icon-menu" viewBox="0 0 24 13">
-            <title>menu</title>
-            <path d="M.75 1.515h22.498a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5zM23.248 5.265H8.168a.75.75 0 0 0 0 1.5h15.08a.75.75 0 0 0 0-1.5zM23.248 10.514H4.322a.75.75 0 0 0 0 1.5h18.926a.75.75 0 0 0 0-1.5z" />
-        </symbol>
-        <symbol id="icon-dot" viewBox="0 0 24 24">
-            <title>dot</title>
-            <path d="M11.5 9c-.69 0-1.28.244-1.768.732A2.41 2.41 0 0 0 9 11.5c0 .69.244 1.28.732 1.767A2.409 2.409 0 0 0 11.5 14c.69 0 1.28-.244 1.768-.733A2.408 2.408 0 0 0 14 11.5c0-.69-.244-1.28-.732-1.768A2.408 2.408 0 0 0 11.5 9z" />
-        </symbol>
-        <symbol id="icon-cross" viewBox="0 0 24 24">
-            <title>cross</title>
-            <path d="M11.449 11.962l-5.1 5.099a.363.363 0 1 0 .513.512L12 12.436l5.137 5.137a.361.361 0 0 0 .513 0 .363.363 0 0 0 0-.512l-5.099-5.1 5.102-5.102a.363.363 0 1 0-.512-.513L12 11.487l-5.141-5.14a.363.363 0 0 0-.513.512l5.103 5.103z" />
-        </symbol>
-        <symbol id="icon-arrowlong" viewBox="0 0 32 11">
-            <title>arrow-long</title>
-            <path d="M27.166.183a.619.619 0 0 0-.878 0 .619.619 0 0 0 0 .878l2.735 2.735H.768a.624.624 0 0 0 0 1.248h28.254L26.287 7.77a.619.619 0 0 0 0 .878.617.617 0 0 0 .441.183c.163 0 .32-.061.442-.183l3.796-3.796a.623.623 0 0 0-.005-.878L27.166.183z" />
-        </symbol>
-        <symbol id="icon-close" viewBox="0 0 24 24">
-            <title>close</title>
-            <path d="M21 4.565L19.435 3 12 10.435 4.565 3 3 4.565 10.435 12 3 19.435 4.565 21 12 13.565 19.435 21 21 19.435 13.565 12z" />
-        </symbol>
-        <symbol id="icon-navup" viewBox="0 0 50 50">
-            <title>navup</title>
-            <path d="M20.259 28.211l5.07-5.03 5.075 5.034a.36.36 0 0 0 .51 0 .356.356 0 0 0 0-.506l-5.323-5.28a.404.404 0 0 0-.135-.084.364.364 0 0 0-.384.08l-5.324 5.28a.356.356 0 0 0 0 .506c.141.14.37.14.51 0z" />
-        </symbol>
-        <symbol id="icon-navdown" viewBox="0 0 50 50">
-            <title>navdown</title>
-            <path d="M20.259 22.43l5.07 5.03 5.075-5.034a.36.36 0 0 1 .51 0c.14.14.14.366 0 .506l-5.323 5.28a.404.404 0 0 1-.135.084.364.364 0 0 1-.384-.081l-5.324-5.28a.356.356 0 0 1 0-.505c.141-.14.37-.14.51 0z" />
-        </symbol>
-        <symbol id="icon-grid" viewBox="0 0 24 24">
-            <title>grid</title>
-            <path d="M8.982 8.982h5.988v5.988H8.982zM0 0h5.988v5.988H0zM8.982 17.965h5.988v5.988H8.982zM0 8.982h5.988v5.988H0zM0 17.965h5.988v5.988H0zM17.965 0h5.988v5.988h-5.988zM8.982 0h5.988v5.988H8.982zM17.965 8.982h5.988v5.988h-5.988zM17.965 17.965h5.988v5.988h-5.988z" />
-        </symbol>
-    </svg>
-    <main>
-      <!-- photo credit -->
-       <a 
-        style="position: absolute; top: 3px; right: 1em; font-size: 10px; z-index: 500" 
-        href="https://dribbble.com/Octopus"
-        target="_blank">
-        photo credit: Octopus 
-        </a>
-        <div class="sections">
-            <header class="sections__header">
-                <h1 class="title">
-                        <img src="logo.png" style="height: 1.2em; float:left"/> 
-                        <span style="float: left"> &nbsp; Trendy Dots </span>
-					</h1>
-            </header>
-
-            <!-- menu -->
-            <!--
-            <nav class="menu">
-               
-                <ul class="menu__inner">
-                    <li class="menu__item"><a class="menu__item-link" href="#"></a></li>
-                    
-                    <li class="menu__item"><a class="menu__item-link" href="#">What we do</a></li>
-                    <li class="menu__item"><a class="menu__item-link" href="#">Happy clients</a></li>
-                    <li class="menu__item"><a class="menu__item-link" href="#">Contact</a></li>
-                    
-                </ul>
-                
-                <div class="menu__toggle">
-                    <span class="menu__toggle-inner menu__toggle-inner--open">
-							<svg class="icon icon--menu"><use  href="#icon-menu"></use></svg>
-						</span>
-                    <span class="menu__toggle-inner menu__toggle-inner--close">
-							<svg class="icon icon--close"><use  href="#icon-close"></use></svg>
-						</span>
-                </div>
-            </nav>
-            -->
-            <!-- facts expander with toggles; content for each is in its section -->
-         
-            <div class="facts">
-                <div class="facts__toggle">
-                    <span class="facts__toggle-inner facts__toggle-inner--more">
-							<!-- <svg class="icon icon--dot"><use  href="#icon-dot"></use></svg>
-							<span class="facts__toggle-text">See more details</span> -->
-                    </span>
-                    <span class="facts__toggle-inner facts__toggle-inner--less">
-							<!-- 
-							<svg class="icon icon--cross"><use  href="#icon-cross"></use></svg>
-						    <span class="facts__toggle-text">See less details</span> -->
-                    </span>
-                </div>
-                <button class="button-contentclose">
-                    <svg class="icon icon--close">
-                        <use href="#icon-close"></use>
-                    </svg>
-                </button>
-            </div>
-           
-            <!-- index -->
-            <div class="sections__index">
-                <span class="sections__index-current">
-						<span class="sections__index-inner">01</span>
-                </span>
-                <span class="sections__index-total">04</span>
-            </div>
-            
-            <!-- navigation down -->
-            <nav class="sections__nav">
-                <button class="sections__nav-item sections__nav-item--prev">
-                    <svg class="icon icon--navup">
-                        <use href="#icon-navup"></use>
-                    </svg>
-                </button>
-                <button class="sections__nav-item sections__nav-item--next">
-                    <svg class="icon icon--navdown">
-                        <use href="#icon-navdown"></use>
-                    </svg>
-                </button>
-            </nav>
-            
-            <!-- sections our story-->
-            <section class="section section--current">
-                <div class="section__content">
-                    <h2 class="section__title">our &nbsp; story</h2>
-                    <p class="section__description">
-                        <span class="section__description-inner">
-                            Trendy Dots is a boutique digital lab. making trend and exploratory data analysis on the new and old markets.
-                             We model the internet behaviour and forecast the evolution of markets, products, companies, etc. using innovative AI algorithms.
-						  </span>
-                    </p>
-                </div>
-                <div class="section__img">
-                    <div class="section__img-inner" style="background-image: url(img/1.png); -webkit-box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);-moz-box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);"></div>
-                </div>
-                <div class="section__more">
-                    <div class="section__more-inner section__more-inner--bg1">
-                        <span class="section__more-text">Want to know more?</span>
-                        <a href="/blog.html" class="section__more-link">
-                            <span class="section__more-linktext">Blog</span>
-                            <svg class="icon icon--arrowlong">
-                                <use href="#icon-arrowlong"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="section__expander"></div>
-                <ul class="section__facts">
-                    <li class="section__facts-item">
-                        <h3 class="section__facts-title">Social Informatics</h3>
-                        <span class="section__facts-detail">Discovering internet behaviour</span>
-                    </li>
-                    <li class="section__facts-item">
-                        <h3 class="section__facts-title">Exploratory Data Analysis</h3>
-                        <span class="section__facts-detail">Analyze collective interest through innovative techniques</span>
-                    </li>
-                    <!-- 
-                    <li class="section__facts-item">
-                        <h3 class="section__facts-title">Lake depth</h3>
-                        <span class="section__facts-detail">With 55m it's the deepest</span>
-                    </li>
-                    <li class="section__facts-item section__facts-item--clickable" data-gallery="gallery1">
-                        <div class="section__facts-img">
-                            <img src="img/thumb1.jpg" alt="Some image" />
-                            <svg class="icon icon--grid">
-                                <use href="#icon-grid"></use>
-                            </svg>
-                        </div>
-                        <h3 class="section__facts-title">More impressions</h3>
-                        <span class="section__facts-detail">A collection of images</span>
-                    </li>
-                    -->
-                </ul>
-                <!--
-                <div class="section__gallery" id="gallery1">
-                    <h3 class="section__gallery-item section__gallery-item--title">More impressions</h3>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb1.jpg" alt="Some image" /></a>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb2.jpg" alt="Some image" /></a>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb3.jpg" alt="Some image" /></a>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb4.jpg" alt="Some image" /></a>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb5.jpg" alt="Some image" /></a>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb6.jpg" alt="Some image" /></a>
-                </div>
-                -->
-            </section>
-            <!--/ section who we are -->
-            <section class="section">
-                <div class="section__content">
-                    <h2 class="section__title">What &nbsp; we &nbsp; do</h2>
-                    <p class="section__description">
-                        <span class="section__description-inner">
-                             We apply data science best practices to big data, aimig to produce highly valuable knowledge.
-                             The trendy dots platform is a meeting point for combining and correlating data from large public sources.
-                             With a strong focus on user experience, we produce reports that tell stories with data.
-						    </span>
-                    </p>
-                </div>
-                <div class="section__img">
-                    <div class="section__img-inner" style="background-image: url(img/2.png); -webkit-box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);-moz-box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);">
-                    </div>
-                </div>
-                <div class="section__more">
-                    <div class="section__more-inner section__more-inner--bg2">
-                        <span class="section__more-text">Want to know more?</span>
-                        <a href="/blog.html" class="section__more-link">
-                            <span class="section__more-linktext">Blog</span>
-                            <svg class="icon icon--arrowlong">
-                                <use href="#icon-arrowlong"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="section__expander"></div>
-                <ul class="section__facts">
-                    <li class="section__facts-item">
-                        <h3 class="section__facts-title">Trend analysis</h3>
-                        <span class="section__facts-detail">Looking at how data evolves over time</span>
-                    </li>
-                    <li class="section__facts-item">
-                        <h3 class="section__facts-title">Correlation analysis</h3>
-                        <span class="section__facts-detail">Associating meaningful data trends</span>
-                    </li>
-                    <!--
-                    <li class="section__facts-item">
-                        <h3 class="section__facts-title">Lake depth</h3>
-                        <span class="section__facts-detail">With 55m it's the deepest</span>
-                    </li>
-                    <li class="section__facts-item section__facts-item--clickable" data-gallery="gallery2">
-                        <div class="section__facts-img">
-                            <img src="img/thumb2.jpg" alt="Some image" />
-                            <svg class="icon icon--grid">
-                                <use href="#icon-grid"></use>
-                            </svg>
-                        </div>
-                        <h3 class="section__facts-title">More impressions</h3>
-                        <span class="section__facts-detail">A collection of images</span>
-                    </li>
-                    -->
-                </ul>
-                <!--
-                <div class="section__gallery" id="gallery2">
-                    <h3 class="section__gallery-item section__gallery-item--title">More impressions</h3>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb5.jpg" alt="Some image" /></a>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb6.jpg" alt="Some image" /></a>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb1.jpg" alt="Some image" /></a>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb2.jpg" alt="Some image" /></a>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb3.jpg" alt="Some image" /></a>
-                    <a class="section__gallery-item" href="#"><img src="img/thumb4.jpg" alt="Some image" /></a>
-                </div>
-                -->
-            </section>
-            <!--/ section our clients-->
-            <section class="section">
-                <div class="section__content">
-                    <h2 class="section__title">Happy &nbsp; clients</h2>
-                    <div class="section__description"><span class="section__description-inner">
-                    Want to be one of our happy clients?</span>
-                     <!-- contact form -->
-                        <form id="signupform1" accept-charset="UTF-8" action="https://usebasin.com/f/06dcf3d4ebaf" method="POST">
-                            <div class="form-group input-group">
-                                <label for="email"></label>
-                                <input class="m-input" type="email" name="email" placeholder="Email Address" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please provide a valid email address">
-                            </div>
-
-                            <div class="form-group input-group">
-                                <label for="letsDoBusiness"></label>
-                                <input class="m-input" type="text" name="letsDoBusiness" placeholder="Your message" id="letsDoBusiness" required>
-                            </div>
-                            <br>
-                            <div class="form-group">
-                                <button type="submit" class="submit btn btn-primary btn-shadow btn-gradient" style=" font-weight: 800;color: #FBB82B;">Send Message</button>
-                            </div>
-                        </form>
-                        <!-- /contact form -->
-                    </div>
-                </div>
-                <div class="section__img">
-                    <div class="section__img-inner" style="background-image: url(img/3.png); -webkit-box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);-moz-box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);">
-                    </div>
-                </div>
-                <div class="section__more">
-                    <div class="section__more-inner section__more-inner--bg3">
-                        <span class="section__more-text">Want to know more?</span>
-                        <a href="/blog.html" class="section__more-link">
-                            <span class="section__more-linktext">Blog</span>
-                            <svg class="icon icon--arrowlong">
-                                <use href="#icon-arrowlong"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="section__expander"></div>
-                <ul class="section__facts">
-                    <li class="section__facts-item">
-                        <h3 class="section__facts-title">We transform data into knowledge</h3>
-                        <span class="section__facts-detail">and the internet is full of data</span>
-                    </li>
-                    <!--
-                    <li class="section__facts-item">
-                        <h3 class="section__facts-title"> </h3>
-                        <span class="section__facts-detail">Kayaking the whole lake</span>
-                    </li>
-                    <li class="section__facts-item">
-                        <h3 class="section__facts-title">Running and more</h3>
-                        <span class="section__facts-detail">With 55m it's the deepest</span>
-                    </li>
-                    <li class="section__facts-item">
-                        <h3 class="section__facts-title">Starting to walk</h3>
-                        <span class="section__facts-detail">An aerial view of the lake</span>
-                    </li>
-                    -->
-                </ul>
-            </section>
-            <!--/ section contact-->
-            <section class="section">
-                <div class="section__content">
-                    <h2 class="section__title">Contact &nbsp; us</h2>
-                    <div class="section__description">
-                        
-                        <!-- contact form -->
-                        <form id="signupform" accept-charset="UTF-8" action="https://usebasin.com/f/06dcf3d4ebaf" method="POST">
-                            <div class="form-group input-group">
-                                <label for="fullname"></label>
-                                <input class="m-input" type="text" name="fullname" placeholder="Full Name" class="m-input" id="fullname">
-                            </div>
-
-                            <div class="form-group input-group">
-                                <label for="email"></label>
-                                <input class="m-input" type="email" name="email" placeholder="Email Address" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please provide a valid email address">
-                            </div>
-
-                            <div class="form-group input-group">
-                                <label for="clientMessage"></label>
-                                <input class="m-input" type="text" name="clientMessage" placeholder="Your message" id="clientMessage" required>
-                            </div>
-                            <br>
-                            <div class="form-group">
-                                <button type="submit" class="submit btn btn-primary btn-shadow btn-gradient" style=" font-weight: 800;color: #FBB82B;">Send Message</button>
-                            </div>
-                        </form>
-                        <!-- /contact form -->
-                        <span class="section__description-inner">
-                            We are always happy to hear your thoughts! Reach out and we'll come back at you as soon as possible.
-                            </span>
-                    </div>
-                </div>
-                <div class="section__img">
-                     
-                    <div class="section__img-inner" style="background-image: url(img/4.png); -webkit-box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);-moz-box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);box-shadow: inset 18px 0px 102px -31px rgba(0,0,0,0.58);">
-                        
-                    </div>
-                    
-                </div>
-                <div class="section__more">
-                    <div class="section__more-inner section__more-inner--bg4">
-                        <span class="section__more-text">
-                        <a href="https://twitter.com/trendydots" target="_blank" > 
-                                        <img src="img/twitter_black.png" style="height: 1em; float: left"/> &nbsp; @trendydots
-                            </a>
-                        </span>
-                        <!--
-                        <a href="#" class="section__more-link">
-                            <span class="section__more-linktext"></span>
-                            <svg class="icon icon--arrowlong">
-                                <use href="#icon-arrowlong"></use>
-                            </svg>
-                        </a>
-                        -->
-                    </div>
-                </div>
-                <div class="section__expander"></div>
-                
-                <ul class="section__facts">
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Thank you for your interest in our work.</h3>
-							<span class="section__facts-detail"></span>
-						</li>
-						  <!--
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">Walking around</h3>
-							<span class="section__facts-detail">With 55m it's the deepest</span>
-						</li>
-						<li class="section__facts-item">
-							<h3 class="section__facts-title">How many miles?</h3>
-							<span class="section__facts-detail">An aerial view of the lake</span>
-						</li>
-						-->
-                </ul>
-                
-            </section>
-            <!--/ section -->
+<body class="htmlNoPages eupopup eupopup-bottom eupopup-style-compact">
+  <img src="3.png" class="gwd-img-1a3v">
+  <img src="4.png" class="gwd-img-14i0">
+  <img src="2.png" class="gwd-img-1uan" id="page2Media">
+  <img src="1.png" class="gwd-img-1998" id="page1Media">
+  <div class="gwd-div-1sxe" id="page1Text">
+    <div class="gwd-div-1kug" id="header">
+      <img src="logo.png" class="gwd-img-n42l" id="logo">
+      <p class="gwd-p-nsz4">trendy dots</p>
+    </div>
+    <div class="gwd-div-9729 gwd-div-1521">
+      <p class="gwd-p-6mvh">our story</p>
+      <p class="gwd-p-1em6"><span class="gwd-span-1nog">Trendy Dots is a boutique digital lab. making trend and exploratory data analysis on the new and old markets. We model the internet behaviour and forecast the evolution of markets, products, companies, etc. using innovative AI algorithms.</span><br>
+        
+      </p>
+    </div>
+  </div>
+  <div class="gwd-div-1ej3" id="page1Summary">
+    <div class="gwd-div-3afy" id="page1SummaryText">
+      <p class="gwd-p-1cu1">Social Informatics</p>
+      <p class="gwd-p-18oe">Discovering internet behaviour</p>
+      <p class="gwd-p-1qr0">Exploratory&nbsp; Data Analysis</p>
+      <p class="gwd-p-exsd">Analise collective interest through innovative techniques</p>
+    </div>
+  </div>
+  <div class="gwd-div-mx5a" id="page2Text">
+    <div class="gwd-div-9729">
+      <p class="gwd-p-6mvh">what we do</p>
+      <p class="gwd-p-1em6">We apply data science best practices to big data, aimig to produce highly valuable knowledge. The trendy dots platform is a meeting point for combining and correlating data from large public sources. With a strong focus on user experience, we produce
+        reports that tell stories with data.
+      </p>
+    </div>
+  </div>
+  <div class="gwd-div-1ej3 gwd-div-4bf6" id="page2Summary">
+    <div class="gwd-div-3afy" id="page1SummaryText_1">
+      <p class="gwd-p-1cu1">Trend Analysis</p>
+      <p class="gwd-p-18oe">Looking at how data evolves over time</p>
+      <p class="gwd-p-1qr0">Correlation Analysis</p>
+      <p class="gwd-p-exsd">Meaningful association of data trends</p>
+    </div>
+  </div>
+  <div class="gwd-div-mx5a gwd-div-s0or" id="page3Text">
+    <div class="gwd-div-9729">
+      <p class="gwd-p-6mvh">contact us</p>
+      <p class="gwd-p-1em6">Want to be one of our happy clients?</p>
+      <!-- contact form -->
+      <form id="signupform" accept-charset="UTF-8" action="https://usebasin.com/f/06dcf3d4ebaf" method="POST" class="gwd-form-11dq">
+        <div class="form-group input-group">
+          <label for="fullname"></label>
+          <input class="m-input" type="text" name="fullname" placeholder="Full Name" id="fullname">
         </div>
-        <!--/ sections -->
-    </main>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/charming.min.js"></script>
-    <script src="js/anime.min.js"></script>
-    <script src="js/main.js"></script>
-    
+        <div class="form-group input-group">
+          <label for="email"></label>
+          <input class="m-input" type="email" name="email" placeholder="Email Address" id="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please provide a valid email address">
+        </div>
+        <div class="form-group input-group">
+          <label for="clientMessage"></label>
+          <input class="m-input" type="text" name="clientMessage" placeholder="Your message" id="clientMessage" required="">
+        </div><br>
+        
+        <div class="form-group">
+          <button type="submit" style="font-weight: 800;color: #FBB82B;">Send Message</button>
+        </div>
+      </form>
+      <!-- /contact form -->
+    </div>
+  </div>
+  <div class="gwd-div-25b1" id="footer">
+    <p class="gwd-p-g9j6"><strong class=""><span class="gwd-span-qcoj">©</span> copyright&nbsp; </strong><strong class="">trendydots.com</strong>
+    </p>
+    <p class="gwd-p-1glz">image credit: Octopus</p>
+  </div>
+
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113784035-1"></script>
 <script>
@@ -519,6 +119,5 @@
         }
 
     </script>
-</body>
 
-</html>
+</body></html>

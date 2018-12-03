@@ -6,8 +6,7 @@
     <meta charset="utf-8">
     <title>Trendy Dots</title>
     <meta name="author" content="trendydots">
-    <meta name="description" content="Trendy Dots is a boutique digital lab. making trend and exploratory data analysis on the new and old markets. We model the internet behaviour and forecast the evolution of markets, products, companies, etc. using innovative AI algorithms."
-    />
+    <meta name="description" content="Trendy Dots is a boutique digital lab. making trend and exploratory data analysis on the new and old markets. We model the internet behaviour and forecast the evolution of markets, products, companies, etc. using innovative AI algorithms." />
     <meta name="keywords" content="digital lab, exploratory data analysis, behavioural economics, trend analysis" />
 
     <link rel="shortcut icon" href="logo.png">
@@ -365,7 +364,9 @@
             color: black
         }
 
+
         @media only screen and (max-width: 768px) {
+
             /* For mobile phones: */
             .gwd-p-1em6 {
                 position: absolute;
@@ -378,14 +379,15 @@
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Oswald|Lato|Roboto|Roboto+Condensed|Ubuntu" rel="stylesheet"
-        type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Oswald|Lato|Roboto|Roboto+Condensed|Ubuntu"
+        rel="stylesheet" type="text/css">
 
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script async="" defer="" src="//usebasin.com/f/06dcf3d4ebaf/ahoy.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/jquery-eu-cookie-law-popup.css" />
     <script src="js/jquery-eu-cookie-law-popup.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
@@ -402,8 +404,10 @@
         <div class="gwd-div-9729 gwd-div-1521">
             <p class="gwd-p-6mvh">our story</p>
             <p class="gwd-p-1em6">
-                Trendy Dots is a boutique digital lab. making trend and exploratory data analysis on the new and old markets. We model the
-                internet behaviour and forecast the evolution of markets, products, companies, etc. using innovative AI algorithms.
+                Trendy Dots is a boutique digital lab. making trend and exploratory data analysis on the new and old
+                markets. We model the
+                internet behaviour and forecast the evolution of markets, products, companies, etc. using innovative AI
+                algorithms.
                 <br>
 
             </p>
@@ -426,8 +430,10 @@
     <div class="gwd-div-mx5a" id="page2Text">
         <div class="gwd-div-9729">
             <p class="gwd-p-6mvh">what we do</p>
-            <p class="gwd-p-1em6">We apply data science best practices to big data, aimig to produce highly valuable knowledge. The trendy dots
-                platform is a meeting point for combining and correlating data from large public sources. With a strong focus
+            <p class="gwd-p-1em6">We apply data science best practices to big data, aimig to produce highly valuable
+                knowledge. The trendy dots
+                platform is a meeting point for combining and correlating data from large public sources. With a strong
+                focus
                 on user experience, we produce reports that tell stories with data.
                 <br>
                 <br>
@@ -475,24 +481,29 @@
             <p class="gwd-p-6mvh">contact us</p>
             <p class="gwd-p-1em6">Want to be one of our happy clients?</p>
             <!-- contact form -->
-            <form id="signupform" accept-charset="UTF-8" action="https://usebasin.com/f/06dcf3d4ebaf" method="POST" class="gwd-form-11dq">
+            <form id="signupform" accept-charset="UTF-8" action="https://usebasin.com/f/06dcf3d4ebaf" enctype="multipart/form-data" method="POST"
+                class="gwd-form-11dq">
                 <div class="form-group input-group">
                     <label for="fullname"></label>
                     <input class="m-input" type="text" name="fullname" placeholder="Full Name" id="fullname">
                 </div>
                 <div class="form-group input-group">
                     <label for="email"></label>
-                    <input class="m-input" type="email" name="email" placeholder="Email Address" id="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                        title="Please provide a valid email address">
+                    <input class="m-input" type="email" name="email" placeholder="Email Address" id="email" required=""
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please provide a valid email address">
                 </div>
                 <div class="form-group input-group">
                     <label for="clientMessage"></label>
-                    <input class="m-input" type="text" name="clientMessage" placeholder="Your message" id="clientMessage" required="">
+                    <input class="m-input" type="text" name="clientMessage" placeholder="Your message" id="clientMessage"
+                        required="">
                 </div>
                 <br>
 
+                <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
+                <br>
+
                 <div class="form-group">
-                    <button type="submit" style="font-weight: 800;color: #FBB82B;">Send Message</button>
+                    <button type="submit" value="submit" style="font-weight: 800;color: #FBB82B;">Send Message</button>
                 </div>
             </form>
             <!-- /contact form -->

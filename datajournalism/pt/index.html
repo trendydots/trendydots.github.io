@@ -21,6 +21,10 @@
       width: 100%;
     }
 
+    .grecaptcha-badge {
+      display: none;
+    }
+
     @media (min-width: 768px) {
       .form-style {
         display: flex;
@@ -33,7 +37,12 @@
   <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/jquery-eu-cookie-law-popup.css" />
   <script src="../js/jquery-eu-cookie-law-popup.js"></script>
-
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("invisible-recaptcha-form").submit();
+    }
+  </script>
 </head>
 
 <body class="htmlNoPages eupopup eupopup-bottom eupopup-style-compact">
@@ -128,12 +137,13 @@
         terá a oportunidade de ser selecionado para a sessão de testes beta. </p>
 
       <div class="max-w-sm mt-4 sm:flex" style="box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);">
-        <form accept-charset="UTF-8" action="https://usebasin.com/f/06dcf3d4ebaf" enctype="multipart/form-data" method="POST"
-          class="form-style">
+        <form id="invisible-recaptcha-form" accept-charset="UTF-8" action="https://usebasin.com/f/06dcf3d4ebaf" enctype="multipart/form-data"
+          method="POST" class="form-style">
           <input type="email" class="block w-full focus:outline-0 bg-white py-3 px-6 mb-2 sm:mb-0" name="email"
-            placeholder="Insira o seu email " required="">
+            placeholder="Enter your email" required="">
           <input type="hidden" name="comment" value="Subscribe me to trendy dots . data journalism">
-          <button type="submit" style="min-height: 30px; white-space:nowrap;" class="uppercase text-sm text-white focus:outline-0 w-full sm:w-auto bg-black hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6">Inscreva-se</button>
+          <button type="submit" style="min-height: 30px;" class="g-recaptcha uppercase text-sm text-white focus:outline-0 w-full sm:w-auto bg-black hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6"
+            data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline">Inscreva-se</button>
         </form>
       </div>
     </div>
@@ -146,7 +156,9 @@
       </a>
       <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
         <h4 class="py-2 uppercase font-bold tracking-wide">Sobre nós</h4>
-        <p>Trendy Dots é um pequeno laboratório digital que efetua análise exploratória de dados e de tendências sobre novos e antigos mercados. Modelamos o comportamento da Internet e prevemos a evolução de mercados, produtos, empresas, etc., usando algoritmos de IA inovadores.</p>
+        <p>Trendy Dots é um pequeno laboratório digital que efetua análise exploratória de dados e de tendências sobre
+          novos e antigos mercados. Modelamos o comportamento da Internet e prevemos a evolução de mercados, produtos,
+          empresas, etc., usando algoritmos de IA inovadores.</p>
       </div>
       <div class="text-grey-dark flex flex-col items-center w-full md:w-1/4 mt-6 md:mt-0">
         <h4 class="inline-block py-2 px-3 uppercase font-bold tracking-wide text-grey-darkest">Siga-nos</h4>

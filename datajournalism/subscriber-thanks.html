@@ -44,10 +44,7 @@
 </head>
 
 <body class="htmlNoPages eupopup eupopup-bottom eupopup-style-compact" style="background: #f5f5f5">
-  <nav class="font-sans bg-white text-center flex justify-between p-4 container overflow-hidden" style="
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    max-width: 100%;
-">
+  <nav class="font-sans bg-white text-center flex justify-between p-4 container overflow-hidden" style="box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); max-width: 100%; position: fixed; top: 0; z-index: 100; ">
     <span class="flex items-center">
       <a href="https://trendydots.com" class="block text-left" target="_blank">
         <img src="assets/img/logo.png" class="h-8 sm:h-8 rounded-full" alt="logo">
@@ -74,7 +71,7 @@
   </nav>
 
 
-  <section class="my-8 font-sans container max-w-xl m-auto flex flex-col md:flex-row sm:items-center">
+  <section class="my-8 font-sans container max-w-xl m-auto flex flex-col md:flex-row sm:items-center" style="margin-top: 80px">
     <div class="w-full md:w-1/2 flex flex-col justify-center items-start px-6 py-0 md:py-8 md:px-8 lg:items-start">
       <!--
         <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">various aspects</label>
@@ -85,15 +82,15 @@
       Your subscrition is being processed. You will receive an email with the outcome.
       </p>
     </div>
-    <div class="w-full md:w-1/2 flex flex-row md:flex-col justify-between md:justify-center items-center p-2 md:p-8 items-center md:items-start">
-      <div class="flex items-center sm:border-r md:border-b md:border-r-0 p-4 w-1/2 md:w-auto">
+    <div class="w-full lg:w-1/2 flex flex-col justify-between md:justify-center items-center p-2 md:p-8 items-center md:items-start">
+      <div class="flex items-center sm:border-b md:border-b md:border-r-0 p-4 lg:w-full md:w-full sm:w-full sm:display-none">
         <div class="w-14 h-14 rounded-full mr-4 bg-grey-light" alt="data trends"></div>
         <div class="">
           <h2 class="text-black font-medium">See the latest trends for your keywords to start your article</h2>
           <p class="text-grey-dark leading-normal"> <br>When you are starting your article, data trends are essential. You will get the latest internet search trends, geographical distribution of internet searches and latest news about the subject that interests you.</p>
         </div>
       </div>
-      <div class="flex items-center p-4 w-1/2 md:w-auto">
+      <div class="flex items-center p-4 lg:w-full md:w-full sm:w-full">
         <div class="w-14 h-14 rounded-full mr-4 bg-grey-light" alt="Avatar of Jonathan Reinink"></div>
         <div class="">
           <h2 class="text-black font-medium">Experiment with headlines and plan your article</h2>
@@ -118,7 +115,8 @@
       <p class="leading-normal mb-4 text-grey-dark">A report allows you input up to 5 keywords. Keywords are semantically annotated and the platform performs several queries to retrieve several publically available data sets.</p>
     </div>
   </section>
-  <section class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
+  
+  <section class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row  text-center lg:text-left sm:items-center">
     <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
       <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">Finetuning your report</label>
       <h1 class="my-4 font-normal">View. Deduce. Take conclusions</h1>

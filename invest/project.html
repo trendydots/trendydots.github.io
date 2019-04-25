@@ -14,8 +14,9 @@
     href=https://use.fontawesome.com/releases/v5.0.13/css/all.css
     integrity=sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp
     crossorigin="anonymous">
-    <title>trendy dots - investor news platform</title>
+    <title>trendy dots - market research</title>
     <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png" />
+    <link rel="stylesheet" href="./assets/css/aos.css" />
 
     <style>
       *:focus {
@@ -97,11 +98,13 @@
       <div
         class="w-full lg:w-1/2"
         style="box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);"
+        data-aos="fade-right"
       >
         <img src="./assets/img/in0.png" alt="" />
       </div>
       <div
         class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
+        data-aos="fade-left"
       >
         <h1 class="my-4 font-normal">Information empowers good decisions.</h1>
         <p class="leading-normal mb-4 text-grey-dark">
@@ -111,11 +114,14 @@
         </p>
       </div>
     </section>
+
     <section
       class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center"
     >
       <div
         class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
+        data-aos="fade-right"
+        data-aos-delay="300"
       >
         <h1 class="my-4 font-normal">
           News insights into company shares, indices, Forex, commodities,
@@ -130,7 +136,7 @@
           and interest in the events, companies, currencies, etc. you set.
         </p>
       </div>
-      <div class="w-full lg:w-1/2">
+      <div class="w-full lg:w-1/2" data-aos="fade-left" data-aos-delay="300">
         <img
           src="./assets/img/in3.png"
           alt=""
@@ -159,6 +165,7 @@
           action="https://usebasin.com/f/06dcf3d4ebaf"
           enctype="multipart/form-data"
           method="POST"
+          data-aos="fade-up"
         >
           <div
             class="relative border rounded mb-4 shadow appearance-none label-floating"
@@ -324,6 +331,10 @@
         >
       </div>
     </footer>
+    <script src="./assets/js/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script

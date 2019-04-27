@@ -20,8 +20,8 @@
   </head>
   <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     <nav
-      class="font-sans bg-white text-center flex  justify-between p-4  container overflow-hidden border-b"
       style="max-width: 100%; position: fixed; top:0; z-index: 1000"
+      class="font-sans bg-white text-center flex justify-between py-4 overflow-hidden px-4 w-screen border-b"
     >
       <span class="flex items-center">
         <a href="" class="block text-left" target="_blank">
@@ -39,7 +39,57 @@
           &nbsp; Vienna</span
         >
       </span>
-      <ul class="text-sm text-grey-dark list-reset flex items-center">
+
+      <div class="text-sm lg:flex md:flex hidden">
+        <ul
+          class="text-sm text-grey-dark list-reset items-center flex flex-row"
+        >
+          <li>
+            <a
+              href="#program"
+              class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
+              >Program</a
+            >
+          </li>
+          <li>
+            <a
+              href="#challenges"
+              class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
+              >Challenges</a
+            >
+          </li>
+          <li class="pr-2">
+            <a
+              href="#about"
+              class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
+              >About us</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="block lg:hidden md:hidden">
+        <button
+          id="navButton"
+          class="flex items-center border bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <div
+      id="navMenu"
+      class="text-sm w-full lg:hide md:hide hidden border-b"
+      style="position:fixed; background: white; z-index: 1000; top:66px"
+    >
+      <ul class="text-sm text-grey-dark flex list-reset items-center flex-col">
         <li>
           <a
             href="#program"
@@ -61,8 +111,12 @@
             >About us</a
           >
         </li>
+        <li class="pr-2">
+          &nbsp;
+        </li>
       </ul>
-    </nav>
+    </div>
+
     <section
       id="program"
       class="font-sans container max-w-xl mx-auto flex flex-col md:flex-row sm:items-start"
@@ -460,6 +514,14 @@
     <script src="https://trendydots.com/datajournalism/assets/js/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      function menuToggle() {
+        document.querySelector("#navMenu").classList.toggle("hidden");
+      }
+      document
+        .querySelector("#navButton")
+        .addEventListener("click", menuToggle);
     </script>
   </body>
 </html>

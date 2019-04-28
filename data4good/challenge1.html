@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="./css/taylwind.css" rel="stylesheet" />
+    <link
+    href=https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900
+    rel="stylesheet"> <link rel="stylesheet"
+    href=https://use.fontawesome.com/releases/v5.6.3/css/all.css
+    integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/aos.css" />
+    <link rel="icon" href="./img/logo2.png" />
+    <title>data4good</title>
+  </head>
+  <body>
+    <nav
+      style="max-width: 100%; position: fixed; top:0; z-index: 1000"
+      class="font-sans bg-white text-center flex justify-between py-4 overflow-hidden px-4 w-screen border-b"
+    >
+      <span class="flex items-center">
+        <a
+          href="./index.html"
+          class="inline-block text-left flex items-center"
+          style="text-decoration: none; color:black"
+        >
+          <img src="./img/logo2.png" class="h-8 sm:h-8" alt="logo" />
+          &nbsp;
+          <b class="text-lg" style="font-size: 1.35rem;">
+            data4good
+          </b>
+        </a>
+
+        <span class="text-lg flex text-left" style="font-size: 1rem;">
+          &nbsp; Vienna
+        </span>
+      </span>
+
+      <div class="text-sm lg:flex md:flex hidden">
+        <ul
+          class="text-sm text-grey-dark list-reset items-center flex flex-row"
+        >
+          <li>
+            <a
+              href="./index.html"
+              class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
+              >Home</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="block lg:hidden md:hidden">
+        <button
+          id="navButton"
+          class="flex items-center border bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <div
+      id="navMenu"
+      class="text-sm w-full lg:hide md:hide hidden border-b"
+      style="position:fixed; background: white; z-index: 1000; top:64px"
+    >
+      <ul class="text-sm text-grey-dark flex list-reset items-center flex-col">
+        <li>
+          <a
+            href="./index.html"
+            class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
+            >Home</a
+          >
+        </li>
+        <li class="pr-2">
+          &nbsp;
+        </li>
+      </ul>
+    </div>
+    <!-- Challenge 1 -->
+    <section
+      id="challenges"
+      style="margin-top: 80px"
+      class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center"
+    >
+      <div class="w-full lg:w-1/2" data-aos="fade-up">
+        <img src="./img/1.png" alt="" />
+      </div>
+      <div
+        class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
+      >
+        <label for="tagline" class=" tracking-wide text-grey-dark font-bold">
+          <a
+            href="https://gruenstattgrau.at/en/"
+            target="_blank"
+            style="text-decoration: none;"
+          >
+            <img src="./img/ngo1.png" style="height: 60px" />
+          </a>
+        </label>
+        <h1 class="my-4 font-normal">
+          Textual analysis of urban greening projects in the press
+        </h1>
+        <p class="leading-normal mb-4 ">
+          The non-profit portal GruenStattGrau is a knowledge-management
+          platform focused on urban greening. With the consideration for climate
+          change, water management and air pollution the competency center aims
+          to promote the development of green rooftops, facades and urban
+          farming.
+          <br /><br />
+          The data4good Hackathon project will focus on a textual analysis of
+          the relevant literature (magazines, websites, blogs, …), to understand
+          the geographical distribution of urban greening projects, as well as
+          the development of topics over time.
+        </p>
+        <!-- 
+     <button
+       class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent"
+     >
+       Learn More
+     </button>
+     -->
+      </div>
+    </section>
+
+    <section
+    class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center"
+  >
+    <div
+      class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
+    >
+      
+      <h1 class="my-4 font-normal">Method</h1>
+      <p class="leading-normal mb-4">
+          A team of very talented data scientists have decided to help solving this challenge. 
+          The main objective is to help GSG to analyze and extract insights from unstructured content.
+      </p>
+      <p class="leading-normal mb-4">
+          The analysis will help to discover the obstacles the industry is struggling
+        with. The results will enable GSG to detect potential areas for green
+        roofs. Based on the detection they can suggest funding opportunities for
+        greenery projects
+      </p>
+      <p class="leading-normal mb-4">
+          Data will be extracted from magazine articles published in the last few
+      years. The articles are provided in PDF format. Additional open datasets:
+      <ul class="flex flex-col text-left">
+        <li>Satellite images</li>
+        <li>Trees in the city (Baumkataster)</li>
+        <li>Open Maps</li>
+      </ul>
+      </p>
+    </div>
+    <div class="w-full lg:w-1/2">
+      <img
+        src="./media/ch1-team.png"
+        alt=""
+      />
+    </div>
+  </section>
+    <section
+      class="font-sans container m-auto flex flex-col py-8 max-w-xl text-center px-6"
+    >
+      <h3
+        class="my-8 max-w-full m-auto text-3xl md:text-4xl lg:text-5xl font-medium"
+      >
+        Results
+      </h3>
+      <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-6 text-left">
+          The following map represents the number of times that countries are mentioned in the texts from the Grünstattgrau. Note that the countries mentioned are not only specific to buildings with green roof tops. That distinction in the analysis has to be better worked out.
+      </p>
+     <iframe src="./misc/ch1-map-result.html" style="min-height: 450px"></iframe>
+     <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-6 text-left">
+        The team is working hard to achieve great results. They will be presented later. Plases stay tuned
+      </p>
+    </section>
+    <footer id="about" class="font-sans bg-white py-8 px-4">
+      <div
+        class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left"
+      >
+        <a
+          href="https://viennadatasciencegroup.at/data4good/"
+          class="block mr-4 w-full md:w-1/4"
+          style="text-decoration: none; color: black; text-align: center"
+        >
+          <img
+            src="./img/logo2.png"
+            class="h-8 sm:h-8 rounded-full"
+            alt="logo"
+          />
+          <br />
+          <span class="" style="font-size: 1.35rem;">
+            data4good
+          </span>
+        </a>
+
+        <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
+          <h4 class="py-2 uppercase font-bold tracking-wide">About US</h4>
+          <p>
+            Rapid advances in Artificial Intelligence and data processing
+            technologies are having a deep impact on society.This has triggered
+            a certain amount of media hype about the opportunities and risks
+            behind this profound transformation. The data4good Hackathon aims to
+            close the gap between buzz and knowledge, paving the path for NGOs,
+            newbies, and practitioners to put AI’s promise to practice, and
+            learn first-hand how to deal with both its advantages and its
+            shortcomings.
+          </p>
+        </div>
+        <div
+          class="text-grey-dark flex flex-col items-center w-full md:w-1/4 mt-6 md:mt-0"
+        >
+          <h4
+            class="inline-block py-2 px-3 uppercase font-bold tracking-wide text-grey-darkest"
+          >
+            Follow Us
+          </h4>
+          <div class="flex pl-0 md:pl-4 justify-start text-3xl">
+            <a
+              class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline"
+              href="https://www.meetup.com/de-DE/Vienna-Data-Science-Group-Meetup/"
+              target="_blank"
+              ><i class="fab fa-meetup"></i
+            ></a>
+            <a
+              class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline"
+              href="https://twitter.com/ViennaDSG"
+              target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="block flex items-center text-grey-darkest hover:text-black no-underline"
+              href="https://www.youtube.com/channel/UC6QK4pOaKBmPRwGCFLYklLA"
+              target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-4 mt-4 text-grey-darker text-xs border-t border-grey-lighter text-center"
+      >
+        ©2019 Vienna Data Science Group. All rights reserved. Webdesign &
+        development
+        <a href="https://trendydots.com/me/" target="_blank">
+          Cristian-Dan Bara</a
+        >
+      </div>
+    </footer>
+
+    <script src="./js/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      function menuToggle() {
+        document.querySelector("#navMenu").classList.toggle("hidden");
+      }
+      document
+        .querySelector("#navButton")
+        .addEventListener("click", menuToggle);
+    </script>
+  </body>
+</html>

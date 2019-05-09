@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="./css/taylwind.css" rel="stylesheet" />
+  <link href=https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900 rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" />
+  <link rel="stylesheet" href=https://use.fontawesome.com/releases/v5.6.3/css/all.css
+    integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/aos.css" />
+  <link rel="icon" href="./img/logo2.png" />
+  <title>Gentleman'style</title>
+</head>
+
+<body class="font-serif">
+  <nav style="max-width: 100%; position: fixed; top:0; z-index: 1000"
+    class="bg-white text-center flex justify-between py-4 overflow-hidden px-4 w-screen border-b">
+    <span class="flex items-center">
+      <a href="./index.html" class="inline-block text-left flex items-center"
+        style="text-decoration: none; color:black">
+        <img src="./img/logo2.png" class="h-8 sm:h-8" alt="logo" />
+      </a>
+
+      <span class="text-lg flex text-left" style="font-size: 1rem;">
+        &nbsp; Vienna
+      </span>
+    </span>
+
+    <div class="text-sm lg:flex md:flex hidden">
+      <ul class="text-sm text-grey-dark list-reset items-center flex flex-row">
+        <li>
+          <a href="./index.html"
+            class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Home</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="block lg:hidden md:hidden">
+      <button id="navButton" class="flex items-center border bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  <div id="navMenu" class="text-sm w-full lg:hide md:hide hidden border-b"
+    style="position:fixed; background: white; z-index: 1000; top:64px">
+    <ul class="text-sm text-grey-dark flex list-reset items-center flex-col">
+      <li>
+        <a href="./index.html"
+          class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Home</a>
+      </li>
+      <li class="pr-2">
+        &nbsp;
+      </li>
+    </ul>
+  </div>
+
+  <!-- Challenge 1 Intro -->
+  <section style="margin-top:40px"
+    class="my-8 px-4 pt-8 font-serif container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
+    <div class="w-full lg:w-1/2" data-aos="fade-right">
+      <img src="./img/2.png" class="rounded-lg" alt="" />
+    </div>
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <label for="tagline" class="tracking-wide text-grey-dark font-sans flex items-center">
+        <img src="./img/ngo2.png" style="height: 60px" />
+        Challenge 1</label>
+      <h1 class="my-4 font-normal">
+        The right shoe for the right occasion
+      </h1>
+      <p class="leading-normal mb-4 font-sans">
+        If you agree to participate in my experiment, I kindly ask you to take the role of a teacher,
+        helping a young student understand the basic concept of wearing the right shoe for the right occasion.
+        <br />
+      </p>
+      <h2 class="my-4 font-normal">Method</h2>
+      <p class="leading-normal mb-4 font-sans">
+        As it's teacher, plase help our Gaston make correct associations between season, material and types of shoes.
+        <br>
+        You will be presented with a "Dos" and a "Donts" section. Each section contans multiple cathegories with
+        notions that need to be associated. Add 10 Dos and 10 Donts.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Dos -->
+  <section
+    class="pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-start">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start px-8 items-center lg:items-start">
+
+      <h1 class="my-4 font-normal font-serif">
+        <i class="far fa-check-circle" style="color: green"></i>
+        Do
+      </h1>
+      <p class="leading-normal mb-4">
+        Let's teach Gaston what are Do's for wearing shoes according to the seasons. After you select a combination,
+        please click the <b>+</b> button to add it to Gaston's knowledge base. Your answer will be visible in the
+        diagram on
+        the side.
+      </p>
+      <br>
+    </div>
+    <div class="w-full lg:w-1/2">
+      <h1 class="my-4 font-normal font-serif"> <span id="remaining-dos">10</span> remaining</h1>
+      <div class="flex flex-wrap -mx-3 mb-2">
+        <!-- season -->
+        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+            Season
+          </label>
+          <div class="relative">
+            <select
+              class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
+              id="do-season">
+              <option value="0">Select a season</option>
+              <option value="1">Spring</option>
+              <option value="2">Summer</option>
+              <option value="3">Autumn</option>
+              <option value="4">Winter</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- shoe material -->
+        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+            Material
+          </label>
+          <div class="relative">
+            <select
+              class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
+              id="do-material">
+              <option value="0">Select a material class </option>
+              <option value="1">Smooth leather (darker tones) </option>
+              <option value="1">Smooth leather (lighter tones)</option>
+              <option value="1">Cotton (darker tones)</option>
+              <option value="1">Cotton (lighter tones)</option>
+              <option value="1">Suade (darker tones)</option>
+              <option value="1">Suade (lighter tones)</option>
+
+            </select>
+          </div>
+        </div>
+
+        <!-- shoe types -->
+        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+            Types
+          </label>
+          <div class="relative">
+            <select
+              class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
+              id="do-type">
+              <option value="0">Select a shoe type</option>
+              <option value="1">Derby</option>
+              <option value="1">Oxford</option>
+              <option value="1">Monk</option>
+              <option value="1">Brogue</option>
+              <option value="1">Loafers</option>
+              <option value="1">Sneakers</option>
+              <option value="1">Boat shoes</option>
+              <option value="1">Espadrilles</option>
+              <option value="1">Sandals</option>
+              <option value="1">Chelsea boots</option>
+              <option value="1">Chukka boots</option>
+              <option value="1">Brogue boots</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <button style="text-decoration: none; margin-bottom: 20px" onclick="addDoRecords()"
+        class="rounded bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        Add to knowldge base
+      </button>
+    </div>
+  </section>
+  <section class="font-sans container max-w-xl m-auto flex text-center lg:text-left sm:items-start">
+    <div class="w-full flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <div id="sankey-do-seasons" class="w-full" style=" min-height: 600px"></div>
+    </div>
+  </section>
+
+  <br>
+  <br>
+
+  <!-- Donts -->
+  <section
+    class="border-t pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-start">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <h1 class="my-4 font-normal font-serif"><i class="far fa-times-circle" style="color:red"></i> Dont </h1>
+      <p class="leading-normal mb-4">
+        Let's teach Gaston what are Do's for wearing shoes according to the seasons. After you select a combination,
+        please click the <b>+</b> button to add it to Gaston's knowledge base. Your answer will be visible in the
+        diagram on
+        the side.
+      </p>
+      <br>
+    </div>
+    <div class="w-full lg:w-1/2">
+      <br> <br>
+      <h1 class="my-4 font-normal font-serif"> <span id="remaining-donts">10</span> remaining </h1>
+      <div class="flex flex-wrap -mx-3 mb-2">
+        <!-- season -->
+        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+            Season
+          </label>
+          <div class="relative">
+            <select
+              class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
+              id="dont-season">
+              <option value="0">Select a season</option>
+              <option value="1">Spring</option>
+              <option value="2">Summer</option>
+              <option value="3">Autumn</option>
+              <option value="4">Winter</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- shoe material -->
+        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+            Material
+          </label>
+          <div class="relative">
+            <select
+              class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
+              id="dont-material">
+              <option value="0">Select a material class </option>
+              <option value="1">Smooth leather (darker tones) </option>
+              <option value="1">Smooth leather (lighter tones)</option>
+              <option value="1">Cotton (darker tones)</option>
+              <option value="1">Cotton (lighter tones)</option>
+              <option value="1">Suade (darker tones)</option>
+              <option value="1">Suade (lighter tones)</option>
+
+            </select>
+          </div>
+        </div>
+
+        <!-- shoe types -->
+        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+            Types
+          </label>
+          <div class="relative">
+            <select
+              class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-grey"
+              id="dont-type">
+              <option value="0">Select a shoe type</option>
+              <option value="1">Derby</option>
+              <option value="1">Oxford</option>
+              <option value="1">Monk</option>
+              <option value="1">Brogue</option>
+              <option value="1">Loafers</option>
+              <option value="1">Sneakers</option>
+              <option value="1">Boat shoes</option>
+              <option value="1">Espadrilles</option>
+              <option value="1">Sandals</option>
+              <option value="1">Chelsea boots</option>
+              <option value="1">Chukka boots</option>
+              <option value="1">Brogue boots</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <button style="text-decoration: none; margin-bottom: 20px" onclick="addDontRecords()"
+        class="rounded bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        Add to knowldge base
+      </button>
+      <!-- 
+      <label>All year (pre-trained)</label>
+      <div id="sankey-dont-allyear" class="w-full"></div>
+      -->
+    </div>
+  </section>
+  <section class="font-sans container max-w-xl m-auto flex text-center lg:text-left sm:items-start">
+    <div class="w-full flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <div id="sankey-dont-seasons" class="w-full" style=" min-height: 600px"></div>
+    </div>
+  </section>
+
+  <footer id="about" class="border-t font-serif bg-white py-8 px-4">
+    <div
+      class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left">
+      <a href="#" class="block mr-4 w-full md:w-1/4" style="text-decoration: none; color: black; text-align: center">
+        <img src="./img/logo2.png" class="h-8 sm:h-8 rounded-full" alt="logo" />
+        <br />
+        <span class="" style="font-size: 1.35rem;">
+          <span style="font-size: 1rem;">Vienna</span>
+        </span>
+      </a>
+
+      <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
+        <h4 class="py-2 uppercase font-bold tracking-wide">About</h4>
+        <p class="font-sans">
+          The Gentleman’style experiment is developed by Cristian-Dan Bara within the frames of the <a
+            href="https://trendydots.com/project">trendy dots</a> project. It aims to help build a prototype for an AI
+          model which can give basic men’s style advices. <a href="https://trendydots.com/me/">Cristian-Dan</a> is
+          a non
+          conventional researcher with a great interest in web development, web design and pretty much everything web
+          related. Lately he is extending his knowledge in machine learning and artificial intelligence.
+
+        </p>
+      </div>
+      <div class="text-grey-dark flex flex-col items-center w-full md:w-1/4 mt-6 md:mt-0">
+        <h4 class="inline-block py-2 px-3 uppercase font-bold tracking-wide text-grey-darkest">
+          Follow Us
+        </h4>
+        <div class="flex pl-0 md:pl-4 justify-start text-2xl">
+          <!-- 
+            <a class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline" href="#"
+              target="_blank"><i class="fab fa-meetup"></i></a>
+              -->
+          <a class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline"
+            href="https://twitter.com/trendydots" target="_blank"><i class="fab fa-twitter"></i></a>
+          <!-- 
+            <a class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline" href="#"
+              target="_blank"><i class="fab fa-facebook"></i></a>
+            <a class="block flex items-center text-grey-darkest hover:text-black no-underline" href="#" target="_blank"><i
+                class="fab fa-youtube"></i></a>
+                -->
+        </div>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 text-grey-darker text-xs border-t border-grey-lighter text-center">
+      ©2019 trendy dots. All rights reserved.
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="js/app.js"></script>

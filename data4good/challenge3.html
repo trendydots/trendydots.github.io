@@ -84,9 +84,8 @@
         physical disabilities, Hilfswerk Österreich provide a matching service
         between patients and live-in care providers. These matchings require
         intense care and administrative effort; accordingly, early
-        cancellations caused by unsuitable combinations are undesirable. The
-        data4good Hackathon project will examine historical cases, in order to
-        reveal conflicts in ongoing relationships.
+        cancellations caused by unsuitable combinations are undesirable. The data4good Hackathon project will examine
+        historical cases, in order to reveal conflicts in ongoing relationships.
       </p>
     </div>
   </section>
@@ -105,11 +104,11 @@
 
       </p>
       <p class="leading-normal mb-4">
-        The data comes from Hilfswerk's 24-Stunden-Betreuung - Visitenblatt (visits) and Telefonprotokoll (phone calls).
-        The records from pdf forms which resulted in two dataframes containing heterogenious informations about the
-        cases. Each case belongs to one of the two classes (normal or conflict) and has a few to several records in time
-        order. The records include information on service activities that have been done (categorical type) as well as
-        additional information and service evaluation from both parties in the text format.
+        The data come from Hilfswerk's 24-Stunden-Betreuung - Visitenblatt (visits) and Telefonprotokoll (phone calls).
+        The records from the pdf forms resulted in two dataframes containing heterogeneous information about the cases.
+        Each case belongs to one of the two classes (normal or conflict) and has a few to several records in time
+        order. The records include information on service activities that have been done (categorical and text type) as
+        well as conversations with the caregivers and patients.
 
       </p>
       <p class="leading-normal mb-4">
@@ -157,23 +156,33 @@
       The team calculated sentiments present in each individual case report. As expected, conflict cases have a lower
       (unhappier) sentiment than non-conflict cases.
       Their analysis resulted in several insights:
-      <ul class="flex flex-col text-left m-auto">
-        <li>Both normal and conflicted cases have positive sentiments, but conflicted cases have a more negative
-          approach</li>
-        <li>The sentiments present in the text were the most important predicted os whether a case will become
-          conflicted or not.</li>
-        <li>The frerquency of usage for the word "nicht" is important and indicative the the classification </li>
-        <li>Many conflicts are detected in the first 3 montsh of the case</li>
-      </ul>
-      <img src="./misc/ch3-satisfaction-result.png" style="min-height: 350px" class="m-8">
-
     </p>
-    <h4 class="my-8 max-w-full m-auto text-3xl md:text-4xl lg:text-5xl font-medium">
-      Sentiment scrores for cases
+    <ul class="flex flex-col text-left max-w-lg m-auto">
+
+      <li> Most normal and conflicted cases have positive SentiWS
+        sentiment, but the average sentiment score is lower for
+        conflicted cases </li>
+      <li> Records of telephone calls have more negative
+        sentiments than records of visits. Larger numbers of
+        telephone calls are associated with conflict </li>
+      <li> Sentiments calculated based on the tf-idf analysis are the
+        most important predictors of whether the case is a conflict
+        or not </li>
+      <li> Some possible signs of conflict:
+        <br> ○ frequent use of the word 'nicht' (especially by the
+        caregiver)
+        <br> ○ usage of family words ('Tochter', 'Mutter', 'Gattin' etc)
+      </li>
+      <li> Many conflicts happen in the first four months of care </li>
+
+    </ul>
+
+    <h4 class="my-8 max-w-full m-auto text-3xl md:text-3xl lg:text-3xl font-medium">
+      Sentiment scores for cases
     </h4>
 
     <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-6 text-center">
-      Calculated based on SentiWS lexicon - a publuccally available German-language resource for sentiment analysis.
+      Calculated based on SentiWS lexicon - a publicly available German-language resource for sentiment analysis.
       <img src="./misc/ch3-sentiment-1.png" style="min-height: 350px; " class="m-8">
     </p>
     <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-6 text-center">

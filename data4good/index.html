@@ -1,550 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="./css/taylwind.css" rel="stylesheet" />
-    <link
-    href=https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900
-    rel="stylesheet"> <link rel="stylesheet"
-    href=https://use.fontawesome.com/releases/v5.6.3/css/all.css
-    integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/aos.css" />
-    <link rel="icon" href="./img/logo2.png" />
-    <title>data4good</title>
-  </head>
-  <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-    <nav
-      style="max-width: 100%; position: fixed; top:0; z-index: 1000"
-      class="font-sans bg-white text-center flex justify-between py-4 overflow-hidden px-4 w-screen border-b"
-    >
-      <span class="flex items-center">
-        <a
-          href="./index.html"
-          class="inline-block text-left flex items-center"
-          style="text-decoration: none; color:black"
-        >
-          <img src="./img/logo2.png" class="h-8 sm:h-8" alt="logo" />
-          &nbsp;
-          <b class="text-lg" style="font-size: 1.35rem;">
-            data4good
-          </b>
-        </a>
 
-        <span class="text-lg flex text-left" style="font-size: 1rem;">
-          &nbsp; Vienna
-        </span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="./css/taylwind.css" rel="stylesheet" />
+  <link href=https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900 rel="stylesheet">
+  <link rel="stylesheet" href=https://use.fontawesome.com/releases/v5.6.3/css/all.css
+    integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/aos.css" />
+  <link rel="icon" href="./img/logo2.png" />
+  <title>data4good</title>
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+  <nav style="max-width: 100%; position: fixed; top:0; z-index: 1000"
+    class="font-sans bg-white text-center flex justify-between py-4 overflow-hidden px-4 w-screen border-b">
+    <span class="flex items-center">
+      <a href="./index.html" class="inline-block text-left flex items-center"
+        style="text-decoration: none; color:black">
+        <img src="./img/logo2.png" class="h-8 sm:h-8" alt="logo" />
+        &nbsp;
+        <b class="text-lg" style="font-size: 1.35rem;">
+          data4good
+        </b>
+      </a>
+
+      <span class="text-lg flex text-left" style="font-size: 1rem;">
+        &nbsp; Vienna
       </span>
+    </span>
 
-      <div class="text-sm lg:flex md:flex hidden">
-        <ul
-          class="text-sm text-grey-dark list-reset items-center flex flex-row"
-        >
-          <li>
-            <a
-              href="#program"
-              class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
-              >Program</a
-            >
-          </li>
-          <li>
-            <a
-              href="#challenges"
-              class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
-              >Challenges</a
-            >
-          </li>
-          <li class="pr-2">
-            <a
-              href="#about"
-              class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
-              >About us</a
-            >
-          </li>
-          <li class="pr-2">
-            <a
-              href="./photos.html"
-              class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
-              >Photos 📸</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <div class="block lg:hidden md:hidden">
-        <button
-          id="navButton"
-          class="flex items-center border bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3"
-        >
-          <svg
-            class="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-    </nav>
-    <div
-      id="navMenu"
-      class="text-sm w-full lg:hide md:hide hidden border-b"
-      style="position:fixed; background: white; z-index: 1000; top:64px"
-    >
-      <ul class="text-sm text-grey-dark flex list-reset items-center flex-col">
+    <div class="text-sm lg:flex md:flex hidden">
+      <ul class="text-sm text-grey-dark list-reset items-center flex flex-row">
         <li>
-          <a
-            href="#program"
-            class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
-            >Program</a
-          >
+          <a href="#program"
+            class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Program</a>
         </li>
         <li>
-          <a
-            href="#challenges"
-            class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
-            >Challenges</a
-          >
+          <a href="#challenges"
+            class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Challenges</a>
         </li>
         <li class="pr-2">
-          <a
-            href="#about"
-            class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
-            >About us</a
-          >
+          <a href="#about" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">About
+            us</a>
         </li>
         <li class="pr-2">
-          <a
-            href="./photos.html"
-            class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline"
-            >Photos 📸</a
-          >
-        </li>
-        <li class="pr-2">
-          &nbsp;
+          <a href="./photos.html"
+            class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Photos 📸</a>
         </li>
       </ul>
     </div>
 
-    <section
-      id="program"
-      class="font-sans container max-w-xl mx-auto flex flex-col md:flex-row sm:items-start"
-      style="margin-top:80px"
-    >
-      <div
-        class="w-full md:w-1/2 flex flex-col justify-center items-start px-6 py-0 md:py-8 md:px-8 lg:items-start"
-      >
-        <h1 class="mt-2 mb-4 font-medium">
-          The first data4good Hackathon
-        </h1>
-        <h3 class="mb-4">
-          When: April 27-28, 2019 <br />
-          Where: A1 Telekom Austria Group office building, Lassallestraße 9
-        </h3>
-      </div>
-      <div
-        class="w-full md:w-1/2 flex flex-col md:flex-col sm:flex-col justify-between md:justify-center items-center px-2 md:p-8 items-center md:items-start"
-      >
-        <span>
-          Organised by &nbsp; &nbsp;
-          <a
-            href="https://viennadatasciencegroup.at/"
-            target="_blank"
-            style="text-decoration: none;"
-          >
-            <img src="./img/organizer.png" alt="" style="height: 50px" />
-          </a>
-        </span>
-        <span>&nbsp;</span>
-        <img src="./img/twitter-hash.png" alt="" style="height: 80px" />
-        <span>&nbsp;</span>
-      </div>
-    </section>
-    <!-- About the hackathon -->
-    <section
-      class="mb-8 font-sans container max-w-xl mx-auto flex flex-col md:flex-row sm:items-start"
-    >
-      <div
-        class="w-full md:w-1/2 flex flex-col justify-center items-start px-6 py-0 md:py-8 md:px-8 lg:items-start"
-      >
-        <p class="leading-normal mb-4">
-          In an intense, 2-day hackathon interdisciplinary teams of data
-          scientists, developers and designers will work together with domain
-          experts from NGOs and social enterprises to create new insight about
-          their work, solve complex challenges and identify new social impact
-          opportunities. This may be in form of statistical analyses and machine
-          learning models, data visualizations or by linking existing data with
-          new data sets – the teams have no boundaries on their creativity!
-          <br />
-          <br />
-          The hackathon is a broader framework of democratizing Artificial
-          Intelligence [AI]. With the data4good Hackathon we aim to:
-        </p>
-        <ul>
-          <li>
-            Bring data science and the power of AI to new communities and
-            partners
-          </li>
-          <li>
-            create a beginner-friendly environment to introduce new data
-            scientists to practical problems
-          </li>
-          <li>
-            allow experienced data scientists to broaden their scope and
-            experiment with new domains
-          </li>
-          <li>
-            develop new markets for data science and AI-services in sectors that
-            stand to benefit a lot but have higher entry-barriers
-          </li>
-        </ul>
+    <div class="block lg:hidden md:hidden">
+      <button id="navButton" class="flex items-center border bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  <div id="navMenu" class="text-sm w-full lg:hide md:hide hidden border-b"
+    style="position:fixed; background: white; z-index: 1000; top:64px">
+    <ul class="text-sm text-grey-dark flex list-reset items-center flex-col">
+      <li>
+        <a href="#program"
+          class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Program</a>
+      </li>
+      <li>
+        <a href="#challenges"
+          class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Challenges</a>
+      </li>
+      <li class="pr-2">
+        <a href="#about" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">About us</a>
+      </li>
+      <li class="pr-2">
+        <a href="./photos.html"
+          class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Photos 📸</a>
+      </li>
+      <li class="pr-2">
+        &nbsp;
+      </li>
+    </ul>
+  </div>
+
+  <section id="program" class="font-sans container max-w-xl mx-auto flex flex-col md:flex-row sm:items-start"
+    style="margin-top:80px">
+    <div class="w-full md:w-1/2 flex flex-col justify-center items-start px-6 py-0 md:py-8 md:px-8 lg:items-start">
+      <h1 class="mt-2 mb-4 font-medium">
+        The first data4good Hackathon
+      </h1>
+      <h3 class="mb-4">
+        When: April 27-28, 2019 <br />
+        Where: A1 Telekom Austria Group office building, Lassallestraße 9
+      </h3>
+    </div>
+    <div
+      class="w-full md:w-1/2 flex flex-col md:flex-col sm:flex-col justify-between md:justify-center items-center px-2 md:p-8 items-center md:items-start">
+      <span>
+        Organised by &nbsp; &nbsp;
+        <a href="https://viennadatasciencegroup.at/" target="_blank" style="text-decoration: none;">
+          <img src="./img/organizer.png" alt="" style="height: 50px" />
+        </a>
+      </span>
+      <span>&nbsp;</span>
+      <img src="./img/twitter-hash.png" alt="" style="height: 80px" />
+      <span>&nbsp;</span>
+    </div>
+  </section>
+  <!-- About the hackathon -->
+  <section class="mb-8 font-sans container max-w-xl mx-auto flex flex-col md:flex-row sm:items-start">
+    <div class="w-full md:w-1/2 flex flex-col justify-center items-start px-6 py-0 md:py-8 md:px-8 lg:items-start">
+      <p class="leading-normal mb-4">
+        In an intense, 2-day hackathon interdisciplinary teams of data
+        scientists, developers and designers will work together with domain
+        experts from NGOs and social enterprises to create new insight about
+        their work, solve complex challenges and identify new social impact
+        opportunities. This may be in form of statistical analyses and machine
+        learning models, data visualizations or by linking existing data with
+        new data sets – the teams have no boundaries on their creativity!
         <br />
-        <p class=" justify-center">
-          <b>Sponsored by</b> <br /><br />
-          <a
-            href="http://contextflow.com/de/"
-            target="_blank"
-            style="text-decoration: none;"
-          >
-            <img src="./img/sponsor1.png" style="height: 60px" />
-          </a>
-          &nbsp;&nbsp;
-          <a
-            href="https://www.enlite.ai/"
-            target="_blank"
-            style="text-decoration: none;"
-          >
-            <img src="./img/sponsor2.png" style="height: 60px" />
-          </a>
-        </p>
-        <p class=" justify-center">
-          <b>Hoste by</b> <br /><br />
-          <a
-            href="https://www.a1.group/"
-            target="_blank"
-            style="text-decoration: none;"
-          >
-            <img src="./img/sponsor3.png" style="height: 120px" />
-          </a>
-        </p>
-      </div>
-      <div
-        class="w-full md:w-1/2 flex flex-col md:flex-col sm:flex-col justify-between md:justify-center items-center p-2 md:p-8 items-center md:items-start"
-      >
-        <div
-          class="flex items-center sm:border-b md:border-b md:border-r-0 p-4 md:w-auto"
-        >
-          <div class="">
-            <h2 class="text-grey-dark font-medium">
-              Saturday 27th April 2019
-            </h2>
-            <p class="leading-normal">
-              <br />
-              <b>09:00 </b> Breakfast and open Help Desk <br />
-              <b>10:00 </b> Opening <br />
-              <b>10:30 </b> Project introduction by the Data Science Leads +
-              15min Q&A
-              <br />
-              <b>11:15 </b> Team-building <br />
-              <b>11:30 </b> Hacking !!! <br />
-              <b>13:00 </b> Lunch break <br />
-              <b>14:00 </b> Hacking !!! <br />
-              <b>17:30 </b> Review: Status report <br />
-            </p>
-          </div>
-        </div>
-        <div class="flex items-center p-4  md:w-auto">
-          <div class="">
-            <h2 class="text-grey-dark font-medium">
-              Sunday 28th April 2019
-            </h2>
-            <p class="leading-normal">
-              <br />
-              <b>09:00</b> Breakfast<br />
-              <b>10:00</b> Hacking !!!<br />
-              <b>13:00</b> Lunch break<br />
-              <b>14:00</b> Hacking !!!<br />
-              <b>15:30</b> Preparing Demo & Slides<br />
-              <b>17:00</b> Final presentations<br />
-              <b>18:00</b> End<br />
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Challenge 1 -->
-    <section
-      id="challenges"
-      class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center"
-    >
-      <div class="w-full lg:w-1/2" data-aos="fade-up">
-        <img src="./img/1.png" alt="" />
-      </div>
-      <div
-        class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
-      >
-        <label for="tagline" class=" tracking-wide text-grey-dark font-bold">
-          <a
-            href="https://gruenstattgrau.at/en/"
-            target="_blank"
-            style="text-decoration: none;"
-          >
-            <img src="./img/ngo1.png" style="height: 60px" />
-          </a>
-        </label>
-        <h1 class="my-4 font-normal">
-          Textual analysis of urban greening projects in the press
-        </h1>
-        <p class="leading-normal mb-4 text-grey-dark">
-          The non-profit portal GruenStattGrau is a knowledge-management
-          platform focused on urban greening. With the consideration for climate
-          change, water management and air pollution the competency center aims
-          to promote the development of green rooftops, facades and urban
-          farming.
-          <br /><br />
-          The data4good Hackathon project will focus on a textual analysis of
-          the relevant literature (magazines, websites, blogs, …), to understand
-          the geographical distribution of urban greening projects, as well as
-          the development of topics over time.
-        </p>
-
-        <a
-          style="text-decoration: none"
-          href="./challenge1.html"
-          class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent"
-        >
-          Learn More
+        <br />
+        The hackathon is a broader framework of democratizing Artificial
+        Intelligence [AI]. With the data4good Hackathon we aim to:
+      </p>
+      <ul>
+        <li>
+          Bring data science and the power of AI to new communities and
+          partners
+        </li>
+        <li>
+          create a beginner-friendly environment to introduce new data
+          scientists to practical problems
+        </li>
+        <li>
+          allow experienced data scientists to broaden their scope and
+          experiment with new domains
+        </li>
+        <li>
+          develop new markets for data science and AI-services in sectors that
+          stand to benefit a lot but have higher entry-barriers
+        </li>
+      </ul>
+      <br />
+      <p class=" justify-center">
+        <b>Sponsored by</b> <br /><br />
+        <a href="http://contextflow.com/de/" target="_blank" style="text-decoration: none;">
+          <img src="./img/sponsor1.png" style="height: 60px" />
         </a>
-      </div>
-    </section>
-
-    <!-- Challenge 2 -->
-    <section
-      class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center"
-    >
-      <div
-        class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
-      >
-        <label for="tagline" class=" tracking-wide text-grey-dark font-bold">
-          <a
-            href="https://www.hilfswerk.at/international/"
-            target="_blank"
-            style="text-decoration: none;"
-          >
-            <img src="./img/ngo2.png" style="height: 60px" /> </a
-        ></label>
-        <h1 class="my-4 font-normal">
-          Satellite imagery for emergency relief projects
-        </h1>
-        <p class="leading-normal mb-4 text-grey-dark">
-          Hilfswerk International is an Austrian non-profit that has been
-          implementing emergency relief projects and sustainable development
-          projects in different countries around the world since 1978. One long
-          term project is the construction of mother houses and the equipment of
-          health posts in Mozambique to effectively reduce maternal and child
-          mortality.
-          <br /><br />
-          The recent disaster related to cyclone Idai has hit Mozambique hard,
-          and has also severely impacted the operations of Hilfswerk
-          International. We have therefore decided to adapt the data4good
-          hackathon project on short notice. Our aim now is to utilize the
-          satellite imagery released by the Copernicus Emergency Mapping
-          Service, and identify ways to use and enrich this data in support of
-          on the ground efforts. Due to the nature of the catastrophe, this will
-          be an open-ended challenge without a predefined outcome.
-        </p>
-
-        <a
-          href="./challenge2.html"
-          style="text-decoration: none"
-          class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent"
-        >
-          Learn More
+        &nbsp;&nbsp;
+        <a href="https://www.enlite.ai/" target="_blank" style="text-decoration: none;">
+          <img src="./img/sponsor2.png" style="height: 60px" />
         </a>
-      </div>
-      <div class="w-full lg:w-1/2" data-aos="fade-up">
-        <img src="./img/2.png" alt="" />
-      </div>
-    </section>
-
-    <!-- Challenge 3 -->
-    <section
-      class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center"
-    >
-      <div class="w-full lg:w-1/2" data-aos="fade-up">
-        <img src="./img/3.png" alt="" />
-      </div>
-      <div
-        class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
-      >
-        <label for="tagline" class="tracking-wide text-grey-dark font-bold"
-          ><a
-            href="https://www.hilfswerk.at/"
-            target="_blank"
-            style="text-decoration: none;"
-          >
-            <img src="./img/ngo3.png" style="height: 60px" /> </a
-        ></label>
-        <h1 class="my-4 font-normal">Efficient 24-hour care services</h1>
-        <p class="leading-normal mb-4 text-grey-dark">
-          Hilfswerk Österreich is one of Austria’s leading charities. Their
-          mission is to provide support in overcoming health, family, or social
-          challenges. They provide services all over Austria, ranging from care
-          for the elderly, child care, to social living and supermarkets.
-          <br /><br />
-          Within the framework of their 24-hour care services for persons with
-          physical disabilities, Hilfswerk Österreich provide a matching service
-          between patients and live-in care providers. These matchings require
-          intense care and administrative effort; accordingly, early
-          cancellations caused by unsuitable combinations are undesirable. The
-          data4good Hackathon project will examine historical cases, in order to
-          help improve patient to care-provider matching.
-        </p>
-
-        <a
-          href="./challenge3.html"
-          style="text-decoration: none"
-          class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent"
-        >
-          Learn More
+      </p>
+      <p class=" justify-center">
+        <b>Hoste by</b> <br /><br />
+        <a href="https://www.a1.group/" target="_blank" style="text-decoration: none;">
+          <img src="./img/sponsor3.png" style="height: 120px" />
         </a>
-      </div>
-    </section>
-
-    <!-- Challenge 4 -->
-    <section
-      class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center"
-    >
-      <div
-        class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
-      >
-        <label for="tagline" class="tracking-wide text-grey-dark font-bold"
-          ><a
-            href="https://civessolutions.com/"
-            target="_blank"
-            style="text-decoration: none;"
-          >
-            <img src="./img/ngo4.png" style="height: 100px" /> </a
-        ></label>
-        <h1 class="my-4 font-normal">Innovation in smart cities</h1>
-        <p class="leading-normal mb-4 text-grey-dark">
-          CivesSolutions is a social enterprise that aims to improve democracy
-          and governance by enabling active citizen participation. They provide
-          consulting, research, and educational services for effective Smart
-          City implementations around the globe.
-          <br />
-          <br />
-          Bottom-up initiatives for innovation in smart cities need a platform
-          that connects citizens with authorities. In conjunction with
-          CivesSolutions, at the data4good Hackathon we will build a prototype
-          that addresses one aspect of the development process of a digital
-          citizen’s complaint system. This prototype can then be used for
-          further developments of the actual platform in a build-measure-learn
-          cycle.
-        </p>
-
-        <a
-          href="./challenge4.html"
-          style="text-decoration: none"
-          class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent"
-        >
-          Learn More
-        </a>
-      </div>
-      <div class="w-full lg:w-1/2" data-aos="fade-up">
-        <img src="./img/4.png" alt="" />
-      </div>
-    </section>
-
-    <footer id="about" class="font-sans bg-white py-8 px-4">
-      <div
-        class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left"
-      >
-        <a
-          href="https://viennadatasciencegroup.at/data4good/"
-          class="block mr-4 w-full md:w-1/4"
-          style="text-decoration: none; color: black; text-align: center"
-        >
-          <img
-            src="./img/logo2.png"
-            class="h-8 sm:h-8 rounded-full"
-            alt="logo"
-          />
-          <br />
-          <span class="" style="font-size: 1.35rem;">
-            data4good
-          </span>
-        </a>
-
-        <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
-          <h4 class="py-2 uppercase font-bold tracking-wide">About US</h4>
-          <p>
-            Rapid advances in Artificial Intelligence and data processing
-            technologies are having a deep impact on society.This has triggered
-            a certain amount of media hype about the opportunities and risks
-            behind this profound transformation. The data4good Hackathon aims to
-            close the gap between buzz and knowledge, paving the path for NGOs,
-            newbies, and practitioners to put AI’s promise to practice, and
-            learn first-hand how to deal with both its advantages and its
-            shortcomings.
+      </p>
+    </div>
+    <div
+      class="w-full md:w-1/2 flex flex-col md:flex-col sm:flex-col justify-between md:justify-center items-center p-2 md:p-8 items-center md:items-start">
+      <div class="flex items-center sm:border-b md:border-b md:border-r-0 p-4 md:w-auto">
+        <div class="">
+          <h2 class="text-grey-dark font-medium">
+            Saturday 27th April 2019
+          </h2>
+          <p class="leading-normal">
+            <br />
+            <b>09:00 </b> Breakfast and open Help Desk <br />
+            <b>10:00 </b> Opening <br />
+            <b>10:30 </b> Project introduction by the Data Science Leads +
+            15min Q&A
+            <br />
+            <b>11:15 </b> Team-building <br />
+            <b>11:30 </b> Hacking !!! <br />
+            <b>13:00 </b> Lunch break <br />
+            <b>14:00 </b> Hacking !!! <br />
+            <b>17:30 </b> Review: Status report <br />
           </p>
         </div>
-        <div
-          class="text-grey-dark flex flex-col items-center w-full md:w-1/4 mt-6 md:mt-0"
-        >
-          <h4
-            class="inline-block py-2 px-3 uppercase font-bold tracking-wide text-grey-darkest"
-          >
-            Follow Us
-          </h4>
-          <div class="flex pl-0 md:pl-4 justify-start text-3xl">
-            <a
-              class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline"
-              href="https://www.meetup.com/de-DE/Vienna-Data-Science-Group-Meetup/"
-              target="_blank"
-              ><i class="fab fa-meetup"></i
-            ></a>
-            <a
-              class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline"
-              href="https://twitter.com/ViennaDSG"
-              target="_blank"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              class="block flex items-center text-grey-darkest hover:text-black no-underline"
-              href="https://www.youtube.com/channel/UC6QK4pOaKBmPRwGCFLYklLA"
-              target="_blank"
-              ><i class="fab fa-youtube"></i
-            ></a>
-          </div>
+      </div>
+      <div class="flex items-center p-4  md:w-auto">
+        <div class="">
+          <h2 class="text-grey-dark font-medium">
+            Sunday 28th April 2019
+          </h2>
+          <p class="leading-normal">
+            <br />
+            <b>09:00</b> Breakfast<br />
+            <b>10:00</b> Hacking !!!<br />
+            <b>13:00</b> Lunch break<br />
+            <b>14:00</b> Hacking !!!<br />
+            <b>15:30</b> Preparing Demo & Slides<br />
+            <b>17:00</b> Final presentations<br />
+            <b>18:00</b> End<br />
+          </p>
         </div>
       </div>
-      <div
-        class="pt-4 mt-4 text-grey-darker text-xs border-t border-grey-lighter text-center"
-      >
-        ©2019 Vienna Data Science Group. All rights reserved. Webdesign &
-        development
-        <a href="https://trendydots.com/me/" target="_blank">
-          Cristian-Dan Bara
-        </a>
-      </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="./js/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script>
-      function menuToggle() {
-        document.querySelector("#navMenu").classList.toggle("hidden");
-      }
-      document
-        .querySelector("#navButton")
-        .addEventListener("click", menuToggle);
-    </script>
-  </body>
+  <!-- Challenge 1 -->
+  <section id="challenges"
+    class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+    <div class="w-full lg:w-1/2" data-aos="fade-up">
+      <img src="./img/1.png" alt="" />
+    </div>
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <label for="tagline" class=" tracking-wide text-grey-dark font-bold">
+        <a href="https://gruenstattgrau.at/en/" target="_blank" style="text-decoration: none;">
+          <img src="./img/ngo1.png" style="height: 60px" />
+        </a>
+      </label>
+      <h1 class="my-4 font-normal">
+        Textual analysis of urban greening projects in the press
+      </h1>
+      <p class="leading-normal mb-4 text-grey-dark">
+        The non-profit portal GruenStattGrau is a knowledge-management
+        platform focused on urban greening. With the consideration for climate
+        change, water management and air pollution the competency center aims
+        to promote the development of green rooftops, facades and urban
+        farming.
+        <br /><br />
+        The data4good Hackathon project will focus on a textual analysis of
+        the relevant literature (magazines, websites, blogs, …), to understand
+        the geographical distribution of urban greening projects, as well as
+        the development of topics over time.
+      </p>
+
+      <a style="text-decoration: none" href="./challenge1.html"
+        class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        Learn More
+      </a>
+    </div>
+  </section>
+
+  <!-- Challenge 2 -->
+  <section
+    class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <label for="tagline" class=" tracking-wide text-grey-dark font-bold">
+        <a href="https://www.hilfswerk.at/international/" target="_blank" style="text-decoration: none;">
+          <img src="./img/ngo2.png" style="height: 60px" /> </a></label>
+      <h1 class="my-4 font-normal">
+        Satellite imagery for emergency relief projects
+      </h1>
+      <p class="leading-normal mb-4 text-grey-dark">
+        Hilfswerk International is an Austrian non-profit that has been
+        implementing emergency relief projects and sustainable development
+        projects in different countries around the world since 1978. One long
+        term project is the construction of mother houses and the equipment of
+        health posts in Mozambique to effectively reduce maternal and child
+        mortality.
+        <br /><br />
+        The recent disaster related to cyclone Idai has hit Mozambique hard,
+        and has also severely impacted the operations of Hilfswerk
+        International. We have therefore decided to adapt the data4good
+        hackathon project on short notice. Our aim now is to utilize the
+        satellite imagery released by the Copernicus Emergency Mapping
+        Service, and identify ways to use and enrich this data in support of
+        on the ground efforts. Due to the nature of the catastrophe, this will
+        be an open-ended challenge without a predefined outcome.
+      </p>
+
+      <a href="./challenge2.html" style="text-decoration: none"
+        class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        Learn More
+      </a>
+    </div>
+    <div class="w-full lg:w-1/2" data-aos="fade-up">
+      <img src="./img/2.png" alt="" />
+    </div>
+  </section>
+
+  <!-- Challenge 3 -->
+  <section
+    class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+    <div class="w-full lg:w-1/2" data-aos="fade-up">
+      <img src="./img/3.png" alt="" />
+    </div>
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <label for="tagline" class="tracking-wide text-grey-dark font-bold"><a href="https://www.hilfswerk.at/"
+          target="_blank" style="text-decoration: none;">
+          <img src="./img/ngo3.png" style="height: 60px" /> </a></label>
+      <h1 class="my-4 font-normal">Efficient 24-hour care services</h1>
+      <p class="leading-normal mb-4 text-grey-dark">
+        Hilfswerk Österreich is one of Austria’s leading charities. Their
+        mission is to provide support in overcoming health, family, or social
+        challenges. They provide services all over Austria, ranging from care
+        for the elderly, child care, to social living and supermarkets.
+        <br /><br />
+        Within the framework of their 24-hour care services for persons with
+        physical disabilities, Hilfswerk Österreich provide a matching service
+        between patients and live-in care providers. These matchings require
+        intense care and administrative effort; accordingly, early
+        cancellations caused by unsuitable combinations are undesirable. The data4good Hackathon project will examine
+        historical cases, in order to reveal conflicts in ongoing relationships.
+      </p>
+
+      <a href="./challenge3.html" style="text-decoration: none"
+        class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        Learn More
+      </a>
+    </div>
+  </section>
+
+  <!-- Challenge 4 -->
+  <section
+    class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <label for="tagline" class="tracking-wide text-grey-dark font-bold"><a href="https://civessolutions.com/"
+          target="_blank" style="text-decoration: none;">
+          <img src="./img/ngo4.png" style="height: 100px" /> </a></label>
+      <h1 class="my-4 font-normal">Innovation in smart cities</h1>
+      <p class="leading-normal mb-4 text-grey-dark">
+        CivesSolutions is a social enterprise that aims to improve democracy
+        and governance by enabling active citizen participation. They provide
+        consulting, research, and educational services for effective Smart
+        City implementations around the globe.
+        <br />
+        <br />
+        Bottom-up initiatives for innovation in smart cities need a platform
+        that connects citizens with authorities. In conjunction with
+        CivesSolutions, at the data4good Hackathon we will build a prototype
+        that addresses one aspect of the development process of a digital
+        citizen’s complaint system. This prototype can then be used for
+        further developments of the actual platform in a build-measure-learn
+        cycle.
+      </p>
+
+      <a href="./challenge4.html" style="text-decoration: none"
+        class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        Learn More
+      </a>
+    </div>
+    <div class="w-full lg:w-1/2" data-aos="fade-up">
+      <img src="./img/4.png" alt="" />
+    </div>
+  </section>
+
+  <footer id="about" class="font-sans bg-white py-8 px-4">
+    <div
+      class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left">
+      <a href="https://viennadatasciencegroup.at/data4good/" class="block mr-4 w-full md:w-1/4"
+        style="text-decoration: none; color: black; text-align: center">
+        <img src="./img/logo2.png" class="h-8 sm:h-8 rounded-full" alt="logo" />
+        <br />
+        <span class="" style="font-size: 1.35rem;">
+          data4good
+        </span>
+      </a>
+
+      <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
+        <h4 class="py-2 uppercase font-bold tracking-wide">About US</h4>
+        <p>
+          Rapid advances in Artificial Intelligence and data processing
+          technologies are having a deep impact on society.This has triggered
+          a certain amount of media hype about the opportunities and risks
+          behind this profound transformation. The data4good Hackathon aims to
+          close the gap between buzz and knowledge, paving the path for NGOs,
+          newbies, and practitioners to put AI’s promise to practice, and
+          learn first-hand how to deal with both its advantages and its
+          shortcomings.
+        </p>
+      </div>
+      <div class="text-grey-dark flex flex-col items-center w-full md:w-1/4 mt-6 md:mt-0">
+        <h4 class="inline-block py-2 px-3 uppercase font-bold tracking-wide text-grey-darkest">
+          Follow Us
+        </h4>
+        <div class="flex pl-0 md:pl-4 justify-start text-3xl">
+          <a class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline"
+            href="https://www.meetup.com/de-DE/Vienna-Data-Science-Group-Meetup/" target="_blank"><i
+              class="fab fa-meetup"></i></a>
+          <a class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline"
+            href="https://twitter.com/ViennaDSG" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a class="block flex items-center text-grey-darkest hover:text-black no-underline"
+            href="https://www.youtube.com/channel/UC6QK4pOaKBmPRwGCFLYklLA" target="_blank"><i
+              class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 text-grey-darker text-xs border-t border-grey-lighter text-center">
+      ©2019 Vienna Data Science Group. All rights reserved. Webdesign &
+      development
+      <a href="https://trendydots.com/me/" target="_blank">
+        Cristian-Dan Bara
+      </a>
+    </div>
+  </footer>
+
+  <script src="./js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    function menuToggle() {
+      document.querySelector("#navMenu").classList.toggle("hidden");
+    }
+    document
+      .querySelector("#navButton")
+      .addEventListener("click", menuToggle);
+  </script>
+</body>
+
 </html>

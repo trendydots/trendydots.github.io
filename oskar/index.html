@@ -13,10 +13,9 @@
   <link rel="stylesheet" href="./css/aos.css" />
   <link rel="icon" href="./img/logo2.png" />
   <title>Gentleman'style</title>
-  <script src="./js/aos.js"></script>
 </head>
 
-<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<body>
   <nav style="max-width: 100%; position: fixed; top:0; z-index: 1000"
     class="font-serif bg-white text-center flex justify-between py-4 overflow-hidden px-4 w-screen border-b">
     <span class="flex items-center">
@@ -133,7 +132,7 @@
   <!-- Challenge 2 -->
   <section
     class="px-4 my-8 font-serif container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
-    <div class="w-full lg:w-1/2" data-aos="fade-in">
+    <div class="w-full lg:w-1/2">
       <img src="./img/3.jpg" class="rounded-lg" alt="" />
     </div>
     <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
@@ -175,7 +174,7 @@
         Learn more soon
       </a>
     </div>
-    <div class="w-full lg:w-1/2" data-aos="fade-in">
+    <div class="w-full lg:w-1/2">
       <img src="./img/4.jpg" class="rounded-lg" alt="" />
     </div>
   </section>
@@ -197,7 +196,7 @@
       is
       progressing.
     </p>
-    <img src="img/oskar.png" data-aos="fade-in" />
+    <img src="img/oskar.png" />
   </section>
 
   <footer id="about" class="font-serif bg-white py-8 px-4">
@@ -248,9 +247,6 @@
     </div>
   </footer>
 
-  <script>
-    AOS.init();
-  </script>
   <script>
     function menuToggle() {
       document.querySelector("#navMenu").classList.toggle("hidden");

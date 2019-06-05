@@ -1,0 +1,33 @@
+<section class="font-sans h-screen w-full bg-cover text-center flex flex-col items-center justify-center">
+  <div id="chart-7" style="width:80%; height:60%"> </div>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart7);
+
+    function drawChart7() {
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Sales', 'Expenses'],
+        ['2004', 1000, 400],
+        ['2005', 1170, 460],
+        ['2006', 660, 1120],
+        ['2007', 1030, 540]
+      ]);
+
+      var options = {
+        title: 'Company Performance',
+        curveType: 'function',
+        legend: { position: 'bottom' },
+        'width': '100%',
+        'height': '100%'
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart-7'));
+
+      chart.draw(data, options);
+    }
+
+    $(window).on("window:resize", function (e) {
+      drawChart7();
+    })
+  </script>
+</section>

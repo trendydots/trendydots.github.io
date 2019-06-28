@@ -37,10 +37,11 @@
   <script src="../js/jquery-eu-cookie-law-popup.js"></script>
 </head>
 
-<body class="htmlNoPages eupopup eupopup-bottom eupopup-style-compact">
+<body class="htmlNoPages eupopup eupopup-bottom eupopup-style-compact" data-aos-easing="ease" data-aos-delay="300"
+  data-aos="fade-in">
   <nav class="font-sans bg-white text-center flex justify-between p-4 container overflow-hidden" style="
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    max-width: 100%;
+    max-width: 100%; position: fixed; top: 0; z-index: 100; 
 ">
     <span class="flex items-center">
       <a href="https://trendydots.com/project" class="block text-left" target="_blank">
@@ -53,6 +54,15 @@
         </span>
       </b>
     </span>
+
+    <div>
+      <!-- 
+      <a href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
+        data-aos="fade-in">Become a
+        Patron!</a>
+        -->
+    </div>
+
     <ul class="text-sm text-grey-dark list-reset flex items-center">
       <!-- 
       <li>
@@ -62,13 +72,14 @@
     <li><a href="#" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Pricing</a></li>
     <li class="pr-2"><a href="#" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">FAQs</a></li>
     <li class="pl-2 border-l"><a href="#" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Log In</a></li>
-    -->
+    
       <a href="#subscribe-section" class="bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3 no-underline">
         Sign Up
       </a>
+      -->
     </ul>
   </nav>
-  <section
+  <section style="margin-top:5em"
     class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
     <div class="w-full lg:w-1/2" style="box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);" data-aos="fade-right">
       <img src="./assets/img/in0.png" alt="" />
@@ -110,6 +121,7 @@
     </div>
   </section>
 
+  <!-- Form -->
   <section class="antialiased font-sans w-full bg-grey-lighter text-left text-black py-8" id="subscribe-section">
     <div class="container mx-auto max-w-xl py-8 font-normal leading-normal">
       <h3 class="text-2xl">Join our journey</h3>
@@ -173,6 +185,25 @@
     </div>
   </section>
 
+  <!-- testimonials 
+  <section class="bg-grey-lighter py-4 font-sans">
+    <div class="flex flex-col sm:flex-row flex-wrap my-8 justify-around px-8">
+      <div
+        class="w-full sm:w-1/2 md:w-1/3 flex flex-col items-center justify-center h-48 md:h-64 border-grey-lightest border-r border-b shadow-md hover:border-0 bg-white">
+        <h3 class="mt-4 mb-1"><i>It links the links</i></h3>
+        <p class="mt-4 text-center text-grey-dark leading-normal px-6 block">Dominik S.</p>
+      </div>
+
+      <div
+        class="w-full sm:w-1/2 md:w-1/3 flex flex-col items-center justify-center h-48 md:h-64 p-8  border-grey-lightest border-r border-b shadow-md hover:border-0 bg-white">
+         <h3 class="mt-4 mb-1"><i>My team is doing research at lightspeed</i></h3>
+        <p class="mt-4 text-center text-grey-dark leading-normal block">Regina B.</p>
+      </div>
+
+    </div>
+  </section>
+-->
+
   <footer class="font-sans bg-white py-8 px-4">
     <div
       class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left">
@@ -211,6 +242,7 @@
       <a href="../terms-of-service.html" target="_blank" style="color:#000">Terms of service</a>
     </div>
   </footer>
+
   <script src="./assets/js/aos.js"></script>
   <script>
     AOS.init();
@@ -228,6 +260,8 @@
 
     gtag("config", "UA-113784035-1");
   </script>
+
+  <script src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 </body>
 
 </html>

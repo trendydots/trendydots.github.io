@@ -179,14 +179,14 @@
           accept-charset="UTF-8" action="https://usebasin.com/f/06dcf3d4ebaf" enctype="multipart/form-data"
           method="POST">
           <div class="relative border rounded mb-4 shadow appearance-none label-floating w-full">
-            <input class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="fullname" type="text"
-              placeholder="Full Name">
+            <input class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="fullname" name="fullname"
+              type="text" placeholder="Full Name">
             <label class="absolute block text-grey-darker pin-t pin-l w-full px-3 py-2 leading-normal" for="fullname">
               Full Name
             </label>
           </div>
           <div class="relative border rounded mb-4 shadow appearance-none label-floating">
-            <input class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="email" type="email"
+            <input class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="email" name="email" type="email"
               placeholder="Email">
             <label class="absolute block text-grey-darker pin-t pin-l w-full px-3 py-2 leading-normal" for="email">
               Email
@@ -194,7 +194,7 @@
           </div>
           <div class="relative border rounded mb-4 shadow appearance-none label-floating">
             <input rows="3" cols="5" class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="message"
-              type="text" placeholder="Message">
+              name="message" type="text" placeholder="Message">
             <label class="absolute block text-grey-darker pin-t pin-l w-full px-3 py-2 leading-normal" for="message">
               Message
             </label>

@@ -12,7 +12,7 @@
     integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin="anonymous">
 
   <title>trendy dots - data journalism platform</title>
-  <link rel="shortcut icon" type="image/png" href="logo.png" />
+  <link rel="shortcut icon" type="image/png" href="./logo.png" />
   <style>
     *:focus {
       outline: none;
@@ -37,8 +37,8 @@
   </style>
 
   <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/jquery-eu-cookie-law-popup.css" />
-  <script src="../js/jquery-eu-cookie-law-popup.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/jquery-eu-cookie-law-popup.css" />
+  <script src="./js/jquery-eu-cookie-law-popup.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
@@ -47,13 +47,22 @@
 
   <nav class="font-sans bg-white text-center flex justify-between p-4 container overflow-hidden"
     style="box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); max-width: 100%; position: fixed; top: 0; z-index: 100; ">
-    <span class="flex items-center">
-      <a href="https://trendydots.com/project" class="block text-left" target="_blank">
-        <img src="logo.png" class="h-8 sm:h-8 rounded-full" alt="logo">
-      </a>
-      
-    </span>
-    <span class="pt-1"><b>Thank you for subscribing to the trendy dots</b></span>
+
+    <a href="https://trendydots.com" class="block text-left" target="_blank"
+      style="font-size: 1.35rem; text-decoration: none; color: black">
+      <img src="./logo.png" style="vertical-align: middle; height: 1.6em;" alt="logo">
+      <b> trendy dots</b>
+    </a>
+
+    <div>
+      <b style="line-height: 2em"> Thank you for subscribing to the trendy dots </b>
+
+      <!-- 
+      <a href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
+        data-aos="fade-in">Become a
+        Patron!</a>
+        -->
+    </div>
     <ul class="text-sm text-grey-dark list-reset flex items-center">
       <!--  DO NOT DELETE
       <li>
@@ -70,92 +79,135 @@
     </ul>
   </nav>
 
-
+  <!-- intro & thanks -->
   <section class="my-8 font-sans container max-w-xl m-auto flex flex-col md:flex-row sm:items-center"
     style="margin-top: 80px">
-    <div class="w-full md:w-1/2 flex flex-col justify-center items-start px-6 py-0 md:py-8 md:px-8 lg:items-start">
+    <div class="w-full flex flex-col items-center text-center px-6 py-0 md:py-8 md:px-8">
+      <!--
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">various aspects</label>
+     
+      -->
+      <h2 class="mt-2 mb-4 font-medium">Thank you for subscribing to the trendy dots. We hope you stay curiouse
+        about
+        our initiatives. </h2>
+    </div>
 
-      <h1 class="mt-2 mb-4 font-medium">Thank you for subscribing to our research platform</h1>
-      <p class="leading-normal mb-4 text-grey-dark">
-        Your subscrition is being processed. You will receive an email with the outcome.
-      </p>
-    </div>
-    <div
-      class="w-full lg:w-1/2 flex flex-col justify-between md:justify-center items-center p-2 md:p-8 items-center md:items-start">
-      <div
-        class="flex items-center sm:border-b md:border-b md:border-r-0 p-4 lg:w-full md:w-full sm:w-full sm:display-none">
-        <div class="w-14 h-14 rounded-full mr-4 bg-grey-light" alt="data trends"></div>
-        <div class="">
-          <h2 class="text-black font-medium">See the latest trends for your keywords to start your article</h2>
-          <p class="text-grey-dark leading-normal"> <br>When you are starting your article, data trends are essential.
-            You will get the latest internet search trends, geographical distribution of internet searches and latest
-            news about the subject that interests you.</p>
-        </div>
-      </div>
-      <div class="flex items-center p-4 lg:w-full md:w-full sm:w-full">
-        <div class="w-14 h-14 rounded-full mr-4 bg-grey-light" alt="Avatar of Jonathan Reinink"></div>
-        <div class="">
-          <h2 class="text-black font-medium">Experiment with headlines and plan your article</h2>
-          <p class="text-grey-dark leading-normal"><br>Fast and reliable, the trendy dots data journalism platform
-            compiles headlines from the most read media outlets in the world and categorizes them according to your
-            settings. You can experiment with writing your own headlines, statements and plan your publication structure
-            alongside this data.</p>
-        </div>
-      </div>
-    </div>
   </section>
 
+  <!-- td. market research -->
   <section
     class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
     <div class="w-full lg:w-1/2">
-      <!-- Vime video integration -->
-      <!--
-      <iframe style="width: 100%; height: 100%; min-height: 320px" src="https://player.vimeo.com/video/297751184" frameborder="0" allowFullScreen mozallowfullscreen webkitAllowFullScreen></iframe>
-    -->
-      <div style="padding:58% 0 0 0;position:relative;">
-        <iframe src="https://player.vimeo.com/video/320492602?color=ffffff"
-          style="position:absolute;top:0;left:0;width:100%;height:100%; box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);"
-          frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-      <script src="https://player.vimeo.com/api/player.js"></script>
+      <img src="./tdmr-big.png" style="width: 100%; box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);" />
     </div>
+
     <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
-      <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">Getting started</label>
-      <h1 class="my-4 font-normal">Making a new report</h1>
-      <p class="leading-normal mb-4 text-grey-dark">
-        A report allows you to input up to 5 keywords. Keywords are semantically annotated and the platform performs
-        queries to retrieve several publicly available data sets for each keyword.
+      <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold"> data intelligence</label>
+      <h1 class="my-4 font-normal">Market research platform</h1>
+      <p class="leading-normal mb-4">
+        Our market research platform offers standard reporting containing insights into company shares, indices,
+        commodities, cryptocurrencies and world events.
       </p>
+      <br>
+      <a href="https://trendydots.com/invest/project" target="_blank" style="text-decoration: none;
+      background: white;
+      color: black;
+      border:1px solid black;
+      padding:4px;
+      padding-left:12px;
+      padding-right:12px;
+      border-radius: 60px;
+      line-height: 1.6em;
+      display: inline-block">learn more</a>
+      <!-- 
+      <p> Be among the first patron users to watch all training videos<br><br> <a
+          href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
+          data-aos="fade-in">Become a
+          Patron!</a>
+      </p>
+      -->
     </div>
   </section>
+  <br>
 
+  <!-- oskar -->
   <section
     class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row  text-center lg:text-left sm:items-center">
     <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
-      <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">Finetuning your report</label>
-      <h1 class="my-4 font-normal">View. Deduce. Take conclusions</h1>
-      <p class="leading-normal mb-4 text-grey-dark">
-        There are several applications integrated in the platform which allow you see data related to your keywords. On
-        the right hand side, there are fine-tuning fields which allow you to experiment with headlines, note
-        conclusions, or save a default time interval for which will be read by the applications next time you explore
-        the report.
+      <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">AI & Machine Learning</label>
+      <h1 class="my-4 font-normal">Oskar</h1>
+      <p class="leading-normal mb-4">
+        Oskar is our latest AI experiment which we hope will recommend the proper attire for the proper occasion.
       </p>
+      <br>
+      <a href="https://trendydots.com/oskar/" target="_blank" style="text-decoration: none;
+      background: white;
+      color: black;
+      border:1px solid black;
+      padding:4px;
+      padding-left:12px;
+      padding-right:12px;
+      border-radius: 60px;
+      line-height: 1.6em;
+      display: inline-block">learn more</a>
+      <!-- 
+      <p> Be among the first patron users to watch all training videos<br><br> <a
+          href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
+          data-aos="fade-in">Become a
+          Patron!</a>
+      </p>
+      -->
     </div>
     <div class="w-full lg:w-1/2">
-      <div style="padding:58% 0 0 0;position:relative;">
-        <iframe src="https://player.vimeo.com/video/320491316?color=ffffff"
-          style="position:absolute;top:0;left:0;width:100%;height:100%; box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);"
-          frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-      <script src="https://player.vimeo.com/api/player.js"></script>
-    </div>
+      <img src="./osk-big.png" style="width: 100%; box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);" />
     </div>
   </section>
 
+  <br><br>
+  <!-- data 4 good -->
+  <section
+    class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+    <div class="w-full lg:w-1/2">
+      <img src="./d4g-big.png" style="width: 100%; box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);" />
+    </div>
+
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold"> volunteering hackathons for
+        good</label>
+      <h1 class="my-4 font-normal">data4good</h1>
+      <p class="leading-normal mb-4">
+        Interdisciplinary teams of data scientists, developers and designers working together with domain experts from
+        NGOs and social enterprises to create new insight about their work, solve complex challenges and identify new
+        social impact opportunities.
+        <br><br>
+        Volunteering with web design and UI development.
+      </p>
+      <br>
+      <a href="https://trendydots.com/data4good/" target="_blank" style="text-decoration: none;
+        background: white;
+        color: black;
+        border:1px solid black;
+        padding:4px;
+        padding-left:12px;
+        padding-right:12px;
+        border-radius: 60px;
+        line-height: 1.6em;
+        display: inline-block">learn more</a>
+      <!-- 
+      <p> Be among the first patron users to watch all training videos<br><br> <a
+          href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
+          data-aos="fade-in">Become a
+          Patron!</a>
+      </p>
+      -->
+    </div>
+  </section>
 
   <footer class="font-sans bg-white py-8 px-4">
     <div
       class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left">
       <a href="" class="block mr-4 w-full md:w-1/4" target="_blank">
-        <img src="logo.png" class="w-24 -ml-8 md:ml-0" alt="logo">
+        <img src="./logo.png" class="w-24 -ml-8 md:ml-0" alt="logo">
       </a>
       <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
         <h4 class="py-2 uppercase font-bold tracking-wide">About US</h4>
@@ -182,7 +234,10 @@
       <a href="../terms-of-service.html" target="_blank" style="color:#000">Terms of service</a>
     </div>
   </footer>
- 
+
+  <!-- Patreon js-->
+  <script src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113784035-1"></script>

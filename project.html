@@ -24,8 +24,16 @@
   <link rel="stylesheet" type="text/css" href="css/jquery-eu-cookie-law-popup.css" />
   <script src="js/jquery-eu-cookie-law-popup.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-
+  <style>
+    .grecaptcha-badge {
+      display: none;
+    }
+  </style>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("signupform").submit();
+    }
+  </script>
 </head>
 
 <body style="background: #f5f4f2; font-family: Montserrat;" class="eupopup eupopup-bottom eupopup-style-compact">
@@ -35,9 +43,9 @@
     <div class="w-full md:w-1/2 flex flex-col justify-between items-start items-center md:items-start bg-white" style="z-index: 2; padding: 2%; padding-left: 6%; padding-right: 6%; box-shadow: rgba(0, 0, 0, 0.2) 0 1.5em 85px 0;
       ">
       <div style="font-size: 24px; font-weight: 700">
-        <img src="./logo.png" style="vertical-align: middle; height: 1.2em" /> trendy dots
+        <img src="./logo.png" style="vertical-align: middle; height: 1.3em" /> trendy dots
       </div>
-      <br>
+
       <div>
         <h1 class="my-4 font-normal" style="font-weight: 700;
       font-size: 10vh;">our story</h1>
@@ -47,6 +55,7 @@
           innovative AI algorithms.
         </p>
       </div>
+      <br>
       <br>
       <div> <a href="https://twitter.com/trendydots" target="_blank" style="text-decoration: none; color: black">
           <img src="twitter_black.png" style="vertical-align: middle; height: 1em">
@@ -130,34 +139,67 @@
     <div class="text-center">
       <h2 class="my-4 font-medium">Projects we're proud of</h2>
     </div>
-    <div class="flex flex-col sm:flex-row flex-wrap my-8">
-      <a target="_blank" href="https://trendydots.com/oskar/" style="text-decoration: none; color:black;"
-        class="w-full sm:w-full md:w-1/3 flex flex-col items-center justify-center h-48 md:h-64 p-8  border-grey-lightest border-r border-b hover:shadow-md hover:border-0 bg-white hover:transform-scale-subtle transition-normal hover:show-child">
-        <img src="./osk.png" style="height: 2em" alt="">
-        <h3 class="mt-4 mb-1">Oskar</h3>
-        <p class="mt-4 text-center text-grey-dark leading-normal">Oskar is our latest AI experiment which we hope will
-          recommend the proper attire for the proper occasion. </p>
+  </section>
+  <section class="bg-white py-4 font-sans">
+    <div class="container max-w-xl m-auto flex flex-wrap items-baseline ">
+
+      <a target="_blank" href="https://trendydots.com/oskar/" style="height:250px; text-decoration: none; color:black;"
+        class="w-full md:w-1/3 lg:w-1/3 flex flex-col mb-8 px-3 ">
+        <div class="overflow-hidden bg-white text-center rounded-lg shadow-md hover:translateY-2px transition h-full">
+          <img style="height: 2em;" src="./osk.png" alt="Sunset in the mountains">
+          <div class="p-6 flex flex-col justify-between ">
+            <h3 class="font-medium text-grey-darkest mb-4 leading-normal">Oskar</h3>
+            <p class="inline-flex items-center">
+              <span class="text-grey-dark text-sm">Oskar is our latest AI experiment which we hope will
+                recommend the proper attire for the proper occasion.</span>
+            </p>
+          </div>
+        </div>
       </a>
 
-      <a target="_blank" href="https://trendydots.com/invest/project" style="text-decoration: none; color:black;"
-        class="w-full sm:w-full md:w-1/3 flex flex-col items-center justify-center h-48 md:h-64 border-grey-lightest border-r border-b shadow-md hover:border-0 bg-white hover:transform-scale-subtle transition-normal hover:show-child">
-        <img src="./tdmr.png" style="height: 2em" alt="">
-        <h3 class="mt-4 mb-1"><i>"it links the links"</i></h3>
-        <p class="mt-4 text-center text-grey-dark leading-normal px-6"> Our market research platform offers standard
-          reporting containing insights into company shares, indices, commodities, cryptocurrencies and world events.
-        </p>
+      <a target="_blank" href="https://trendydots.com/invest/project"
+        style="height:250px; text-decoration: none; color:black;"
+        class="w-full md:w-1/3 lg:w-1/3 flex flex-col mb-8 px-3 ">
+        <div class="overflow-hidden bg-white text-center rounded-lg shadow-md hover:translateY-2px transition h-full">
+          <img style="height: 2em" src="./tdmr.png" alt="Sunset in the mountains">
+          <div class="p-6 flex flex-col justify-between ">
+            <h3 class="font-medium text-grey-darkest mb-4 leading-normal"><i>"it links the links"</i></h3>
+            <p class="inline-flex items-center">
+              <span class="text-grey-dark text-sm">
+                Our market research platform offers standard
+                reporting containing insights into company shares, indices, commodities, cryptocurrencies and world
+                events.
+              </span>
+            </p>
+          </div>
+        </div>
       </a>
 
-      <a target="_blank" href="https://trendydots.com/data4good/" style="text-decoration: none; color:black;"
-        class="w-full sm:w-full md:w-1/3 flex flex-col items-center justify-center h-48 md:h-64 p-8  border-grey-lightest border-b hover:shadow-md hover:border-0 bg-white hover:transform-scale-subtle transition-normal hover:show-child">
-        <img src="./d4g.png" style="height: 2em" alt="">
-        <h3 class="mt-4 mb-1">Data for good </h3>
-        <p class="mt-4 text-center text-grey-dark leading-normal">Interdisciplinary teams of data scientists, developers
-          and designers working together with domain experts from NGOs and social enterprises to create new insight
-          about their work, solve complex challenges and identify new social impact opportunities.</p>
+      <a target="_blank" href="https://trendydots.com/data4good/"
+        style="height:250px; text-decoration: none; color:black;"
+        class="w-full md:w-1/3 lg:w-1/3 flex flex-col mb-8 px-3 ">
+        <div class="overflow-hidden bg-white text-center rounded-lg shadow-md hover:translateY-2px transition h-full">
+          <img style="height: 2em" src="./d4g.png" alt="Sunset in the mountains">
+          <div class="p-6 flex flex-col justify-between ">
+            <h3 class="font-medium text-grey-darkest mb-4 leading-normal">
+              Data for good
+            </h3>
+            <p class="inline-flex items-center">
+              <span class="text-grey-dark text-sm">
+                Teams of data scientists, developers
+                and designers working with NGOs and social enterprises to solve complex challenges and identify new
+                social
+                impact opportunities.
+              </span>
+            </p>
+          </div>
+        </div>
       </a>
+
     </div>
   </section>
+
+
 
   <section class="font-sans w-full flex flex-col-reverse md:flex-row text-center md:text-left justify-between">
     <div class="w-full md:w-1/2">
@@ -168,9 +210,9 @@
   </section>
 
   <!-- Contact us -->
-  <section class="font-sans container m-auto max-w-xl" style="margin-top: -20%; margin-bottom: -20%">
+  <section class="font-sans w-full md:w2/3" style="margin-top: -20%; margin-bottom: -20%">
     <div class="flex flex-col sm:flex-row flex-wrap my-8 items-center justify-center">
-      <div class="p-8 sm:w-full md:w-1/2 flex flex-col items-left bg-white text-left"
+      <div class="p-8 w-full md:w-1/2 flex flex-col items-left bg-white text-left"
         style="box-shadow: rgba(0, 0, 0, 0.2) 0 1.5em 85px 0; z-index: 2">
         <br><br>
         <h1 class="my-4 px-6 font-normal" style="font-weight: 700;
@@ -201,17 +243,20 @@
           </div>
           <input type="hidden" name="_gotcha"></input>
 
-          <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
+          <div class="w-full"></div>
           <br>
 
-          <div class="flex items-center justify-between">
-            <button class="bg-black hover:bg-black text-white py-2 px-4 w-1/3" type="submit" value="submit">
+          <div class="flex items-center md:flex-row flex-col justify-between">
+            <button class="g-recaptcha bg-black hover:bg-black text-white py-2 px-4 md:w-1/3 "
+              data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline"
+              type="submit" value="submit">
               Send Message
             </button>
 
             <div>&nbsp;</div>
 
-            <div class="w-1/2">by submitting this information you agree to our <a
+            <div class="md:w-1/2">by
+              submitting this information you agree to our <a
                 class="inline-block align-baseline text-grey hover:text-grey-darker" href="./privacy-statement.html">
                 privacy statement
               </a></div>

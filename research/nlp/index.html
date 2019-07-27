@@ -64,17 +64,23 @@
     </div>
 
     <ul class="text-sm text-grey-dark list-reset flex items-center">
+      <!-- 
       <a href="#about" class="bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3 no-underline">
-        About the project
+        About us
       </a>
+      -->
     </ul>
   </nav>
 
   <section class="font-sans container m-auto flex flex-col py-2 max-w-xl text-center px-6 items-center"
     style="margin-top:5em">
-    <h3 class="my-4 max-w-full m-auto text-2xl md:text-3xl lg:text-4xl font-medium">
+    <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-2 text-left">
+      In this experiment I aim to summarize a large text into a small paragraph. The experiment succeeds if the summary
+      ratio is less than 60%. If you are interested in our research, please visit our Patreon page.
+    </p>
+    <h3 class="mt-2 max-w-full m-auto text-2xl md:text-3xl lg:text-4xl font-medium">
       Input your text here</h3>
-    <div class="mt-1 lg:mt-4 max-w-lg w-full leading-loose mb-2 text-left">
+    <div class="mt-1 lg:mt-2 max-w-lg w-full leading-loose mb-2 text-left">
       <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-2 text-left"> Title </p>
       <input id="titleInput" type="text"
         style="width: 100%; border: 1px solid #E0E0E0; padding:10px; border-radius: 6px; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;"></input>
@@ -85,26 +91,37 @@
         style="width: 100%; border: 1px solid #E0E0E0; padding:10px; border-radius: 6px; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;"></textarea>
     </div>
     <div class="mt-1 lg:mt-4 max-w-lg w-full leading-loose mb-6 items-center">
-      <button id="summarizeBtn" class="bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3 no-underline">
+      <button id="summarizeBtn" class="hover:bg-grey-lighter "
+        style="text-align: center; border: 1px solid black; padding: 1em">
+        <img src="../assets/img/summarize-icon.svg" style="height: 1.2em; vertical-align: middle;" alt="">
         Summarize
       </button>
     </div>
 
   </section>
-  <section id="loading" class="font-sans container m-auto flex flex-col max-w-xl text-center px-6">
 
+  <section id="loading" class="font-sans container m-auto flex flex-col max-w-xl text-center px-6">
     <p class="max-w-lg m-auto leading-loose text-left">
       <img src="../assets/img/dots-loader.gif" style="height:7em" alt="">
     </p>
   </section>
 
   <section id="summarySection" class="font-sans container m-auto flex flex-col py-2 max-w-xl text-center px-6">
-
     <h3 class="my-8 max-w-full m-auto text-2xl md:text-3xl lg:text-4xl font-medium">
       Your text summary</h3>
-    <p id="summary" class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-6 text-left"
+    <div class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-6 text-left"
       style="box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important; background: #f1f1f1; padding: 20px">
-    </p>
+      <p id="summary" class="w-full"></p>
+      <br>
+      <p class="w-full text-center">
+        <button id="copySummaryBtn" class="copyBtn hover:bg-grey-lighter" data-clipboard-action="copy"
+          data-clipboard-target="#summary"
+          style="display: inline-block; text-align: center; border: 1px solid black; padding: 1em">
+          <img src="../assets/img/copy-icon.svg" style="height: 1.2em; vertical-align: middle;" alt=""> Copy to
+          clipboard
+        </button>
+      </p>
+    </div>
     <p class="max-w-lg m-auto leading-loose mb-6 text-left">
       <div class="px-6 w-full m-auto mb-6 flex flex-wrap md:flex-no-wrap items-center justify-center">
         <h1 class="w-full md:w-1/4 font-medium tracking-normal mb-4 md:mb-0">Summary<br>Stats</h1>
@@ -119,7 +136,7 @@
           <h2 id="summaryLength" class="inline-block">0</h2>
         </div>
         <div class="w-1/3 md:w-1/4">
-          <span class="text-xs inline-block mr-2 uppercase text-grey-darkest tracking-wide">Sunnary Ratio
+          <span class="text-xs inline-block mr-2 uppercase text-grey-darkest tracking-wide">Summary Ratio
             (percents)</span>
           <h2 id="summaryRatio" class="inline-block">0</h2>
         </div>
@@ -128,6 +145,11 @@
     </p>
   </section>
 
+  <section id="errorSection" class="font-sans container m-auto flex flex-col max-w-xl text-center px-6 mb-3">
+    <p class="max-w-lg m-auto leading-loose text-center">
+      An error has occured. Please make sure that the <b>content</b> section has at least 300 characters.
+    </p>
+  </section>
 
 
   <footer id="about" class="font-sans bg-white py-8 px-4" style="
@@ -138,7 +160,6 @@
         <img src="../assets/img/logo.png" class="w-24 -ml-8 md:ml-0" alt="logo" />
       </a>
       <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
-        <h4 class="py-2 uppercase font-bold tracking-wide">About US</h4>
         <p>
           Trendy Dots is an ambitious project making trend and exploratory
           data analysis on the new and old markets. We model the internet
@@ -166,6 +187,7 @@
     </div>
   </footer>
 
+  <script src="../assets/js/clipboard.min.js"></script>
   <script src="../assets/js/aos.js"></script>
   <script>
     AOS.init();
@@ -186,29 +208,53 @@
 
   <script src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
   <script>
+
     var title = '';
     var content = '';
     var summary = '';
     $('#summarySection').hide();
+    $('#errorSection').hide();
     $('#loading').hide();
     $('#summarizeBtn').click(function () {
       $('#loading').show();
       title = $('#titleInput').val();
       content = $('#contentInput').val();
-      $.get('https://td-api-test.herokuapp.com/textSummary',
-        { title: title, content: content },
-        function (data, status) {
-          $('#summarySection').show();
-          if (data.summary) {
-            summary = data.summary.replace(/\n/g, "<br />");
-            $('#summary').html(summary);
-            $('#originalLength').html(data.originalLength);
-            $('#summaryLength').html(data.summaryLength);
-            $('#summaryRatio').html(data.summaryRatio);
+      $.ajax(
+        {
+          type: 'GET',
+          url: 'https://td-api-test.herokuapp.com/textSummary',
+          data: { title: title, content: content },
+          success: function (data) {
+            if (data.summary && data.summary.length > 1) {
+              $('#summarySection').show();
+              summary = data.summary.replace(/\n/g, "<br />");
+              $('#summary').html(summary);
+              $('#originalLength').html(data.originalLength);
+              $('#summaryLength').html(data.summaryLength);
+              $('#summaryRatio').html(data.summaryRatio.toFixed(4));
+              $('#loading').hide();
+            } else {
+              $('#errorSection').show();
+              $('#loading').hide();
+            }
+          },
+          error: function () {
+            $('#errorSection').show();
             $('#loading').hide();
           }
-        })
+        });
     })
+
+
+    var clipboard = new ClipboardJS('.copyBtn');
+
+    clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+
+      e.clearSelection();
+    });
   </script>
 </body>
 

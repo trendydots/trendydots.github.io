@@ -1,0 +1,215 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:image" content="https://trendydots.com/invest/assets/img/in3.png" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/stitches.css" />
+  <link href=https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900 rel="stylesheet">
+  <link rel="stylesheet" href=https://use.fontawesome.com/releases/v5.0.13/css/all.css
+    integrity=sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp crossorigin="anonymous">
+  <title>trendy dots - nlp research</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/img/logo.png" />
+  <link rel="stylesheet" href="../assets/css/aos.css" />
+
+  <style>
+    *:focus {
+      outline: none;
+    }
+
+    .form-style {
+      margin: 0;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .form-style {
+        display: flex;
+        margin: 0;
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../css/jquery-eu-cookie-law-popup.css" />
+  <script src="../../js/jquery-eu-cookie-law-popup.js"></script>
+</head>
+
+
+<body class="htmlNoPages eupopup eupopup-bottom eupopup-style-compact" data-aos-easing="ease" data-aos-delay="300"
+  data-aos="fade-in">
+
+  <nav class="font-sans bg-white text-center flex justify-between p-4 container overflow-hidden" style="
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    max-width: 100%; position: fixed; top: 0; z-index: 100; 
+">
+    <span class="flex items-center">
+      <a href="https://trendydots.com/project" class="block text-left" target="_blank">
+        <img src="../assets/img/logo.png" class="h-8 sm:h-8 rounded-full" alt="logo" />
+      </a>
+      &nbsp;
+      <b class="text-lg flex text-left" style="font-size: 1.35rem;">
+        nlp
+        <span style="color: #FFCA28; display: inline; text-indent: 0.2em">research
+        </span>
+      </b>
+    </span>
+
+    <div>
+      <a href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
+        data-aos="fade-in">Become a
+        Patron!</a>
+    </div>
+
+    <ul class="text-sm text-grey-dark list-reset flex items-center">
+      <a href="#subscribe-section" class="bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3 no-underline">
+        Contact
+      </a>
+    </ul>
+  </nav>
+
+  <section class="font-sans container m-auto flex flex-col py-2 max-w-xl text-center px-6 items-center"
+    style="margin-top:5em">
+    <h3 class="my-4 max-w-full m-auto text-2xl md:text-3xl lg:text-4xl font-medium">
+      Input your text here</h3>
+    <div class="mt-1 lg:mt-4 max-w-lg w-full leading-loose mb-2 text-left">
+      <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-2 text-left"> Title </p>
+      <input id="titleInput" type="text"
+        style="width: 100%; border: 1px solid #E0E0E0; padding:10px; border-radius: 6px; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;"></input>
+    </div>
+    <div class="mt-1 lg:mt-4 max-w-lg w-full leading-loose mb-6 text-left">
+      <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-2 text-left"> Content </p>
+      <textarea id="contentInput" rows="10" col="50"
+        style="width: 100%; border: 1px solid #E0E0E0; padding:10px; border-radius: 6px; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;"></textarea>
+    </div>
+    <div class="mt-1 lg:mt-4 max-w-lg w-full leading-loose mb-6 items-center">
+      <button id="summarizeBtn" class="bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3 no-underline">
+        Summarize
+      </button>
+    </div>
+
+  </section>
+  <section id="loading" class="font-sans container m-auto flex flex-col max-w-xl text-center px-6">
+
+    <p class="max-w-lg m-auto leading-loose text-left">
+      <img src="../assets/img/dots-loader.gif" style="height:7em" alt="">
+    </p>
+  </section>
+
+  <section id="summarySection" class="font-sans container m-auto flex flex-col py-2 max-w-xl text-center px-6">
+
+    <h3 class="my-8 max-w-full m-auto text-2xl md:text-3xl lg:text-4xl font-medium">
+      Your text summary</h3>
+    <p id="summary" class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-6 text-left"
+      style="box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important; background: #f1f1f1; padding: 20px">
+    </p>
+    <p class="max-w-lg m-auto leading-loose mb-6 text-left">
+      <div class="px-6 w-full m-auto mb-6 flex flex-wrap md:flex-no-wrap items-center justify-center">
+        <h1 class="w-full md:w-1/4 font-medium tracking-normal mb-4 md:mb-0">Summary<br>Stats</h1>
+        <div class="w-1/3 md:w-1/4">
+          <span class="text-xs inline-block mr-2 uppercase text-grey-darkest tracking-wide">Original Length
+            (characters)</span>
+          <h2 id="originalLength" class="inline-block">0</h2>
+        </div>
+        <div class="w-1/3 md:w-1/4">
+          <span class="text-xs inline-block mr-2 uppercase text-grey-darkest tracking-wide">Summary Length (characters)
+          </span>
+          <h2 id="summaryLength" class="inline-block">0</h2>
+        </div>
+        <div class="w-1/3 md:w-1/4">
+          <span class="text-xs inline-block mr-2 uppercase text-grey-darkest tracking-wide">Sunnary Ratio
+            (percents)</span>
+          <h2 id="summaryRatio" class="inline-block">0</h2>
+        </div>
+      </div>
+
+    </p>
+  </section>
+
+
+
+  <footer class="font-sans bg-white py-8 px-4" style="
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">
+    <div
+      class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left">
+      <a href="" class="block mr-4 w-full md:w-1/4" target="_blank">
+        <img src="../assets/img/logo.png" class="w-24 -ml-8 md:ml-0" alt="logo" />
+      </a>
+      <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
+        <h4 class="py-2 uppercase font-bold tracking-wide">About US</h4>
+        <p>
+          Trendy Dots is an ambitious project making trend and exploratory
+          data analysis on the new and old markets. We model the internet
+          behaviour and forecast the evolution of markets, products,
+          companies, etc. using innovative AI algorithms.
+        </p>
+      </div>
+      <div class="text-grey-dark flex flex-col items-center w-full md:w-1/4 mt-6 md:mt-0">
+        <h4 class="inline-block py-2 px-3 uppercase font-bold tracking-wide text-grey-darkest">
+          Follow Us
+        </h4>
+        <div class="flex pl-0 md:pl-4 justify-start">
+          <a class="block flex items-center text-grey-darkest hover:text-black no-underline" target="_blank"
+            href="https://twitter.com/trendydots">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 text-grey-darker text-xs border-t border-grey-lighter text-center">
+      ©2019 trendydots.com All rights reserved. &nbsp;
+      <a href="../privacy-statement.html" target="_blank" style="color:#000">Privacy statement</a>
+      &nbsp;
+      <a href="../terms-of-service.html" target="_blank" style="color:#000">Terms of service</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113784035-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-113784035-1");
+  </script>
+
+  <script src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+  <script>
+    var title = '';
+    var content = '';
+    var summary = '';
+    $('#summarySection').hide();
+    $('#loading').hide();
+    $('#summarizeBtn').click(function () {
+      $('#loading').show();
+      title = $('#titleInput').val();
+      content = $('#contentInput').val();
+      $.get('https://td-api-test.herokuapp.com/textSummary',
+        { title: title, content: content },
+        function (data, status) {
+          $('#summarySection').show();
+          if (data.summary) {
+            summary = data.summary.replace(/\n/g, "<br />");
+            $('#summary').html(summary);
+            $('#originalLength').html(data.originalLength);
+            $('#summaryLength').html(data.summaryLength);
+            $('#summaryRatio').html(data.summaryRatio);
+            $('#loading').hide();
+          }
+        })
+    })
+  </script>
+</body>
+
+</html>

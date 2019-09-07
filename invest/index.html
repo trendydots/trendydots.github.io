@@ -1,397 +1,302 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJle6c6d251eeb758450f6a4338bdf315c9" />
-  <meta charset="utf-8">
-  <title>Trendy Dots</title>
-  <meta name="author" content="trendydots">
-  <link rel="shortcut icon" href="logo.png">
-  <style type="text/css" id="gwd-text-style">
-    p {
-      margin: 0px
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:image" content="https://trendydots.com/invest/assets/img/in3.png" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/stitches.css" />
+  <link href=https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900 rel="stylesheet">
+  <link rel="stylesheet" href=https://use.fontawesome.com/releases/v5.0.13/css/all.css
+    integrity=sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp crossorigin="anonymous">
+  <title>trendy dots - research</title>
+  <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png" />
+  <link rel="stylesheet" href="./assets/css/aos.css" />
+
+  <style>
+    *:focus {
+      outline: none;
     }
 
-    h1 {
-      margin: 0px
+    .form-style {
+      margin: 0;
+      width: 100%;
     }
 
-    h2 {
-      margin: 0px
-    }
-
-    h3 {
-      margin: 0px
+    @media (min-width: 768px) {
+      .form-style {
+        display: flex;
+        margin: 0;
+        width: 100%;
+      }
     }
   </style>
-  <style type="text/css">
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-      margin: 0px
-    }
 
-    body {
-      background-color: #ffffff;
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-      -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-      -moz-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-      perspective: 1400px;
-      -webkit-perspective: 1400px;
-      -moz-perspective: 1400px;
-      transform-style: preserve-3d;
-      -webkit-transform-style: preserve-3d;
-      -moz-transform-style: preserve-3d
-    }
-
-    .input-group input {
-      border-top: none;
-      border-right: none;
-      border-left: none;
-      border-image: initial;
-      border-bottom: 1px solid #ccc;
-      width: 100%;
-      padding: 10px 0px;
-      transition: border-color .2s ease, box-shadow .2s ease;
-      -webkit-transition: border-color .2s ease, box-shadow .2s ease;
-      -moz-transition: border-color .2s ease, box-shadow .2s ease;
-      font-size: 16px;
-      margin-bottom: 15px
-    }
-
-    button {
-      border: 0px;
-      background: none;
-      margin: 0px;
-      padding: 0px;
-      font-family: inherit;
-      cursor: pointer;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      font-size: 16px
-    }
-
-    .gwd-div-1sxe {
-      position: absolute;
-      background-image: none;
-      background-color: #fff;
-      left: 0px;
-      width: 50%;
-      top: 0px;
-      box-shadow: rgba(0, 0, 0, 0.2) 0 1.5em 85px 0;
-      min-height: 500px
-    }
-
-    .gwd-img-1998 {
-      position: absolute;
-      top: 0px;
-      width: 50%;
-      right: 0px
-    }
-
-    .gwd-div-1kug {
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      width: 100%;
-      height: 60px
-    }
-
-    .gwd-img-n42l {
-      position: absolute;
-      height: 30px;
-      width: 40px;
-      left: 60px;
-      top: 30px
-    }
-
-    .gwd-p-nsz4 {
-      position: absolute;
-      font-family: Montserrat;
-      font-weight: bold;
-      left: 110px;
-      font-size: 1.35rem;
-      top: 32px
-    }
-
-    .gwd-div-9729 {
-      position: absolute;
-      left: 0px;
-      width: 100%;
-      background-image: none;
-      background-color: #fff;
-      height: 400px;
-      top: 60px
-    }
-
-    .gwd-p-6mvh {
-      position: absolute;
-      top: 61px;
-      font-family: Montserrat;
-      font-weight: 700;
-      font-size: 4vw;
-      left: 60px
-    }
-
-    .gwd-p-1em6 {
-      position: absolute;
-      font-family: Montserrat;
-      margin-right: 60px;
-      left: 60px;
-      font-weight: 300;
-      top: 185px
-    }
-
-    .gwd-span-1nog {
-      font-size: 16px
-    }
-
-    .gwd-div-1ej3 {
-      position: absolute;
-      background-image: none;
-      background-color: #000;
-      top: 360px;
-      height: 400px;
-      width: 350px;
-      left: calc(50% - 125px);
-    }
-
-    .gwd-div-16oi {
-      position: absolute;
-      width: 2px;
-      height: 100px;
-      left: 682px;
-      top: 460px
-    }
-
-    .gwd-div-1rdk {
-      position: absolute;
-      width: 154px;
-      height: 151px;
-      top: 494px;
-      left: 30%;
-      color: white
-    }
-
-    .gwd-div-3afy {
-      position: absolute;
-      background-image: none;
-      left: 20%;
-      top: 20%;
-      width: 60%;
-      height: 60%;
-      background-color: #000
-    }
-
-    .gwd-p-1cu1 {
-      position: absolute;
-      font-family: Montserrat;
-      font-size: 14px;
-      font-weight: bold;
-      top: 13px;
-      color: white;
-      left: 0px;
-      width: 100%
-    }
-
-    .gwd-p-18oe {
-      position: absolute;
-      font-family: Montserrat;
-      font-size: 14px;
-      color: #fff;
-      font-weight: 300;
-      top: 40px;
-      left: 0px;
-      width: 100%
-    }
-
-    .gwd-p-1qr0 {
-      position: absolute;
-      top: 136px;
-      font-family: Montserrat;
-      font-size: 14px;
-      font-weight: bold;
-      color: #fff;
-      left: 0px;
-      width: 100%
-    }
-
-    .gwd-p-exsd {
-      position: absolute;
-      font-family: Montserrat;
-      font-size: 14px;
-      color: #fff;
-      font-weight: 300;
-      top: 163px;
-      left: 0px;
-      width: 100%
-    }
-
-    .gwd-img-1uan {
-      position: absolute;
-      left: 0px;
-      width: 50%;
-      top: 730px
-    }
-
-    .gwd-div-mx5a {
-      position: absolute;
-      height: 437px;
-      top: 919px;
-      background-image: none;
-      right: 0px;
-      width: 50%;
-      box-shadow: rgba(0, 0, 0, 0.2) 0 1.5em 85px 0;
-      background-color: #fff;
-      min-height: 600px
-    }
-
-    .gwd-div-4bf6 {
-      top: 1322px;
-      left: calc(50% - 320px) !important
-    }
-
-    .gwd-div-s0or {
-      top: 1809px;
-      right: 50%;
-      margin-right: -25%
-    }
-
-    .gwd-form-11dq {
-      font-family: Montserrat;
-      position: absolute;
-      top: 222px;
-      font-size: 16px;
-      left: 60px;
-      width: calc(100% - 120px)
-    }
-
-    .gwd-img-14i0 {
-      position: absolute;
-      top: 2260px;
-      width: 50%;
-      right: 0px
-    }
-
-    .gwd-img-1a3v {
-      position: absolute;
-      width: 50%;
-      height: 431.19px;
-      top: 1612px;
-      left: 0px
-    }
-
-    .gwd-div-25b1 {
-      position: absolute;
-      left: 0px;
-      width: 100%;
-      height: 60px;
-      border-image-source: none;
-      border-image-width: initial;
-      border-image-outset: initial;
-      border-image-repeat: initial;
-      border-color: transparent;
-      background-image: none;
-      background-color: #fff;
-      box-shadow: rgba(0, 0, 0, 0.2) 0 1.5em 85px 0;
-      top: 2804px
-    }
-
-    .gwd-p-g9j6 {
-      position: absolute;
-      top: 20px;
-      font-family: Montserrat;
-      left: 10%
-    }
-
-    .gwd-p-1glz {
-      position: absolute;
-      top: 20px;
-      font-family: Montserrat;
-      right: 10%
-    }
-
-    .gwd-div-1521 {
-      top: 120px
-    }
-
-    .gwd-span-qcoj {
-      font-size: 18px
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Oswald|Lato|Roboto|Roboto+Condensed|Ubuntu"
-    rel="stylesheet" type="text/css">
   <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script async="" defer="" src="//usebasin.com/f/06dcf3d4ebaf/ahoy.js"></script>
-  <script async="" defer="" src="//usebasin.com/f/06dcf3d4ebaf/ahoy.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="css/jquery-eu-cookie-law-popup.css" />
-  <script src="js/jquery-eu-cookie-law-popup.js"></script>
-
+  <link rel="stylesheet" type="text/css" href="../css/jquery-eu-cookie-law-popup.css" />
+  <script src="../js/jquery-eu-cookie-law-popup.js"></script>
 </head>
 
-<body class="htmlNoPages eupopup eupopup-top eupopup-style-compact">
-
-  <img src="under-construction.png" class="gwd-img-1998" id="page1Media">
-  <div class="gwd-div-1sxe" id="page1Text">
-    <div class="gwd-div-1kug" id="header">
-      <img src="logo.png" class="gwd-img-n42l" id="logo">
-      <p class="gwd-p-nsz4">trendy dots</p>
-    </div>
-    <div class="gwd-div-9729 gwd-div-1521">
-      <p class="gwd-p-6mvh">under <br /> construction</p>
-      <p class="gwd-p-1em6">
-        <span class="gwd-span-1nog">
+<body class="htmlNoPages eupopup eupopup-bottom eupopup-style-compact" data-aos-easing="ease" data-aos-delay="300"
+  data-aos="fade-in">
+  <nav
+    class="font-sans bg-white text-center flex md:justify-between items-center md:flex-row flex-col p-4 container overflow-hidden"
+    style="
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    max-width: 100%; position: fixed; top: 0; z-index: 100; 
+">
+    <span class="flex items-center">
+      <a href="https://trendydots.com/project" class="block text-left" target="_blank">
+        <img src="assets/img/logo.png" class="h-8 sm:h-8 rounded-full" alt="logo" />
+      </a>
+      &nbsp;
+      <b class="text-lg flex text-left" style="font-size: 1.35rem;">
+        <span style="color: #606f7b; display: inline; text-indent: 0.2em">research
         </span>
-        <br>
-      </p>
-    </div>
-  </div>
-  <div class="gwd-div-1ej3" id="page1Summary">
-    <div class="gwd-div-3afy" id="page1SummaryText">
-      <p class="gwd-p-18oe">We are redesigning our website, exploring dfferent communication strategies and other cool
-        stuff.
-      </p>
-      <p class="gwd-p-1qr0">Stay tuned</p>
-    </div>
-  </div>
+      </b>
+    </span>
 
+    <div class="flex">
+      <a href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
+        data-aos="fade-in">Become a
+        Patron!</a>
+    </div>
+
+    <!-- 
+    <ul class="text-sm text-grey-dark list-reset flex items-center">
+      
+      <li>
+        <a href="https://trendydots.com" target="_blank" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Main Page</a>
+      </li>
+     
+    <li><a href="#" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Pricing</a></li>
+    <li class="pr-2"><a href="#" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">FAQs</a></li>
+    <li class="pl-2 border-l"><a href="#" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">Log In</a></li>
+   
+      <a href="#subscribe-section" class="bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3 no-underline">
+        Contact
+      </a>
+
+    </ul>
+     -->
+  </nav>
+  <section style="margin-top:5em"
+    class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+    <div class="w-full lg:w-1/2" style="box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);">
+      <img src="./assets/img/in0.png" alt="" />
+    </div>
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <h1 class="my-4 font-normal text-grey-darker">
+        Information empowers good decisions.
+      </h1>
+      <p class="leading-normal mb-4 ">
+        An ambitious project aiming to make story discovery as easy as possible. When you are starting your article,
+        data trends are essential. With the trendy dots platform you will get insights into new stories and new trends
+        <br> <br>
+        We offer an intuitive, easy to use way for getting informed about the
+        things that matter.
+      </p>
+    </div>
+  </section>
+
+  <section
+    class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <h1 class="my-4 font-normal text-grey-darker">
+        Standard reporting containing insights into company shares, indices, commodities,
+        cryptocurrencies and world events.
+      </h1>
+      <br />
+      <p class="leading-normal mb-4">
+        We offer up-to-date information which helps you decide about
+        transactions on a broad spectrum of opportunities. Fast and reliable,
+        the trendy dots investor news compiles headlines from the most read
+        media outlets in the world and categorizes them according to your
+        setting. You will get daily digests over news coverage, global impact
+        and interest in the events, companies, currencies, etc. you set.
+      </p>
+    </div>
+    <div class="w-full lg:w-1/2">
+      <img src="./assets/img/in3.png" alt="" style="box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);" />
+    </div>
+  </section>
+
+
+  <!-- Form -->
+  <section class="antialiased font-sans w-full bg-grey-lighter text-left text-black py-8" id="subscribe-section">
+    <div class="container mx-auto max-w-xl py-8 font-normal leading-normal">
+      <h3 class="text-2xl">Join our journey</h3>
+      <p class="">
+        As we are working hard to achieve a great quality platform, we need
+        your expert opinion. Follow our patreon posts to keep up with developments. Becoming a Supporter patron gives
+        you first access to our donation enabled freemium experiments.
+        Being an Innovator or Angel patron means you are automatically included in the early platform adopter program
+        and you get to: use the platform, offer feedback, have access to all training videos and so much more.
+      </p>
+      <br>
+      <div class="w-full text-center">
+        <a href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
+          data-aos="fade-in">Become a
+          Patron!</a>
+      </div>
+      <br>
+      <!-- New form 
+      <form class="font-sans text-sm rounded w-full max-w-md mx-auto my-8 px-8 pt-6 pb-8" accept-charset="UTF-8"
+        action="https://usebasin.com/f/06dcf3d4ebaf" enctype="multipart/form-data" method="POST" data-aos="fade-up">
+        <div class="w-full text-center"> Not convinced? Stay in touch with our progress. Register to our newsletter
+        </div>
+        <br>
+        <div class="relative border rounded mb-4 shadow appearance-none label-floating">
+          <input class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="firstname" name="firstname"
+            type="text" required style="height: 5em;" />
+          <label class="absolute block text-grey-darker pin-t pin-l w-full px-3 py-2 leading-normal" for="firstname"
+            style="color: black;">
+            Your first name
+          </label>
+        </div>
+        <div class="relative border rounded mb-4 shadow appearance-none label-floating">
+          <input class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="email" name="email" type="email"
+            required style="height: 5em;" />
+          <label class="absolute block text-grey-darker pin-t pin-l w-full px-3 py-2 leading-normal" for="email"
+            style="color: black;">
+            Your email
+          </label>
+        </div>
+        <div class="relative border rounded mb-4 shadow appearance-none label-floating">
+          <input class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="affiliation" name="affiliation"
+            type="text" required style="height: 5em;" />
+          <label class="absolute block text-grey-darker pin-t pin-l w-full px-3 py-2 leading-normal" for="affiliation"
+            style="color: black;">
+            Your affiliation
+          </label>
+        </div>
+        <div class="relative border rounded mb-4 shadow appearance-none label-floating">
+          <input class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="fieldRelation"
+            name="fieldRelation" type="text" style="height: 6em;" />
+          <label class="absolute block text-grey-darker pin-t pin-l w-full px-3 py-2 leading-normal" for="fieldRelation"
+            style="color: black;">
+            How are you related to the standard reporting or market reserach field?
+          </label>
+        </div>
+
+        <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
+        <input type="hidden" name="comment" value="td. market research contact" />
+        <br />
+        <div class="flex items-center justify-between">
+          <button class="bg-black hover:bg-black text-white py-2 px-4" type="submit"
+            style="min-height: 40px; border-radius: 3px; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
+            Submit
+          </button>
+          <span style="font-size:12px">
+            by submitting this information you agree to our
+            <a href="../privacy-statement.html" target="_blank" style="color:#000">privacy statement</a>
+          </span>
+        </div>
+      </form>
+
+          -->
+    </div>
+  </section>
+
+
+  <section style="margin-top:5em"
+    class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+    <div class="w-full lg:w-1/2" style="box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);">
+      <img src="./assets/img/inE1.png" alt="" />
+    </div>
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+      <h1 class="my-4 font-normal text-grey-darker">
+        NEW! Try out our summarisation tool for free
+      </h1>
+      <br />
+      <p class="leading-normal mb-4 ">
+        With this new experimental tool we aim to summarize a large text into a small paragraph. The experiment succeeds
+        if the summary ratio is less than 60%. If you are interested in our research, please visit our Patreon page.
+      </p>
+      <a href="/research/nlp/" id="summarizeBtn" class="hover:bg-grey-lighter no-underline" target="_blank"
+        style="text-align: center; border: 2px solid black; padding: 1em; box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);">
+        Try for free
+      </a>
+    </div>
+  </section>
+
+  <!-- testimonials 
+  <section class="bg-grey-lighter py-4 font-sans">
+    <div class="flex flex-col sm:flex-row flex-wrap my-8 justify-around px-8">
+      <div
+        class="w-full sm:w-1/2 md:w-1/3 flex flex-col items-center justify-center h-48 md:h-64 border-grey-lightest border-r border-b shadow-md hover:border-0 bg-white">
+        <h3 class="mt-4 mb-1"><i>It links the links</i></h3>
+        <p class="mt-4 text-center text-grey-dark leading-normal px-6 block">Dominik S.</p>
+      </div>
+
+      <div
+        class="w-full sm:w-1/2 md:w-1/3 flex flex-col items-center justify-center h-48 md:h-64 p-8  border-grey-lightest border-r border-b shadow-md hover:border-0 bg-white">
+         <h3 class="mt-4 mb-1"><i>My team is doing research at lightspeed</i></h3>
+        <p class="mt-4 text-center text-grey-dark leading-normal block">Regina B.</p>
+      </div>
+
+    </div>
+  </section>
+-->
+
+  <footer class="font-sans bg-white py-8 px-4">
+    <div
+      class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left">
+      <a href="" class="block mr-4 w-full md:w-1/4" target="_blank">
+        <img src="./assets/img/logo.png" class="w-24 -ml-8 md:ml-0" alt="logo" />
+      </a>
+      <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
+        <h4 class="py-2 uppercase font-bold tracking-wide">About US</h4>
+        <p>
+          Trendy Dots is an ambitious project making trend and exploratory
+          data analysis on the new and old markets. We model the internet
+          behaviour and forecast the evolution of markets, products,
+          companies, etc. using innovative AI algorithms.
+        </p>
+      </div>
+      <div class="text-grey-dark flex flex-col items-center w-full md:w-1/4 mt-6 md:mt-0">
+        <h4 class="inline-block py-2 px-3 uppercase font-bold tracking-wide text-grey-darkest">
+          Follow Us
+        </h4>
+        <div class="flex pl-0 md:pl-4 justify-start">
+          <!-- 
+        <a class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline" href="#"><i class="fab fa-github-alt"></i></a>
+        <a class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline" href="#"><i class="fab fa-slack"></i></a>
+       -->
+          <a class="block flex items-center text-grey-darkest hover:text-black no-underline" target="_blank"
+            href="https://twitter.com/trendydots">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-4 mt-4 text-grey-darker text-xs border-t border-grey-lighter text-center">
+      ©2019 trendydots.com All rights reserved. &nbsp;
+      <a href="../privacy-statement.html" target="_blank" style="color:#000">Privacy statement</a>
+      &nbsp;
+      <a href="../terms-of-service.html" target="_blank" style="color:#000">Terms of service</a>
+    </div>
+  </footer>
+
+  <script src="./assets/js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113784035-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'UA-113784035-1');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-113784035-1");
   </script>
 
-
-  <script>
-    function leaveInput(el) {
-      if (el.value.length > 0) {
-        if (!el.classList.contains('active')) {
-          el.classList.add('active');
-        }
-      } else {
-        if (el.classList.contains('active')) {
-          el.classList.remove('active');
-        }
-      }
-    }
-    var inputs = document.getElementsByClassName("m-input");
-    for (var i = 0; i < inputs.length; i++) {
-      var el = inputs[i];
-      el.addEventListener("blur", function () {
-        leaveInput(this);
-      });
-    }
-
-  </script>
-
-
+  <script src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 </body>
 
 </html>

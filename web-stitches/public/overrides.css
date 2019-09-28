@@ -24,3 +24,8 @@
     width: .75rem;
     margin-right: .25rem;
 }
+
+.snippet-tab {
+    /* border-bottom: 2px solid #fff; */
+    border-bottom: 2px solid #fff;
+}

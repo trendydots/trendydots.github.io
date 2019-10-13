@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href=${"https://trendydots.com/invest/assets/css/stitches.css"} rel="stylesheet">
-    <link href=${"https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900"} rel="stylesheet">
-    <link rel="stylesheet" href=${"https://use.fontawesome.com/releases/v5.6.3/css/all.css"} integrity=${"sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"} crossorigin="anonymous">
-    <title>td. web stitches</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="https://trendydots.com/mobile-stitches/public/materialize.min.css"  media="screen,projection"/>
+
+    <title>td. mobile stitches</title>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="https://trendydots.com/mobile-stitches/public/materialize.min.js"></script>
+   
     
     <!--Load Google Charts via the AJAX API-->
     <script type="text/javascript" src=${"https://www.gstatic.com/charts/loader.js"}></script>
@@ -20,10 +26,47 @@
    })
     </script>
   </head>
-  <body>
-  
-  ${e}
+  <body style="background: #eee;">
+  <!-- html[0] -->
+    <div class="row">
+        <div class="container" style="height: 790px; border-bottom: 1px dashed #BDBDBD;">
+            <div class="col s6">
+                <div class="">
+                    <h2 class="col s12"> Mobile mockup showcase</h2>
+                    <h5 class="col s12 blue-grey-text text-darken-3"> This screen contains a web prototype which simulates the user itnerface of a proespective PWA.
+                    <br><br> 
+                    It uses <a target="_blank" href="https://materializecss.com/about.html"> Materialize CSS 1.0.0</a> </h5>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="col s2"></div>
+                <div class="col s8">
+                    <img src="https://trendydots.com/mobile-stitches/images/demo-phone2.png" style="
+                    position: absolute;
+                    width: 458px;
+                    margin-top: 0px;
+                    margin-left: 0px;">
+                    <div style="
+                    background: #ECEFF1;
+                    /* border: 2px solid #E0E0E0; */
+                    position: absolute;
+                    width: 320px;
+                    height: 567px;
+                    margin-top: 98px;
+                    margin-left: 69px;">
+
+                    ${e}
+
+                    </div>
+                </div>
+                <div class="col s2"></div>
+            </div>
+        </div>
+    </div>
+ 
+  <script> M.AutoInit();</script>
   </body>
+
 </html>`;const g={authDomain:"td-mobile-stitches.firebaseapp.com",databaseURL:"https://td-mobile-stitches.firebaseio.com",projectId:"td-mobile-stitches",storageBucket:""};let y=[];downloadFromFB=e=>{let t="";for(let n=0;n<e.length;n++)t+=y[e[n]]?y[e[n]].snippet:"";return{data:m(t)}},c.addEventListener("click",e=>{if("BUTTON"===e.target.tagName){c.childNodes.forEach(e=>{"BUTTON"===e.nodeName&&(e.style.borderColor="#fff")});let r=e.target;r.style.borderColor="#abb7bd";const o=r.getAttribute("data-filter");for(var n=0;n<p.length;n++)p[n].style.display=p[n].classList.contains(o)?"block":"none";t(".js-snippets",".js-snippet",0,2,2,1)}}),u.addEventListener("click",()=>{let e=[],t=document.querySelectorAll(".js-droppable > .js-snippet");for(var r=0;r<t.length;r++)e.push(t[r].id);n("stitches.html",downloadFromFB(e).data)}),document.addEventListener("click",function(e){e.target.classList.contains("js-delete-btn")&&document.querySelector(".js-droppable").removeChild(e.target.parentElement)}),window.addEventListener("resize",function(){o(l,function(){t(".js-snippets",".js-snippet",0,2,2,1)})}),window.addEventListener("load",()=>{console.log("page is fully loaded"),i.initializeApp(g);var e=i.database();e.ref("/platformConfig").once("value").then(function(e){e.val()}),e.ref("/templates").once("value").then(function(e){y=e.val(),Object.keys(y).forEach(function(e){let t=y[e],n=document.createElement("figure");n.id=t.name,n.classList="js-snippet w-1/2 p-2 "+t.templateTags.join(" "),n.innerHTML=`
       <img src="${t.imgUrl}" alt=""
       class="border border-grey-light cursor-move hover:shadow-md transition-normal hover:translate-y-1 hover:border-black" />

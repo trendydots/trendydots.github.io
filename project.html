@@ -12,10 +12,14 @@
   <meta name="keywords" content="digital lab, exploratory data analysis, behavioural economics, trend analysis" />
   <link rel="shortcut icon" href="logo.png">
 
-  <link href=https://trendydots.com/invest/assets/css/stitches.css rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/tailwind.min.css" rel="stylesheet">
+
   <link href=https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900 rel="stylesheet">
   <link rel="stylesheet" href=https://use.fontawesome.com/releases/v5.6.3/css/all.css
     integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -28,6 +32,10 @@
     .grecaptcha-badge {
       display: none;
     }
+
+    .m-0 {
+      margin: 0 !important;
+    }
   </style>
   <script>
     function onSubmit(token) {
@@ -36,270 +44,277 @@
   </script>
 </head>
 
-<body style="background: #f5f4f2; font-family: Montserrat;" class="eupopup eupopup-bottom eupopup-style-compact">
+<body style="font-family: Montserrat;" class="eupopup eupopup-bottom eupopup-style-compact">
+  <nav
+    class="font-sans md:shadow-none md:bg-transparent bg-white shadow text-center fixed flex justify-between py-4 px-8 overflow-hidden w-full flex-col md:flex-row"
+    style="margin-bottom: 5px; z-index: 10; top:0">
+    <a href="/" class="block md:text-left text-center no-underline text-black"
+      style="line-height:40px; font-weight: 700; font-size: 22px;">
+      <span>td<span style="color:#F2D024">.</span> </span>
+      <span style="font-weight: 600;"> trendy dots</span>
+    </a>
+    <ul class="text-sm text-grey-dark list-reset flex items-center md:flex-row flex-col">
+      <li>
+        <a class="btn bg-white border border-red cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mx-4 mb-2 rounded-full shadow inline-flex items-center"
+          href="https://www.patreon.com/bePatron?u=14590376" target="_blank">
+          <img src="./patreon-logo1.png" style="height: 1.5em; vertical-align: middle;" alt="">
+          &nbsp;
+          <span> Become a patron</span>
+        </a>
+      </li>
+      <!-- 
+      <li>
+        <a
+          class="btn bg-white border border-blue cursor-pointer text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center">
+          <img src="./paypal-logo.png" style="height: 1.5em; vertical-align: middle;" alt="">
+          &nbsp;
+          <span> Donate one time</span>
+        </a>
+      </li>
+      -->
+    </ul>
+  </nav>
 
-  <!-- Our story -->
-  <section class="font-sans w-full flex flex-col md:flex-row text-center md:text-left justify-between">
-    <div class="w-full md:w-1/2 flex flex-col justify-between items-start items-center md:items-start bg-white" style="z-index: 2; padding: 2%; padding-left: 6%; padding-right: 6%; box-shadow: rgba(0, 0, 0, 0.2) 0 1.5em 85px 0;
+
+  <!-- the story -->
+  <section
+    class="bg-white font-sans w-full flex flex-col-reverse md:flex-row text-center md:text-left justify-between mt-16 pt-8 md:mt-0 md:pt-0">
+    <div class="w-full md:w-1/2 rounded flex flex-col justify-between items-start items-center md:items-start" style="z-index:2; padding: 2%; padding-left: 6%; padding-right: 6%; 
       ">
-      <div style="font-size: 24px; font-weight: 700">
-        <img src="./logo.png" style="vertical-align: middle; height: 1.3em" /> trendy dots
-      </div>
-
+      <br><br><br>
       <div>
         <h1 class="my-4 font-normal" style="font-weight: 700;
-      font-size: 10vh;">our story</h1>
-        <p class="leading-normal mb-4">
-          Trendy Dots is a hobby project making trend and exploratory data analysis on the new and old markets. We
-          aim to model the internet behaviour and forecast the evolution of markets, products, companies, etc. using
-          innovative AI algorithms.
+      font-size: 8vh;">the story</h1>
+        <p class="leading-normal mb-2 text-base md:text-lg xl:text-xl ">
+          Trendy Dots is a hobby project developing fun applications for data science, data visualization and user
+          experience.
+          I playfully apply UX and data science best practices to big data, aiming to produce high value tools.
+        </p>
+        <p class="leading-normal mb-4 text-center ">
+          <img src="./cris.png" style="max-height: 150px; min-height: 100px;" alt="">
         </p>
       </div>
-      <br>
-      <br>
-      <div> <a href="https://twitter.com/trendydots" target="_blank" style="text-decoration: none; color: black">
-          <img src="twitter_black.png" style="vertical-align: middle; height: 1em">
-          @trendydots
-        </a></div>
-      <div style="height: 50px" class="hidden md:block"></div>
     </div>
-    <div class="w-full md:w-1/2">
-      <img src="./1.png" alt="" />
+    <div class="w-full md:w-1/2 flex flex-col overflow-hidden items-center">
+      <img src="./11.png" alt="" />
+      <a href="https://twitter.com/trendydots" class="mt-4" target="_blank" style="text-decoration: none; color: black">
+        <img src="twitter_black.png" style="vertical-align: middle; height: 1em">
+        @trendydots
+      </a>
     </div>
   </section>
 
-  <section class="font-sans container m-auto max-w-xl" style="margin-top: -10%; margin-bottom: 7%">
-    <div class="flex flex-col sm:flex-row flex-wrap my-8 items-center justify-center">
-      <div style=" z-index: 3; background: #424242;"
-        class="w-full p-8 sm:w-1/2 md:w-1/3 flex flex-col items-left shadow-md text-white text-left text-sm ">
+  <!-- workflow-->
+  <section class="bg-white font-sans w-full flex flex-col text-center lg:text-left justify-between"
+    style="margin-top: 20px;">
 
-        <br><br>
-        <h3 class="mt-4 px-6">Web experiments</h3>
-        <p class="mt-2 leading-normal px-6">Bridging the gap between big ideas, open data and
-          good UX</p>
-        <br><br>
-        <h3 class="mt-4 px-6">Exploratory Data Analysis</h3>
-        <p class="mt-2 leading-normal px-6">Looking at how data evolves over time. Infering meaningful association of
-          data trends</p>
-        <br><br><br><br>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- What we do -->
-  <section class="font-sans w-full flex flex-col-reverse md:flex-row text-center md:text-left justify-between">
-
-    <div class="w-full md:w-1/2">
-      <img src="./3.png" alt="" />
-    </div>
-    <div class="w-full md:w-1/2 flex flex-col justify-between items-start items-center md:items-start bg-white" style="z-index: 2; padding: 2%; padding-left: 6%; padding-right: 6%; box-shadow: rgba(0, 0, 0, 0.2) 0 1.5em 85px 0;
+    <div class="w-full rounded flex flex-col justify-between items-center lg:items-start bg-white" style="z-index:2; padding: 2%; padding-left: 6%; padding-right: 6%;
       ">
-      <div style="font-size: 24px; font-weight: 700">
-      </div>
-      <div style="height: 30px" class="hidden md:block"></div>
-      <div>
+      <div style=" z-index: 3;" class="flex flex-col items-center text-sm font-bold ">
         <h1 class="my-4 font-normal" style="font-weight: 700;
-      font-size: 10vh;">what we do</h1>
-        <p class="leading-normal mb-4">
-          We playfully apply UX and data science best practices to big data, aimig to produce highly valuable knowledge.
-          We
-          produce user interfaces that tell stories with data. We have lots of fun doing this.
-        </p>
-      </div>
-      <br>
-      <div class="w-full text-right"> <a href="https://twitter.com/trendydots" target="_blank"
-          style="text-decoration: none; color: black">
-          <img src="twitter_black.png" style="vertical-align: middle; height: 1em">
-          @trendydots
-        </a></div>
+      font-size: 8vh;">my workflow</h1>
+        <br><br>
+        <div class="flex lg:flex-row flex-col">
+          <div class="flex flex-col lg:flex-row mb-4">
+            <div class=" flex w-full lg:w-1/4 justify-center text-center items-center">
+              <i class="material-icons-round" style="font-size: 4em; color: #F2D024;">emoji_objects</i>
+            </div>
+            <div class="flex w-full lg:w-3/4 flex-col justify-center text-center">
+              <h3 class="mb-2">1. a big idea - early stage prototyping</h3>
+              <p class="leading-normal mb-2">I start brainstorming for ideas until the light bulb shines.
+                then, using the <a href="https://www.gv.com/sprint/" class="text-black" target="_blank">design sprint
+                  method</a>, I
+                challenge
+                myself with building a proof of concept &amp; MVP</p>
+            </div>
+          </div>
 
-      <div style="height: 70px" class="hidden md:block"></div>
-    </div>
-  </section>
+          <div class="flex flex-col lg:flex-row mb-4">
+            <div class=" flex w-full lg:w-1/4 justify-center text-center items-center">
+              <i class="material-icons-round" style="font-size: 4em; color: #F2D024;">language</i>
+            </div>
+            <div class="flex w-full lg:w-3/4 flex-col justify-center text-center lg:text-left">
+              <h3 class="mb-2"> 2. will it work online? - web development </h3>
+              <p class="leading-normal mb-2">
+                A large part of my ambition is to create a toolset the functions 100% online, without the need for
+                complicated
+                installations, or configurations.
+                Depending on your donations, the toolset will be freely available, ad free, accessible to as many users
+                as
+                possible.
+              </p>
+            </div>
+          </div>
 
-  <section class="font-sans container m-auto max-w-xl" style="margin-top: -10%; margin-bottom: 7%">
-    <div class="flex flex-col sm:flex-row flex-wrap my-8 items-center justify-center">
-      <div style=" z-index: 3; background: #424242;"
-        class="w-full p-8 sm:w-1/2 md:w-1/3 flex flex-col items-left shadow-md text-white text-left text-sm ">
-        <br><br>
-        <h3 class="mt-4 px-6"><i> A big idea </i> - Early Stage Prototyping</h3>
-        <p class="mt-2 leading-normal px-6"> We brainstorm for ideas, challenge ourselves with building proofs of
-          concept and
-          MVPs</p>
-        <br><br>
-        <h3 class="mt-4 px-6"> <i> Will it work online?</i> - Web Development</h3>
-        <p class="mt-2 leading-normal px-6">Turning MVPs into products that scale.</p>
-        <br><br>
-        <h3 class="mt-4 px-6"><i> What can be improved?</i> - Data Visualisation & Analysis</h3>
-        <p class="mt-2 leading-normal px-6">Part of our exploratory data analysis practice. Analise
-          collective interest through innovative techniques.</p>
-        <br><br>
-        <div class="w-full mt-4 px-6 text-center">
-          <p> Support our project on Patreon</p>
-          <br>
-          <a href="https://www.patreon.com/tdmresearch" target="_blank">
-            <img src="./patreon.png" alt="" style="height: 4.5em; border-radius: 50%;">
-          </a>
+          <div class="flex flex-col lg:flex-row mb-4">
+            <div class=" flex w-full lg:w-1/4 justify-center text-center items-center">
+              <i class="material-icons-outlined" style="font-size: 4em; color: #F2D024;">contact_support</i>
+            </div>
+            <div class="flex w-full lg:w-3/4 flex-col justify-center text-center lg:text-left">
+              <h3 class="mb-2"> 3. can I do better? - analytics and feedback based improvements </h3>
+              <p class="leading-normal mb-2">
+                Here is where your opinons and contributions are put to good use. I encourage yout to become an active
+                <b>patron</b>
+                Please write your feedback and improvement suggestions. I will consider your desired changes.
+              </p>
+            </div>
+          </div>
         </div>
-        <br><br>
       </div>
 
     </div>
+
+    <div class="w-full flex flex-col items-center justify-center flex overflow-hidden">
+      <a href="https://twitter.com/trendydots" target="_blank"
+        style="text-decoration: none; color: black; float: right;">
+        <img src="twitter_black.png" style="vertical-align: middle; height: 1em">
+        @trendydots
+      </a>
+    </div>
   </section>
 
+
+  <!-- support-->
+  <section class="font-sans m-auto w-full" style="margin-top: 50px; margin-bottom: 50px;">
+    <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center">
+      <div style=" z-index: 3; background: #F5F5F5;"
+        class="w-full p-8 sm:w-1/2 flex flex-col items-left md:shadow-md bg-white text-sm font-bold md:rounded">
+        <h1 class="leading-normal mb-2 text-center te">
+          Support the project
+        </h1>
+        <br><br>
+        <div class="flex md:flex-row flex-col items-center justify-center">
+          <div class="flex flex-col ">
+            <a class="btn bg-white border border-red cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+              href="https://www.patreon.com/bePatron?u=14590376" target="_blank" style="white-space: nowrap;">
+              <img src="./patreon-logo1.png" style="height: 1.5em; vertical-align: middle;" alt="">
+              &nbsp;
+              <span style="white-space: nowrap;"> Become a patron</span>
+            </a>
+          </div>
+          <!-- 
+          <div class="md:w-1/2  flex flex-col">
+            <a
+              class="btn bg-white border border-blue cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center">
+              <img src="./paypal-logo.png" style="height: 1.5em; vertical-align: middle;" alt="">
+              &nbsp;
+              <span> Donate one time</span>
+            </a>
+          </div>
+        </div>
+        -->
+        </div>
+  </section>
 
   <!-- Projects -->
-  <section class="my-16 font-sans w-full bg-white p-8">
+  <section class="mt-16 font-sans w-full bg-white p-8">
     <div class="text-center">
-      <h2 class="my-4 font-medium">Projects we're proud of</h2>
-    </div>
-  </section>
-  <section class="bg-white py-4 font-sans">
-    <div class="container max-w-xl m-auto flex flex-wrap items-baseline ">
-
-      <a target="_blank" href="http://trendydots.com/research/nlp/"
-        style="height:250px; text-decoration: none; color:black;"
-        class="w-full md:w-1/3 lg:w-1/3 flex flex-col mb-8 px-3 ">
-        <div class="overflow-hidden bg-white text-center rounded-lg shadow-md hover:translateY-2px transition h-full"
-          style="padding-top: 5%;">
-          <img style="height: 2em;" src="./nlp.png" alt="natural language processing">
-          <div class="p-6 flex flex-col justify-between ">
-            <h3 class="font-medium text-grey-darkest mb-4 leading-normal">NLP</h3>
-            <p class="inline-flex items-center">
-              <span class="text-grey-dark text-sm">A series of experiments around AI text processing. Summarizing
-                language independent texts, extracting tokens, hashtag autosuggest and so much more. </span>
-            </p>
-          </div>
-        </div>
-      </a>
-
-      <a target="_blank" href="https://trendydots.com/invest/project"
-        style="height:250px; text-decoration: none; color:black;"
-        class="w-full md:w-1/3 lg:w-1/3 flex flex-col mb-8 px-3 ">
-        <div class="overflow-hidden bg-white text-center rounded-lg shadow-md hover:translateY-2px transition h-full"
-          style="padding-top: 5%;">
-          <img style="height: 2em" src="./tdmr.png" alt="Sunset in the mountains">
-          <div class="p-6 flex flex-col justify-between ">
-            <h3 class="font-medium text-grey-darkest mb-4 leading-normal"><i>"it links the links"</i></h3>
-            <p class="inline-flex items-center">
-              <span class="text-grey-dark text-sm">
-                Our market research platform offers standard
-                reporting containing insights into company shares, indices, commodities, cryptocurrencies and world
-                events.
-              </span>
-            </p>
-          </div>
-        </div>
-      </a>
-
-      <a target="_blank" href="https://trendydots.com/data4good/"
-        style="height:250px; text-decoration: none; color:black;"
-        class="w-full md:w-1/3 lg:w-1/3 flex flex-col mb-8 px-3 ">
-        <div class="overflow-hidden bg-white text-center rounded-lg shadow-md hover:translateY-2px transition h-full"
-          style="padding-top: 5%;">
-          <img style="height: 2em" src="./d4g.png" alt="Sunset in the mountains">
-          <div class="p-6 flex flex-col justify-between ">
-            <h3 class="font-medium text-grey-darkest mb-4 leading-normal">
-              Volunteering
-            </h3>
-            <p class="inline-flex items-center">
-              <span class="text-grey-dark text-sm">
-                Teams of data scientists, developers
-                and designers working with NGOs and social enterprises to solve complex challenges and identify new
-                social impact opportunities.
-              </span>
-            </p>
-          </div>
-        </div>
-      </a>
-
+      <h1 class="my-4 font-normal" style="font-weight: 700;
+      font-size: 6vh;">the <span class="font-bold">td<span style="color:#F2D024">.</span></span> toolset
+      </h1>
     </div>
   </section>
 
-
-  <!-- 
-  <section class="font-sans w-full flex flex-col-reverse md:flex-row text-center md:text-left justify-between">
-    <div class="w-full md:w-1/2">
-      <img src="./3.png" alt="" />
-    </div>
-    <div class="w-full md:w-1/2">
-    </div>
-  </section>
--->
-  <!-- Contact us -->
-  <!--
-  <section class="font-sans w-full md:w2/3" style="margin-top: -20%; margin-bottom: -20%">
-    <div class="flex flex-col sm:flex-row flex-wrap my-8 items-center justify-center">
-      <div class="p-8 w-full md:w-1/2 flex flex-col items-left bg-white text-left"
-        style="box-shadow: rgba(0, 0, 0, 0.2) 0 1.5em 85px 0; z-index: 2">
-        <br><br>
-        <h1 class="my-4 px-6 font-normal" style="font-weight: 700;
-      font-size: 8vh;">contact us</h1>
-        <form class="font-sans rounded w-full max-w-md mx-auto my-8 px-8 pt-6 pb-8" id="signupform"
-          accept-charset="UTF-8" action="https://usebasin.com/f/06dcf3d4ebaf" enctype="multipart/form-data"
-          method="POST">
-          <div class="relative border rounded mb-4 shadow appearance-none label-floating w-full">
-            <input class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="fullname" name="fullname"
-              type="text" placeholder="Full Name">
-            <label class="absolute block text-grey-darker pin-t pin-l w-full px-3 py-2 leading-normal" for="fullname">
-              Full Name
-            </label>
-          </div>
-          <div class="relative border rounded mb-4 shadow appearance-none label-floating">
-            <input class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="email" name="email" type="email"
-              placeholder="Email">
-            <label class="absolute block text-grey-darker pin-t pin-l w-full px-3 py-2 leading-normal" for="email">
-              Email
-            </label>
-          </div>
-          <div class="relative border rounded mb-4 shadow appearance-none label-floating">
-            <input rows="3" cols="5" class="w-full py-2 px-3 text-grey-darker leading-normal rounded" id="message"
-              name="message" type="text" placeholder="Message">
-            <label class="absolute block text-grey-darker pin-t pin-l w-full px-3 py-2 leading-normal" for="message">
-              Message
-            </label>
-          </div>
-          <input type="hidden" name="_gotcha"></input>
-
-          <div class="w-full"></div>
-          <br>
-
-          <div class="flex items-center md:flex-row flex-col justify-between">
-            <button class="g-recaptcha bg-black hover:bg-black text-white py-2 px-4 md:w-1/3 "
-              data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline"
-              type="submit" value="submit">
-              Send Message
-            </button>
-
-            <div>&nbsp;</div>
-
-            <div class="md:w-1/2">by
-              submitting this information you agree to our <a
-                class="inline-block align-baseline text-grey hover:text-grey-darker" href="./privacy-statement.html">
-                privacy statement
-              </a></div>
-
-          </div>
-        </form>
-        <br><br><br><br>
+  <!-- features-1 -->
+  <div class="w-full" style="background: #fff; padding-bottom: 20px;">
+    <!-- Web Stitiches-->
+    <section
+      class="bg-white mb-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2">
+        <img class="shadow-md rounded" src="./ws.jpg" alt="" />
       </div>
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">web development</label>
+        <h2 class="my-4 font-normal font-bold">td<span style="color:#F2D024">.</span> web-stitiches</h2>
+        <p class="leading-normal mb-4 text-grey-dark">
+          A web application that helps you rapidly design a landing page or an editorial website.
+          Using Google Charts, the data visualization components make it easy to express knowledge in beautiful web
+          pages.
+          It takes seconds to experiment with diferent layouts.
+          <br><br>
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="/web-stitches/" target="_blank" style="white-space: nowrap; border-color: #F2D024;">
+            <span style="white-space: nowrap;"> Try for FREE </span>
+          </a>
 
-    </div>
-  </section>
--->
-  <!--
-  <section class="font-sans w-full flex flex-col md:flex-row text-center md:text-left justify-between">
-    <div class="w-full md:w-1/2">
-    </div>
-    <div class="w-full md:w-1/2">
-      <img src="./4.png" alt="" />
-    </div>
-  </section>
- -->
-  <footer class="font-sans bg-white py-8 px-4" style="z-index: 4">
-    <div class="mx-auto max-w-xl overflow-hidden flex justify-between items-center">
-      <p class="inline-block py-2 px-3 "> ©2019 <strong class="">trendydots.com</strong> All rights reserved.</p>
+        </p>
+      </div>
+    </section>
+
+    <!-- NPL -->
+    <section
+      class="bg-white my-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">natural language
+          processing</label>
+        <h2 class="my-4 font-normal font-bold">td<span style="color:#F2D024">.</span> nlp research </h2>
+        <p class="leading-normal mb-4 text-grey-dark">
+          A series of experiments around AI text processing. Summarizing language independent texts, extracting tokens,
+          hashtag autosuggest and so much more.
+          <br><br>
+          The first experiment autmatically summarizes text.
+          <br><br>
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="/research/nlp/" target="_blank" style="white-space: nowrap; border-color: #F2D024;">
+            <span style="white-space: nowrap;"> Try for FREE </span>
+          </a>
+        </p>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <img src="./inE1.png" class="shadow-md rounded" alt="" />
+      </div>
+    </section>
+
+    <!-- Trends -->
+    <section
+      class="bg-white my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2">
+        <img src="./in3.png" class="shadow-md rounded" alt="" />
+      </div>
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">behavioural economics</label>
+        <h2 class="my-4 font-normal font-bold">td<span style="color:#F2D024">.</span> trends research</h2>
+        <p class="leading-normal mb-4 text-grey-dark">
+          The td<span style="color:#F2D024">.</span> trends research platform platform that aims to offer an intuitive,
+          easy to use way for getting informed about the
+          things that matter.
+          When you are interested in human/consumer behaviour towards companies, products, world events, or innovative
+          concepts, my td<span style="color:#F2D024">.</span> trends research platform can help you with quick and easy
+          insights.
+          <br><br>
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="/invest/" target="_blank" style="white-space: nowrap; border-color: #F2D024;">
+            <span style="white-space: nowrap;"> Check out details </span>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Data4Good -->
+    <section
+      class=" bg-white my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center"
+      style="border-top:1px solid #eee">
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">Volunteering</label>
+        <img class="my-4" style="height: 3em;" src="./d4g.png" alt="natural language processing">
+
+        <p class="leading-normal mb-4 text-grey-dark">
+          Helping teams of data scientists, developers
+          and designers working with NGOs and social enterprises to solve complex challenges and identify new
+          social impact opportunities.
+        </p>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <img src="./d4g.jpg" class="shadow-md rounded" alt="" />
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="font-sans bg-white pb-8 px-4" style="z-index: 4">
+    <div class="mx-auto max-w-xl overflow-hidden flex flex-col md:flex-row justify-between items-center">
+      <p class="inline-block py-2 px-3 text-center md:text-left"> ©2019 <strong class="">trendydots.com</strong> <br>
+        All rights reserved.</p>
 
       <ul class="text-sm text-grey-dark list-reset flex items-center">
         <li><a href="./privacy-statement.html" target="_blank" class="inline-block py-2 px-3 text-black">Privacy

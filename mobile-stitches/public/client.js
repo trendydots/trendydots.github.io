@@ -16,15 +16,9 @@
     <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="https://trendydots.com/mobile-stitches/public/materialize.min.js"></script>
    
+    <!-- Import ChartJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
     
-    <!--Load Google Charts via the AJAX API-->
-    <script type="text/javascript" src=${"https://www.gstatic.com/charts/loader.js"}></script>
-    
-    <script> 
-    $(window).resize(function () {
-      $(window).trigger("window:resize")
-   })
-    </script>
   </head>
   <body style="background: #eee;">
   <!-- html[0] -->
@@ -48,12 +42,15 @@
                     margin-left: 0px;">
                     <div style="
                     background: #ECEFF1;
-                    /* border: 2px solid #E0E0E0; */
+                    border: 2px solid #E0E0E0;
                     position: absolute;
                     width: 320px;
                     height: 567px;
                     margin-top: 98px;
-                    margin-left: 69px;">
+                    margin-left: 69px;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    ">
 
                     ${e}
 

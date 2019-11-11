@@ -1,0 +1,31 @@
+.js-droppable>.js-snippet {
+    width: 100%;
+    padding: 0;
+}
+
+.js-droppable>.js-snippet:hover>.js-delete-btn {
+    display: block;
+}
+
+.js-droppable>.js-snippet>img:hover {
+    transform: none;
+    border-color: #dae1e7;
+}
+
+.js-snippet {
+    display: block;
+}
+
+.window-nav-dot {
+    display: inline-block;
+    border-radius: 9999px;
+    background-color: #f7fafc;
+    height: .75rem;
+    width: .75rem;
+    margin-right: .25rem;
+}
+
+.snippet-tab {
+    /* border-bottom: 2px solid #fff; */
+    border-bottom: 2px solid #fff;
+}

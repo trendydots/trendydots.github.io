@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet" />
+  <link rel="stylesheet" href="./public/dragula.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="./public/stitches.css" />
+  <link rel="stylesheet" type="text/css" href="./public/overrides.css" />
+
+  <title>
+    td. mobile stitches - A HTML template generator using functional css
+  </title>
+
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/jquery-eu-cookie-law-popup.css" />
+  <script src="../js/jquery-eu-cookie-law-popup.js"></script>
+</head>
+
+<body class="overflow-hidden font-sans" style="background:#EEEEEE;">
+
+  <!-- the web elements section -->
+  <section class="fixed pin-l pin-t pin-b overflow-y-scroll w-1/2">
+    <div class="fixed font-black bg-white w-1/2 mb-3 " style="z-index: 100">
+      <h2 class="pb-2 pt-1 mx-3" style="font-weight: 800; display: flex; flex-direction: row">
+        <a href="/" class="no-underline text-black transition" style="line-height: 1.8em">
+          <img src="https://trendydots.com/logo.png" class="inline-block mr-2 w-10 -mb-2" />mobile stitches</a>
+        <div style="flex:auto"></div>
+        <a style="display: inline;" href="https://www.patreon.com/bePatron?u=14590376">
+          <img src="./images/patreon-btn.png" alt="Become a patron" style="height: 1.8em">
+        </a>
+      </h2>
+      <div class="border-b-2 js-filter pl-3 border-grey-light text-center">
+        <button id="all-snippet-tab" class="text-black font-semibold snippet-tab px-2 py-1 transition-normal"
+          data-filter="js-snippet">
+          All
+        </button>
+        <!-- General -->
+        <button class="text-black font-semibold snippet-tab px-2 py-1 transition-normal" data-filter="st-basic">
+          Basics
+        </button>
+        <!-- Marketing -->
+        <button class="text-black font-semibold snippet-tab px-2 py-1 transition-normal" data-filter="st-marketing">
+          Marketing
+        </button>
+        <button class="text-black font-semibold snippet-tab px-2 py-1 transition-normal" data-filter="st-dataviz">
+          Data Viz.
+        </button>
+      </div>
+    </div>
+    <!-- preloader -->
+    <div id="snippet-preloader" class="fixed bg-white" style="width:50%; height: 100%">
+      <div class="flex flex-col items-center justify-center" style="height: 100%">
+        <div class="flex"> loading snippets ...</div>
+        <div class="text-center"> <img src="./images/dots-loader.gif" alt="" style="width:50%"> </div>
+      </div>
+
+    </div>
+    <div id="snippet-set" class="js-snippets inline-flex flex-wrap flex-col items-start justify-start"
+      style="margin-top: 100px;">
+    </div>
+  </section>
+
+  <!-- the composition canvas section -->
+  <section class="py-2 pb-0 flex-col flex"
+    style="margin-left:50%; width:auto; height: 100vh; border-left: 1px solid #bfbfbf">
+    <header class="mb-4 text-center">
+      <button class="shadow text-center py-3 px-4 bg-black hover:text-green text-white js-download transition-normal"
+        style="display: inline-block; border-radius: 45px; font-size: 0.86em;">
+        Generate HTML + CSS
+      </button>
+      <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+      <a href="https://materializecss.com/getting-started.html" target="_blank"
+        class="text-center py-3 px-4 bg-white hover:text-black text-black no-underline"
+        style="display: inline-block; border-radius: 45px; border: 1px solid grey; font-size: 0.86em;">
+        CSS Guide
+      </a>
+    </header>
+
+    <div class="flex flex-col" style="height: 620px; width: 500px; margin: 0 auto;">
+      <div class="flex flex-col flex-1 border" style="background: #ECEFF1;
+      border: 2px solid #E0E0E0;
+      position: absolute;
+      width: 320px;
+      height: 565px;
+      margin-top: 96px;
+      margin-left: 69px;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+      ">
+      </div>
+      <img src="./images/demo-phone2.png" style="
+        position: absolute;
+        width: 460px;
+        margin-top: 0px;
+        margin-left: 0px;">
+
+      <div class="flex flex-col flex-1 border js-droppable border-grey-lighter overflow-y-scroll" style="background: #ECEFF1;
+        border: 2px solid #E0E0E0;
+        position: absolute;
+        width: 320px;
+        height: 565px;
+        margin-top: 96px;
+        margin-left: 69px;">
+      </div>
+
+
+      <div class="text-right my-4"></div>
+      <div class="bg-white hidden fixed js-delete-btn px-4 py-2 shadow">
+        Delete <i class="far fa-trash-alt pointer-events-none"></i>
+      </div>
+    </div>
+
+    <div class="fixed" style="z-index: 100;
+    bottom: 0px;
+    font-size: 0.9em;
+    text-align: center;
+    color: grey;
+    height: 27px;
+    background: #EEEEEE;
+    padding-top: 5px;
+    left: 51%;
+    right: 82px;">
+      by <a href="http://trendydots.com/project" target="_blank"
+        style="color: rgb(236, 156, 9); font-weight: 600">trendydots</a>. adapted from <a
+        href="https://www.amie-chen.com/" target="_blank" style="color: rgb(88, 88, 88);"> Amie Chen</a>'s stitches
+      project
+    </div>
+  </section>
+
+  <section class="py-2 pb-0 flex-col fixed pin-t pin-b pin-r"
+    style="width:80px; height: 100vh; border-left: 1px solid #bfbfbf">
+  </section>
+
+  <script src="public/client.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113784035-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-113784035-1");
+  </script>
+
+</body>
+
+</html>

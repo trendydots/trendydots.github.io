@@ -35,6 +35,7 @@
   <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/jquery-eu-cookie-law-popup.css" />
   <script src="../js/jquery-eu-cookie-law-popup.js"></script>
+  <script src="https://usebasin.com/f/06dcf3d4ebaf/ahoy.js" async defer></script>
 </head>
 
 <body class="htmlNoPages eupopup eupopup-bottom eupopup-style-compact" data-aos-easing="ease" data-aos-delay="300"
@@ -46,7 +47,7 @@
     max-width: 100%; position: fixed; top: 0; z-index: 100; 
 ">
     <span class="flex items-center">
-      <a href="https://trendydots.com/project" class="block text-left" target="_blank">
+      <a href="https://trendydots.com" class="block text-left" target="_blank">
         <img src="assets/img/logo.png" class="h-8 sm:h-8 rounded-full" alt="logo" />
       </a>
       &nbsp;
@@ -79,6 +80,7 @@
     </ul>
 
   </nav>
+
   <section style="margin-top:5em"
     class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
     <div class="w-full lg:w-1/2" style="box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);">
@@ -144,6 +146,74 @@
         </a>
       </div>
       <br>
+      <div class="w-full flex flex-col text-center items-center justify-center">
+        <!-- contact form -->
+        <div class="container mx-auto max-w-xl py-8 font-normal leading-normal text-center lg:text-left ">
+          <h3 class="text-2xl">Interested in trying out the platform at scale?</h3>
+          <p class="">
+            Are you a media company, newspaper, or any business which is interested in internet behaviour research?
+            Request a demo by filling out this form. We will happily contact you with details.
+          </p>
+        </div>
+        <!-- /contact form -->
+        <form id="request-demo" class="w-full max-w-md" accept-charset="UTF-8"
+          action="https://usebasin.com/f/06dcf3d4ebaf" method="POST">
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-user-name">
+                Your Full Name
+              </label>
+              <input
+                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-user-name" type="text" name="user-name" placeholder="">
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+              <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+                for="grid-user-email">
+                Your business email
+              </label>
+              <input
+                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"
+                id="grid-user-email" type="email" name="business-user-email" placeholder="" required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+                for="grid-business-name">
+                The name of the business you represent
+              </label>
+              <input
+                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-grey"
+                id="grid-business-name" type="text" name="business-name" placeholder="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+                for="grid-demo-reason">
+                The reason you requested the demo
+              </label>
+              <input
+                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-grey"
+                id="grid-demo-reason" type="text" name="demo-reason" placeholder="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-2">
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <input type="hidden" name="only_fake_users"><input>
+            </div>
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <button type="submit" class="submit btn btn-primary btn-shadow btn-gradient"
+                style=" font-weight: 800;color: #FBB82B;">Send Message</button>
+            </div>
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -203,6 +273,7 @@
 
     </div>
   </section>
+
   <section style="margin-top:5em"
     class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
     <div class="w-full lg:w-1/2" style="box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);">
@@ -223,25 +294,6 @@
       </a>
     </div>
   </section>
-
-  <!-- testimonials 
-  <section class="bg-grey-lighter py-4 font-sans">
-    <div class="flex flex-col sm:flex-row flex-wrap my-8 justify-around px-8">
-      <div
-        class="w-full sm:w-1/2 md:w-1/3 flex flex-col items-center justify-center h-48 md:h-64 border-grey-lightest border-r border-b shadow-md hover:border-0 bg-white">
-        <h3 class="mt-4 mb-1"><i>It links the links</i></h3>
-        <p class="mt-4 text-center text-grey-dark leading-normal px-6 block">Dominik S.</p>
-      </div>
-
-      <div
-        class="w-full sm:w-1/2 md:w-1/3 flex flex-col items-center justify-center h-48 md:h-64 p-8  border-grey-lightest border-r border-b shadow-md hover:border-0 bg-white">
-         <h3 class="mt-4 mb-1"><i>My team is doing research at lightspeed</i></h3>
-        <p class="mt-4 text-center text-grey-dark leading-normal block">Regina B.</p>
-      </div>
-
-    </div>
-  </section>
--->
 
   <footer class="font-sans bg-white py-8 px-4">
     <div

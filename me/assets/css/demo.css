@@ -104,8 +104,7 @@
     text-transform: capitalize;
 }
 
-#buttons .btn,
-#javascriptComponents .btn {
+#buttons .btn, #javascriptComponents .btn {
     margin: 0 0px 10px;
 }
 
@@ -229,7 +228,6 @@
     }
 }
 
-
 /*.separator{
     content: "Separator";
     color: #FFFFFF;
@@ -287,8 +285,7 @@
 }
 
 @media (max-width: 768px) {
-    .btn,
-    .btn-morphing {
+    .btn, .btn-morphing {
         margin-bottom: 10px;
     }
     .parallax .motto {
@@ -299,17 +296,11 @@
     }
 }
 
-
 /*       Loading dots  */
-
 
 /*      transitions */
 
-.presentation .front,
-.presentation .front:after,
-.presentation .front .btn,
-.logo-container .logo,
-.logo-container .brand {
+.presentation .front, .presentation .front:after, .presentation .front .btn, .logo-container .logo, .logo-container .brand {
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
     -o-transition: all .2s;
@@ -323,7 +314,6 @@
 #javascriptComponents {
     padding-bottom: 0;
 }
-
 
 /*      layer animation          */
 
@@ -368,8 +358,7 @@
     margin: 15px 4px 0;
 }
 
-.section-thin,
-.section-notifications {
+.section-thin, .section-notifications {
     padding: 0;
 }
 
@@ -381,8 +370,7 @@
     margin-bottom: 20px;
 }
 
-#navbar .navbar-toggler,
-#menu-dropdown .navbar-toggler {
+#navbar .navbar-toggler, #menu-dropdown .navbar-toggler {
     pointer-events: none;
 }
 
@@ -418,16 +406,14 @@
     margin-top: 30px;
 }
 
-.components-page .wrapper>.header,
-.tutorial-page .wrapper>.header {
+.components-page .wrapper>.header, .tutorial-page .wrapper>.header {
     height: 500px;
     padding-top: 128px;
     background-size: cover;
     background-position: center center;
 }
 
-.components-page .title,
-.tutorial-page .title {
+.components-page .title, .tutorial-page .title {
     color: #FFFFFF;
 }
 
@@ -483,7 +469,7 @@
 }
 
 .page-header::before {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .title {
@@ -497,9 +483,11 @@
 .section {
     background: #f8f8f8;
 }
+
 .rounded-circle {
     background-color: #FFFFFF !important;
 }
+
 @media screen and (max-width: 991px) {
     .section-navbars .navbar-collapse {
         display: none !important;

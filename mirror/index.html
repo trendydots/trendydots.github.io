@@ -56,14 +56,29 @@
 
         video {
             margin: 10px 0 0 0;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .hidden {
+            display: none;
         }
 
         .w-50 {
-            position: relative;
-            float: left;
-            width: 40% !important;
-            margin: 5%;
+            margin: 0 auto;
+            width: 50% !important;
             text-align: center;
+        }
+
+        .w-100 {
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .mx-25 {
+            margin-left: 25%;
+            margin-right: 25%;
         }
     </style>
 
@@ -77,17 +92,20 @@
             <h1><img src="http://trendydots.com/assets/img/logo.png" style="height: 1.3em; vertical-align: middle;"
                     alt="logo"> web mirror</h1>
         </div>
-        <div class="w-50">
-            <br><br><br>
-            <div class="select">
+
+        <div class="w-100">
+
+
+            <div class="select hidden">
                 <label for="audioSource">Audio source: </label><select id="audioSource"></select>
             </div>
-            <br>
+
             <div class="select">
                 <label for="videoSource">Video source: </label><select id="videoSource"></select>
             </div>
+
         </div>
-        <div class="w-50">
+        <div class="w-50 mx-25">
             <video autoplay muted playsinline style="width: 100%;"></video>
         </div>
 

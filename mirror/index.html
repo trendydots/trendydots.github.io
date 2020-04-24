@@ -23,6 +23,8 @@
         body {
             margin: 0;
             padding: 0;
+            background: #455A64;
+            color: white;
         }
 
         .container {
@@ -32,7 +34,8 @@
         .header {
             width: 100%;
             height: 50px;
-
+            background: white;
+            color: black;
             margin: 0;
             padding: 0;
             padding-top: 10px;
@@ -101,7 +104,8 @@
             </div>
 
             <div class="select">
-                <label for="videoSource">Video source: </label><select id="videoSource"></select>
+                <label for="videoSource"> <img src="webcam-icon.svg" style="height: 1.7em; vertical-align: middle;" />
+                </label><select id="videoSource"></select>
             </div>
 
         </div>
@@ -111,11 +115,13 @@
 
 
         <div style="width: 100%; text-align: center; position: absolute; bottom: 10%;">
-            <p>For more information see <a href="https://www.html5rocks.com/en/tutorials/getusermedia/intro/"
+            <p>For more information see <a style="color:orange"
+                    href="https://www.html5rocks.com/en/tutorials/getusermedia/intro/"
                     title="Media capture article by Eric Bidelman on HTML5 Rocks">Capturing Audio &amp; Video in
                     HTML5</a> on HTML5 Rocks.</p>
 
-            <a href="https://github.com/samdutton/simpl/blob/gh-pages/getusermedia/sources/js/main.js"
+            <a style="color:orange"
+                href="https://github.com/samdutton/simpl/blob/gh-pages/getusermedia/sources/js/main.js"
                 title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
         </div>
     </div>

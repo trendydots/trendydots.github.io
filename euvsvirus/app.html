@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="https://trendydots.com/mobile-stitches/public/materialize.min.css"
+    media="screen,projection" />
+
+
+  <title>td. mobile stitches</title>
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="https://trendydots.com/mobile-stitches/public/materialize.min.js"></script>
+
+  <!-- Import ChartJS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
+  <style>
+    .product-list {
+      margin-left: -24px;
+      margin-right: -24px;
+      margin-bottom: 0;
+    }
+
+    .pb-0 {
+      padding-bottom: 0 !important;
+    }
+  </style>
+</head>
+
+<body style="background: #eee; ">
+
+  <!-- large cards-5 -->
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">Carnival in Venice</div>
+      </div>
+      <div class="card-image">
+        <img src="./img/events/1.png">
+        <a class="btn-floating halfway-fab waves-effect waves-light">
+          <img src="./img/flags/italy.png" style="height: 100%;width: 100%;">
+        </a>
+      </div>
+      <div class="card-content">
+        <p>The Carnival of Venice is an annual festival held in Venice, Italy. The carnival ends with the Christian
+          celebration of Lent, forty days before Easter, on Shrove Tuesday, the day before Ash Wednesday. (Wikipedia)
+        </p>
+      </div>
+
+      <div class="card-tabs">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab"><a href="#test4">Dates</a></li>
+          <li class="tab"><a href="#test5">Food</a></li>
+          <li class="tab"><a href="#test6">Drinks</a></li>
+        </ul>
+      </div>
+      <div class="card-content grey lighten-4">
+        <div id="test4" style="display: block; line-height: 1.7em;">
+          <!-- Dates -->
+          Sat, Jan 30, 2021 – Tue, Feb 16, 2021
+          <br>
+          <b>Location:</b> Venice, Italy
+          <br>
+          <b>Attendance before COVID-19:</b> ~ 3 million
+        </div>
+        <div id="test5" style="display: none;">
+          <!-- Food -->
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="./img/foods/cichetti.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Chicetti<i
+                  class="material-icons right">shopping_cart</i></span>
+              <p> Cicchetti are small snacks or side dishes, typically served in traditional "bàcari" in Venice</p>
+              <ul class="collection product-list">
+                <li class="collection-item">
+                  <div>Pesto Rosso<a href="#!" class="secondary-content"><i class="material-icons">shopping_cart</i></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Cicchetti<i class="material-icons right">close</i></span>
+              <p>Ingredients and products from Venice</p>
+            </div>
+          </div>
+
+        </div>
+        <div id="test6" style="display: none;">
+          <!-- Drink -->
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="" src="./img/foods/aperol-spritz.png">
+            </div>
+            <div class="card-content pb-0">
+              <span class="card-title grey-text text-darken-4">Spritz Veneziano</span>
+              <p> A Spritz Veneziano or Aperol Spritz, also called just Spritz, is an Italian wine-based cocktail,
+                commonly served as an aperitif in Northeast Italy. </p>
+              <ul class="collection product-list">
+                <li class="collection-item">
+                  <div>Prosecco<a href="#!" class="secondary-content"><i class="material-icons">shopping_cart</i></a>
+                  </div>
+                </li>
+                <li class="collection-item">
+                  <div>Aperol<a href="#!" class="secondary-content"><i class="material-icons">shopping_cart</i></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="card-action">
+        <a href="#">
+          < Back to Calendar</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- small cards-5 -->
+  <div class="col s12">
+    <div class="card">
+      <div class="card-image">
+        <img src="./img/events/1.png">
+        <a class="btn-floating halfway-fab waves-effect waves-light">
+          <img src="./img/flags/italy.png" style="height: 100%;width: 100%;">
+        </a>
+      </div>
+      <div class="card-content">
+        <div class="card-title">Carnival in Venice</div>
+        <p>The Carnival of Venice is an annual festival held in Venice, Italy. The carnival ends with the Christian
+          celebration of Lent, forty days before Easter, on Shrove Tuesday, the day before Ash Wednesday. (Wikipedia)
+        </p>
+      </div>
+      <div class="card-action">
+        <a href="#">Find out more</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script> M.AutoInit();</script>
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="https://trendydots.com/mobile-stitches/public/materialize.min.css"
+        media="screen,projection" />
+
+    <title>td. mobile stitches</title>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="https://trendydots.com/mobile-stitches/public/materialize.min.js"></script>
+
+    <!-- Import ChartJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
+
+</head>
+
+<body style="position: absolute; height: 100vh; overflow: hidden;">
+    <!-- html[0] -->
+    <div class="z-depth-3"
+        style="position: fixed; height: 60px; width: 100%; background: #FFECB3;; z-index: 100; font-weight: bold; text-indent: 2em;">
+        <img src="./img/logo.png" style="height: 90%; vertical-align: middle;"> for the City Council of Venice,Italy
+
+        <a class="waves-effect waves-light btn red"
+            style="float: right; margin-right: 15px; text-align: center; text-indent: 0em; margin-top: 10px;">Delete</a>
+        <a class="waves-effect waves-light btn light-blue"
+            style="float: right;text-indent: 0em; margin-right: 15px; text-align: center; margin-top: 10px;">
+            Save</a>
+    </div>
+    <div class="row">
+
+        <div class="col s8"
+            style="z-index:10; background: #fff; height: 100vh; overflow-y: auto; box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);">
+
+            <div class="row" style="padding: 10px; margin-top: 70px;">
+                <form class="col s12">
+                    <!-- Describe the event -->
+                    <div class="row">
+                        <div class="col s12">
+                            <h5>Describe the event</h5>
+                        </div>
+                        <div class="input-field col s4">
+                            <input value="Italy" id="country" type="text">
+                            <label for="country">Country</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input value="Venice" id="city_region" type="text">
+                            <label for="city_region">City/Region</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="last_name" type="text" value="Carnival of Venice">
+                            <label for="last_name">Event Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6">
+                            <div style="width: 360px; height: 150px; border: 2px dotted orange; padding: 5px;">
+                                <img src="./img/events/1.png" style="width: 100%; height: 100%;">
+                            </div>
+                            <a> Upload image</a>
+                        </div>
+                        <div class="input-field col s6">
+                            <textarea id="about_event" class="materialize-textarea">The Carnival of Venice is an annual festival held in Venice, Italy.The carnival ends with the Christian celebration of Lent, forty days before Easter, on Shrove Tuesday, the day before Ash Wednesday. (Wikipedia)
+                            </textarea>
+                            <label for="about_event">About the event (250 characters)</label>
+                        </div>
+                    </div>
+                    <div class="row" style="border-bottom: 1px dotted grey;">
+                        <div class="input-field col s4">
+                            <input id="start_date" type="text" class="datepicker" value="Jan 30, 2020">
+                            <label for="start_date">Event Start Date</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="end_date" type="text" class="datepicker" value="Feb 16, 2020">
+                            <label for="end_date">Event End Date</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="attendance" type="text" value="~ 3 million">
+                            <label for="attendance">Attendance<label>
+                        </div>
+                    </div>
+
+                    <!-- Food input-->
+                    <div class="row">
+                        <div class="col s10">
+                            <h5>Typical Foods</h5>
+                        </div>
+                        <div class="col s2">
+                            <a class="btn-floating btn-large waves-effect waves-light teal"><i
+                                    class="material-icons">add</i></a>
+                        </div>
+                    </div>
+                    <div class="row" style="border: 1px dotted teal; padding: 10px;">
+                        <div class="col s6">
+                            <div style="width: 360px; height: 150px; border: 2px dotted orange; padding: 5px;">
+                                <img src="./img/foods/cichetti.png" style="width: 100%; height: 100%;">
+                            </div>
+                            <a> Upload image</a>
+                        </div>
+                        <div class=" col s6">
+                            <div class="input-field col s12">
+                                <input id="food_name" type="text" value="Chicetti">
+                                <label for="food_name">Food Name</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <textarea id="food_text"
+                                    class="materialize-textarea">Cicchetti are small snacks or side dishes, typically served in traditional "bàcari" in Venice  </textarea>
+                                <label for="food_text">About the food (140 characters)</label>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="col s9">
+                                <label>
+                                    <input type="checkbox" checked="checked" />
+                                    <span>Has local produce</span>
+                                </label>
+                            </div>
+                            <div class="col s3">
+                                <a class="waves-effect waves-light btn"><i class="material-icons left">add</i>New
+                                    Produce</a>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="input-field col s6">
+                                <input value="Pesto Rosso" id="produce_name_1" type="text">
+                                <label for="produce_name_1">Produce Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input value="http://example.web.shop/pesto-rosso/" id="produce_url_1" type="text">
+                                <label for="produce_url_1">Produce URL</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Drink Input-->
+                    <div class="row">
+                        <div class="col s10">
+                            <h5>Typical Drinks</h5>
+                        </div>
+                        <div class="col s2">
+                            <a class="btn-floating btn-large waves-effect waves-light teal"><i
+                                    class="material-icons">add</i></a>
+                        </div>
+                    </div>
+                    <div class="row" style="border: 1px dotted teal; padding: 10px;">
+                        <div class="col s6">
+                            <div style="width: 360px; height: 250px; border: 2px dotted orange; padding: 5px;">
+                                <img src="./img/foods/aperol-spritz.png" style="width: 100%; height: 100%;">
+                            </div>
+                            <a> Upload image</a>
+                        </div>
+                        <div class=" col s6">
+                            <div class="input-field col s12">
+                                <input id="food_name" type="text" value="Spritz Veneziano">
+                                <label for="food_name">Drink Name</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <textarea id="food_text" class="materialize-textarea">A Spritz Veneziano or Aperol Spritz, also called just Spritz, is an Italian wine-based cocktail,
+                                    commonly served as an aperitif in Northeast Italy.</textarea>
+                                <label for="food_text">About the drink (140 characters)</label>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="col s9">
+                                <label>
+                                    <input type="checkbox" checked="checked" />
+                                    <span>Has local produce</span>
+                                </label>
+                            </div>
+                            <div class="col s3">
+                                <a class="waves-effect waves-light btn"><i class="material-icons left">add</i>New
+                                    Produce</a>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="input-field col s6">
+                                <input value="Aperol" id="produce_name_1" type="text">
+                                <label for="produce_name_1">Produce Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input value="http://example.web.shop/aperol/" id="produce_url_1" type="text">
+                                <label for="produce_url_1">Produce URL</label>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="input-field col s6">
+                                <input value="Prosecco" id="produce_name_2" type="text">
+                                <label for="produce_name_1">Produce Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input value="http://example.web.shop/prosecco/" id="produce_url_1" type="text">
+                                <label for="produce_url_2">Produce URL</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="col s4" style="z-index:9; background: #eee; height: 100vh; overflow-y: auto;">
+            <div class="col s1"></div>
+            <!-- large cards-5 -->
+            <div class="col s10">
+                <p style="margin-top: 90px; text-align: center; font-weight: bold;"> Preview in Bites of Culture app</p>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-title">Carnival in Venice</div>
+                    </div>
+                    <div class="card-image">
+                        <img src="./img/events/1.png">
+                        <a class="btn-floating halfway-fab waves-effect waves-light">
+                            <img src="./img/flags/italy.png" style="height: 100%;width: 100%;">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <p>The Carnival of Venice is an annual festival held in Venice, Italy. The carnival ends
+                            with the Christian
+                            celebration of Lent, forty days before Easter, on Shrove Tuesday, the day before Ash
+                            Wednesday. (Wikipedia)
+                        </p>
+                    </div>
+
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width">
+                            <li class="tab"><a href="#test4">Dates</a></li>
+                            <li class="tab"><a href="#test5">Food</a></li>
+                            <li class="tab"><a href="#test6">Drinks</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-content grey lighten-4">
+                        <div id="test4" style="display: block; line-height: 1.7em;">
+                            <!-- Dates -->
+                            Sat, Jan 30, 2021 – Tue, Feb 16, 2021
+                            <br>
+                            <b>Location:</b> Venice, Italy
+                            <br>
+                            <b>Attendance before COVID-19:</b> ~ 3 million
+                        </div>
+                        <div id="test5" style="display: none;">
+                            <!-- Food -->
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="activator" src="./img/foods/cichetti.png">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4">Chicetti<i
+                                            class="material-icons right">shopping_cart</i></span>
+                                    <p> Cicchetti are small snacks or side dishes, typically served in
+                                        traditional
+                                        "bàcari" in Venice</p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Cicchetti<i
+                                            class="material-icons right">close</i></span>
+                                    <p>Ingredients and products from Venice</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="test6" style="display: none;">
+                            <!-- Drink -->
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="" src="./img/foods/aperol-spritz.png">
+                                </div>
+                                <div class="card-content pb-0">
+                                    <span class="card-title grey-text text-darken-4">Spritz Veneziano</span>
+                                    <p> A Spritz Veneziano or Aperol Spritz, also called just Spritz, is an
+                                        Italian
+                                        wine-based cocktail,
+                                        commonly served as an aperitif in Northeast Italy. </p>
+                                    <ul class="collection product-list">
+                                        <li class="collection-item">
+                                            <div>Proseco<a href="#!" class="secondary-content"><i
+                                                        class="material-icons">shopping_cart</i></a>
+                                            </div>
+                                        </li>
+                                        <li class="collection-item">
+                                            <div>Aperol<a href="#!" class="secondary-content"><i
+                                                        class="material-icons">shopping_cart</i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script> M.AutoInit();</script>
+</body>
+
+</html>

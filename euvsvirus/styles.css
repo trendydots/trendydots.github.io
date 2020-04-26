@@ -1,0 +1,52 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    backdrop-filter: brightness(40%);
+}
+
+.body-bck {
+    background-position: center;
+    background: #546e7a;
+    background-image: url(./img/backgrounds/bg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.c-white {
+    color: white;
+}
+
+.c-offwhite {
+    color: #eee;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.mock-menu-header {
+    background: #ECEFF1;
+    border: 2px solid #E0E0E0;
+    position: absolute;
+    width: 320px;
+    height: 63px;
+    margin-top: 98px;
+    margin-left: 69px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.mock-iframe {
+    background: #ECEFF1;
+    border: 2px solid #E0E0E0;
+    position: absolute;
+    width: 320px;
+    height: 504px;
+    margin-top: 161px;
+    margin-left: 69px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

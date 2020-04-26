@@ -44,20 +44,20 @@
               <div class="nav-wrapper valign-wrapper">
                 <div class="col s4 right-align" style="padding: 10px;">
                   <div class="row" style="margin-bottom: 0px;">
-                    <a href="#" class="col s6 blue-grey-text text-darken-2">
+                    <a href="#" class="reload-demo col s6 blue-grey-text text-darken-2">
                       <i class="material-icons">menu</i>
                     </a>
                     <div class="col s6"></div>
                   </div>
                 </div>
                 <div class="col s4 ">
-                  <a class="valign-wrapper " href="#" class="brand-logo"><img class="responsive-img"
+                  <a class="valign-wrapper reload-demo" href="#" class="brand-logo"><img class="responsive-img"
                       src="./img/logo.png"></a>
                 </div>
                 <div class="col s4 right-align" style="padding: 10px;">
                   <div class="row" style="margin-bottom: 0px;">
                     <div class="col s6"></div>
-                    <a href="#" class="col s6 blue-grey-text text-darken-2">
+                    <a href="#" class="col s6 blue-grey-text text-darken-2 reload-demo">
                       <i class="material-icons">notifications_none</i>
                     </a>
                   </div>
@@ -84,7 +84,12 @@
     </div>
   </div>
 
-  <script> M.AutoInit();</script>
+  <script>
+    M.AutoInit();
+    $('.reload-demo').click(function () {
+      location.reload()
+    })
+  </script>
 </body>
 
 </html>

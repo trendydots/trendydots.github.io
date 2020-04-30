@@ -18,7 +18,8 @@
   <script src="../js/jquery-eu-cookie-law-popup.js"></script>
 
   <!--Load Google Charts via the AJAX API-->
-  <script type="text/javascript" src=https://www.gstatic.com/charts/loader.js> </script> <script>
+  <script type="text/javascript" src=https://www.gstatic.com/charts/loader.js> </script>
+  <script>
     $(window).resize(function () {
       $(window).trigger("window:resize")
     })
@@ -30,11 +31,15 @@
     class="font-sans md:shadow-none md:bg-transparent bg-white shadow text-center fixed flex justify-between py-4 px-8 overflow-hidden w-full flex-col md:flex-row"
     style="margin-bottom: 5px; z-index: 10; top:0; padding-left: 3%;
     padding-right: 3%;">
-    <a href="/" class="block md:text-left text-center no-underline text-black"
+    <a class="block md:text-left text-center no-underline text-black"
       style="line-height:40px; font-weight: 700; font-size: 22px;">
       <span>td<span style="color:#F2D024">.</span> </span>
       <span style="font-weight: 600;"> web-stitches</span>
     </a>
+
+    <span class="block text-center" style="line-height:40px;">A web application that helps you rapidly design a landing
+      page and mobile
+      screens</span>
 
     <ul class="md:text-sm text-xs text-grey-dark list-reset flex items-center flex-row">
       <li>
@@ -58,38 +63,53 @@
     </ul>
   </nav>
 
-  <!-- features-1 -->
-  <section
-    class="my-8 lg:my-16 font-sans w-full m-auto flex flex-col lg:flex-row text-center justify-center items-center"
-    style="background: #F5F5F5;">
-    <div class="w-full lg:w-2/3 flex flex-col justify-center items-center ">
-      <br><br><br><br>
-      <h3 class="leading-normal mb-4 text-grey-darkest text-center p-8">
-        A web application that helps you rapidly design a landing page or an editorial website.
-        Using Google Charts, the data visualization components make it easy to express knowledge in beautiful web
-        pages.
-        It takes seconds to experiment with different layouts.
-      </h3>
-      <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-4 rounded-full shadow-md md:shadow items-center"
-        href="./1/" target="_blank" style="white-space: nowrap; border-color: #F2D024;">
-        <span style="white-space: nowrap;"> Try it, it's FREE </span>
+
+  <!-- header mobile statement-->
+  <section style="margin-bottom: 0; margin-top:5em; "
+    class="font-sans container m-auto max-w-xl flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+    <div class="w-full lg:w-2/3">
+      <img src="./images/m-header.png" alt="" style="margin-top: 20px;" />
+    </div>
+    <div class="w-full lg:w-1/3 flex flex-col justify-center items-start items-center lg:items-start">
+      <h2 class="my-4 font-normal">
+        <span style="font-weight:600; color:black;"> Easy mobile screens</span>
+      </h2>
+      <h2 class="my-4 font-normal text-grey-darker">
+        Easily drag and drop UI components and build beautiful mobile and web screens. <br> <br> A perfect tool for
+        hackathons
+      </h2>
+
+      <a href="./2/" target="_blank"
+        class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center"
+        style="border-color: #F2D024; border-width: 5px;">
+        <span> Try it free</span>
       </a>
-      <br><br>
+    </div>
 
-      <iframe class="w-full rounded shadow-md" src="https://www.youtube-nocookie.com/embed/frEiVOU1dak" frameborder="0"
-        allow="autoplay; gyroscope;" allowfullscreen style="height: 450px; max-width: 790px;"></iframe>
-      <br><br>
+  </section>
+  <!-- header desktop statement-->
+  <section style="margin-bottom: 0; margin-top:5em; "
+    class="font-sans container m-auto max-w-xl flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
 
-      <h3 class="leading-normal mb-4 text-grey-darkest text-center p-8">
-        Seriously, it's awesome <p class="md:hidden block"> &nbsp; </p> <a
-          class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 m-2 rounded-full shadow-md md:shadow items-center"
-          href="./1/" target="_blank" style="white-space: nowrap; border-color: #F2D024;">
-          <span style="white-space: nowrap;"> Try it for FREE </span>
-        </a>
-      </h3>
+    <div class="w-full lg:w-1/3 flex flex-col justify-center items-start items-center lg:items-start">
+      <h2 class="my-4 font-normal">
+        <span style="font-weight:600; color:black;"> Easy landing page design</span>
+      </h2>
+      <h2 class="my-4 font-normal text-grey-darker">
+        Experiment with building beautiful landing pages and article designs. Drag and drop web components. Replace. Get
+        creative.
+      </h2>
+
+      <a href="./1/" target="_blank"
+        class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center"
+        style="border-color: #F2D024; border-width: 5px;">
+        <span> Try it FREE</span>
+      </a>
+    </div>
+    <div class="w-full lg:w-2/3">
+      <img src="./images/d-header.png" alt="" style="margin-top: 20px;" />
     </div>
   </section>
-
   <!-- support-->
   <section class="font-sans m-auto w-full" style="margin-top: 30px; ">
     <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center">
@@ -103,8 +123,8 @@
           </a>
         </div>
 
-        <h1 class="leading-normal mb-2 text-center">
-          Cool people support the project 😎
+        <h1 class="leading-normal mb-2 text-center text-grey-dark">
+          If you like the project want to help it grow, <br> please consider donating and becoming a patron.
         </h1>
         <br><br>
         <div class="flex md:flex-row flex-col items-center justify-center mb-8">
@@ -128,62 +148,31 @@
         </div>
       </div>
   </section>
-
-  <!-- cards-2 
-  <section class="bg-white py-4 font-sans">
-    <h1 class="my-4 font-normal text-center">Made with td.web-stitches</h1>
-    <div class="container container max-w-xl m-auto flex flex-wrap flex-col md:flex-row items-center justify-start">
-      <div class="w-full lg:w-1/2 p-3">
-        <div class="flex flex-col lg:flex-row rounded overflow-hidden h-auto lg:h-32 border shadow shadow-lg">
-          <img class="block w-full lg:w-48 flex-none bg-cover p-4" src="./img/arh.png">
-          <div
-            class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-            <div class="text-black font-bold text-xl mb-2 leading-tight">Can coffee make you a better developer?</div>
-            <div class="w-full flex flex-row">
-              <a class="text-grey-darker text-base">Preview</a>
-              &nbsp;&nbsp;&nbsp;
-              <a class="text-grey-darker text-base">Download</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full lg:w-1/2 p-3">
-        <div class="flex flex-col lg:flex-row rounded overflow-hidden h-auto lg:h-32 border shadow shadow-lg">
-          <img class="block w-full lg:w-48 flex-none bg-cover p-4" src="./img/bus.png">
-          <div
-            class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-            <div class="text-black font-bold text-xl mb-2 leading-tight">Can coffee make you a better developer?</div>
-            <div class="w-full flex flex-row">
-              <a class="text-grey-darker text-base">Preview</a>
-              &nbsp;&nbsp;&nbsp;
-              <a class="text-grey-darker text-base">Download</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
   <!-- features-1 -->
   <section
-    class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
-    <div class="w-full lg:w-1/2">
-      <img src="./img/tdms.jpg" class="rounded" alt="" />
-    </div>
-    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
-      <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">in development</label>
-      <h1 class="my-4 font-normal">td<span style="color:#F2D024">.</span> mobile-stitches</h1>
-      <p class="leading-normal mb-4 text-grey-dark">
-        Everything you expect from a stitches based composition tool. You will quickly build fantastic mobile screens
-        and receive showcases which help you make demos and presentations with great impact.
-        <br><br>
-        <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
-          href="./2/" target="_blank" style="white-space: nowrap; border-color: #F2D024;">
-          <span style="white-space: nowrap;"> Be the first to try it </span>
-        </a>
-      </p>
+    class="my-8 lg:my-16 font-sans w-full m-auto flex flex-col lg:flex-row text-center justify-center items-center"
+    style="background: #F5F5F5;">
+    <div class="w-full lg:w-2/3 flex flex-col justify-center items-center ">
+      <br><br><br><br>
+      <h3 class="leading-normal mb-4 text-grey-darkest text-center p-8">
+        A web application that helps you rapidly design a landing page or an editorial website.
+        Using Google Charts, the data visualization components make it easy to express knowledge in beautiful web
+        pages. <br>
+        It takes seconds to experiment with different layouts.
+      </h3>
+
+      <br><br>
+
+      <iframe class="w-full rounded shadow-md" src="https://www.youtube-nocookie.com/embed/frEiVOU1dak" frameborder="0"
+        allow="autoplay; gyroscope;" allowfullscreen style="height: 450px; max-width: 790px;"></iframe>
+      <br><br>
+
+
     </div>
   </section>
+
+
+
 
 
   <footer class="font-sans bg-white pb-8 px-4" style="z-index: 4">

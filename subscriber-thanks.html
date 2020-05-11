@@ -46,167 +46,140 @@
 <body class="htmlNoPages eupopup eupopup-bottom eupopup-style-compact" style="background: #f5f5f5">
 
   <nav
-    class="font-sans bg-white text-center flex md:flex-row flex-col justify-center md:justify-between p-4 container overflow-hidden"
+    class="font-sans bg-white text-center flex lg:flex-row flex-col justify-center lg:justify-between p-4 container overflow-hidden"
     style="box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); max-width: 100%; position: fixed; top: 0; z-index: 100; ">
+    <div class="flex" style="width: 320px; height: 0px;">
 
-    <a href="https://trendydots.com" class="block text-center" target="_blank"
-      style="font-size: 1.35rem; text-decoration: none; color: black">
-      <img src="./logo.png" style="vertical-align: middle; height: 1.6em;" alt="logo">
-      <b> trendy dots</b>
-    </a>
-
-    <div class="flex">
-      <b style="line-height: 2em"> Thank you for subscribing to the trendy dots </b>
     </div>
-    <ul class="text-sm text-grey-dark list-reset flex items-center">
-      <!--  DO NOT DELETE
+
+    <div class="flex justify-center text-center" style="line-height: 2em; font-weight: 700;">
+      Thank you for your subscription!
+    </div>
+
+
+    <ul class="md:text-sm text-xs text-grey-dark list-reset flex items-center justify-center flex-row">
       <li>
-        <a target="_self" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline" style="color:grey">EN</a>
+        <a class="btn bg-white border border-red cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mx-4 mb-2 rounded-full shadow inline-flex items-center"
+          href="https://www.patreon.com/bePatron?u=14590376" target="_blank">
+          <img src="./patreon-logo1.png" style="height: 1.5em; vertical-align: middle;" alt="">
+          &nbsp;
+          <span> Become a patron</span>
+        </a>
       </li>
+
       <li>
-        <a href="./pt/" target="_self" class="inline-block py-2 px-3 text-grey-darkest hover:text-grey-dark no-underline">PT</a>
+        <a href="https://www.paypal.me/trendydots" target="_blank"
+          class="btn bg-white border border-blue cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center">
+          <img src="./paypal-logo.png" style="height: 1.5em; vertical-align: middle;" alt="">
+          &nbsp;&nbsp;
+          <span> Donate one time</span>
+        </a>
       </li>
-      
-      <a href="#subscribe-section" class="bg-black hover:bg-grey-darker text-white ml-4 py-2 px-3 no-underline">
-        Sign Up
-      </a>
-      -->
+
     </ul>
+
+
   </nav>
 
   <!-- intro & thanks -->
   <section class="my-8 font-sans container max-w-xl m-auto flex flex-col md:flex-row sm:items-center"
-    style="margin-top: 80px">
+    style="margin-top: 120px">
     <div class="w-full flex flex-col items-center text-center px-6 py-0 md:py-8 md:px-8">
       <!--
         <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">various aspects</label>
      
       -->
-      <h2 class="mt-2 mb-4 font-medium">Thank you for subscribing to the trendy dots. We hope you stay curiouse
+      <h2 class="mt-2 mb-4 font-medium">We hope you stay curiouse
         about
         our initiatives. </h2>
     </div>
-
   </section>
 
-  <!-- td. market research -->
-  <section
-    class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
-    <div class="w-full lg:w-1/2">
-      <img src="./tdmr-big.png" style="width: 100%; box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);" />
-    </div>
+  <!-- features-1 -->
+  <div class="max-w-xl m-auto " style="background: #f5f5f5; padding-bottom: 20px;">
+    <!-- Trends -->
+    <section
+      class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2">
+        <img src="./me/in3.png" class="shadow-md rounded" alt="" />
+      </div>
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">behavioural economics</label>
+        <h2 class="my-4 font-normal font-bold">td<span style="color:#F2D024">.</span> trends research</h2>
+        <p class="leading-normal mb-4 text-grey-darkest">
+          The td<span style="color:#F2D024">.</span> trends research platform platform that aims to offer an intuitive,
+          easy to use way for getting informed about the
+          things that matter.
+          When you are interested in human/consumer behaviour towards companies, products, world events, or innovative
+          concepts, my td<span style="color:#F2D024">.</span> trends research platform can help you with quick and easy
+          insights.
+          <br><br>
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="/" target="_blank" style="white-space: nowrap; border-color: #ff9800;">
+            <span style="white-space: nowrap;"> Check out details </span>
+          </a>
+        </p>
+      </div>
+    </section>
 
-    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
-      <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold"> data intelligence</label>
-      <h1 class="my-4 font-normal">Market research platform</h1>
-      <p class="leading-normal mb-4">
-        Our market research platform offers standard reporting containing insights into company shares, indices,
-        commodities, cryptocurrencies and world events.
-      </p>
+    <!-- NPL -->
+    <section
+      class="my-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">natural language
+          processing</label>
+        <h2 class="my-4 font-normal font-bold">td<span style="color:#F2D024">.</span> nlp research </h2>
+        <p class="leading-normal mb-4 text-grey-darkest">
+          A series of experiments around AI text processing. Summarizing language independent texts, extracting tokens,
+          hashtag autosuggest and so much more.
+          <br><br>
+          The first experiment automatically summarizes text..
+          <br><br>
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="/research/nlp/" target="_blank" style="white-space: nowrap; border-color: #F2D024;">
+            <span style="white-space: nowrap;"> Try for FREE </span>
+          </a>
+        </p>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <img src="./me/inE1.png" class="shadow-md rounded" alt="" />
+      </div>
+    </section>
 
-      <a href="https://trendydots.com/invest/project" target="_blank" style="text-decoration: none;
-      background: white;
-      color: black;
-      border:1px solid black;
-      padding:4px;
-      padding-left:12px;
-      padding-right:12px;
-      border-radius: 60px;
-      line-height: 1.6em;
-      display: inline-block">learn more</a>
-      <br>
-      <p> Be among the first patron users to watch all training videos<br><br> <a
-          href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
-          data-aos="fade-in">Become a
-          Patron!</a>
-      </p>
+    <!-- Web Stitches-->
+    <section
+      class="mb-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2">
+        <img class="shadow-md rounded" src="./me/ws.jpg" alt="" />
+      </div>
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">web development</label>
+        <h2 class="my-4 font-normal font-bold">td<span style="color:#F2D024">.</span> web-stitches</h2>
+        <p class="leading-normal mb-4 text-grey-darkest">
+          A web application that helps you rapidly design a landing page or an editorial website.
+          Using Google Charts, the data visualization components make it easy to express knowledge in beautiful web
+          pages.
+          It takes seconds to experiment with different layouts.
+          <br><br>
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="/web-stitches/" target="_blank" style="white-space: nowrap; border-color: green;">
+            <span style="white-space: nowrap;"> Try for FREE </span>
+          </a>
 
-    </div>
-  </section>
-  <br>
-
-  <!-- oskar -->
-  <section
-    class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row  text-center lg:text-left sm:items-center">
-    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
-      <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">AI & Machine Learning</label>
-      <h1 class="my-4 font-normal">Oskar</h1>
-      <p class="leading-normal mb-4">
-        Oskar is our latest AI experiment which we hope will recommend the proper attire for the proper occasion.
-      </p>
-      <br>
-      <a href="https://trendydots.com/oskar/" target="_blank" style="text-decoration: none;
-      background: white;
-      color: black;
-      border:1px solid black;
-      padding:4px;
-      padding-left:12px;
-      padding-right:12px;
-      border-radius: 60px;
-      line-height: 1.6em;
-      display: inline-block">learn more</a>
-      <!-- 
-      <p> Be among the first patron users to watch all training videos<br><br> <a
-          href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
-          data-aos="fade-in">Become a
-          Patron!</a>
-      </p>
-      -->
-    </div>
-    <div class="w-full lg:w-1/2">
-      <img src="./osk-big.png" style="width: 100%; box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);" />
-    </div>
-  </section>
-
-  <br><br>
-  <!-- data 4 good -->
-  <section
-    class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
-    <div class="w-full lg:w-1/2">
-      <img src="./d4g-big.png" style="width: 100%; box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);" />
-    </div>
-
-    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
-      <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold"> volunteering hackathons for
-        good</label>
-      <h1 class="my-4 font-normal">data4good</h1>
-      <p class="leading-normal mb-4">
-        Interdisciplinary teams of data scientists, developers and designers working together with domain experts from
-        NGOs and social enterprises to create new insight about their work, solve complex challenges and identify new
-        social impact opportunities.
-        <br><br>
-        Volunteering with web design and UI development.
-      </p>
-      <br>
-      <a href="https://trendydots.com/data4good/" target="_blank" style="text-decoration: none;
-        background: white;
-        color: black;
-        border:1px solid black;
-        padding:4px;
-        padding-left:12px;
-        padding-right:12px;
-        border-radius: 60px;
-        line-height: 1.6em;
-        display: inline-block">learn more</a>
-      <!-- 
-      <p> Be among the first patron users to watch all training videos<br><br> <a
-          href="https://www.patreon.com/bePatron?u=14590376" data-patreon-widget-type="become-patron-button"
-          data-aos="fade-in">Become a
-          Patron!</a>
-      </p>
-      -->
-    </div>
-  </section>
+        </p>
+      </div>
+    </section>
+  </div>
 
   <footer class="font-sans bg-white py-8 px-4">
     <div
-      class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left">
+      class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left border-b">
       <a href="" class="block mr-4 w-full md:w-1/4" target="_blank">
         <img src="./logo.png" class="w-24 -ml-8 md:ml-0" alt="logo">
       </a>
       <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
-        <h4 class="py-2 uppercase font-bold tracking-wide">About US</h4>
-        <p>Trendy Dots is a hobby project developing fun applications for data science, data visualization and user
+        <h4 class="py-2 uppercase font-bold tracking-wide">About</h4>
+        <p>Trendy Dots is a project developing fun applications for data science, data visualization and user
           experience. I playfully apply UX and data science best practices to big data, aiming to produce high value
           tools.</p>
       </div>
@@ -220,16 +193,26 @@
         </div>
       </div>
     </div>
-    <div class="pt-4 mt-4 text-grey-darker text-xs border-t border-grey-lighter text-center"> ©2020 trendydots.com All
-      rights reserved. &nbsp;
-      <a href="../privacy-statement.html" target="_blank" style="color:#000">Privacy statement</a>
-      &nbsp;
-      <a href="../terms-of-service.html" target="_blank" style="color:#000">Terms of service</a>
+    <div class="mx-auto max-w-xl overflow-hidden flex flex-col md:flex-row justify-between items-center pt-2">
+      <p class="inline-block py-2 px-3 text-center md:text-left"> ©
+        <script>document.write(new Date().getFullYear());</script>
+        <strong class="">trendydots.com</strong>
+        All rights reserved.</p>
+
+      <ul class="text-sm text-grey-dark list-reset flex items-center">
+        <li><a href="../privacy-statement.html" target="_blank" class="inline-block py-2 px-3 text-black">Privacy
+            statement</a></li>
+        <li><a href="../terms-of-service.html" target="_blank" class="inline-block py-2 px-3 text-black">Terms of
+            service</a>
+        </li>
+        <li><a href="../imprint.html" target="_blank" class="inline-block py-2 px-3 text-black">
+            Impressum</a>
+        </li>
+      </ul>
     </div>
   </footer>
 
-  <!-- Patreon js-->
-  <script src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->

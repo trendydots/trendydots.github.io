@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="https://trendydots.com/mobile-stitches/public/materialize.min.css"
+    media="screen,projection" />
+
+  <title>td. tweet pitch</title>
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="https://trendydots.com/mobile-stitches/public/materialize.min.js"></script>
+
+  <!-- Import ChartJS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
+  <style>
+    body {
+      background: #ffffff;
+      width: 100%;
+      overflow-x: hidden;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* label focus color */
+    .input-field input[type=text]:focus+label {
+      color: #2196F3 !important;
+    }
+
+    /* label underline focus color */
+    .input-field input[type=text]:focus {
+      border-bottom: 1px solid #2196F3 !important;
+      box-shadow: 0 1px 0 0 #2196F3 !important;
+    }
+
+    /* label focus color */
+    .input-field textarea:focus+label {
+      color: #2196F3 !important;
+    }
+
+    /* label underline focus color */
+    .input-field textarea:focus {
+      border-bottom: 1px solid #2196F3 !important;
+      box-shadow: 0 1px 0 0 #2196F3 !important;
+    }
+
+    .input-font-size {
+      font-size: 18px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- html[0] -->
+  <div class="row">
+
+    <div class="container">
+      <div class="col s12 center" style="margin: 15px 0; padding: 0;">
+        <img src="https://trendydots.com/assets/img/logo.png" alt="" class="border"
+          style="vertical-align: middle; border-radius: 6px; height: 2rem; margin-right: 5px;" />
+        <br>
+        <b style="font-size: 1.35rem;">
+          <span style="display: inline; text-indent: 0.2em; font-weight: 600;">trendy dots - twit pitch builder
+          </span>
+        </b>
+      </div>
+
+      <div class="col s12 m6">
+        <div class="row">
+          <div class="col s12">
+            <ul class="tabs">
+              <li id="with-template" class="tab"><a class="active" href="#tab1">Use the template</a></li>
+              <li id="freestyle" class="tab"><a href="#tab2">Freestyle</a></li>
+            </ul>
+          </div>
+          <div id="tab1" class="col s12">
+            <div class="row" style="min-width: 320px;">
+              <h6 class="blue-grey-text text-darken-3">
+
+                <div style="display:flex; flex-flow: row wrap; justify-content: flex-start; align-items: baseline;">
+                  <div style="display: flex;">When</div>
+                  <div class="input-field"
+                    style="display: flex; flex-grow: 1; margin-left: 12px; margin-right: 12px;  vertical-align: middle;">
+                    <input id="problem_statement" type="text" class="input-font-size">
+                    <label for="problem_statement" class="input-font-size">Problem Statement</label>
+                  </div>
+                  <div style="display: flex;">, </div>
+                </div>
+
+                <div style="display:flex; flex-flow: row wrap; justify-content: flex-start; align-items: baseline;">
+                  <div class="input-field"
+                    style=" margin-left: 8px; display: flex; flex-grow: 1; vertical-align: middle;">
+                    <input id="company_name" type="text" class="input-font-size">
+                    <label for="company_name" class="input-font-size">I | We | Company Name</label>
+                  </div>
+                  <div style="display: flex; margin-left: 6px; margin-right: 6px;"> do </div>
+                  <div class="input-field"
+                    style=" margin-left: 8px; min-width: 260px; display: flex; flex-grow: 1; vertical-align: middle;">
+                    <input id="solution_statement" type="text" class="input-font-size">
+                    <label for="solution_statement" class="input-font-size">Solution Statement</label>
+                  </div>
+                  <div style="display: flex;"> , </div>
+                </div>
+
+                <div style="display:flex; flex-flow: row wrap; justify-content: flex-start; align-items: baseline;">
+                  <div style="display: flex;"> so that </div>
+                  <div class="input-field"
+                    style=" margin-left: 8px; display: flex; flex-grow: 1; vertical-align: middle;">
+                    <input id="impact_statement" type="text" class="input-font-size">
+                    <label for="impact_statement" class="input-font-size">Impact Statement</label> </div>
+                  <div style="display: flex;"> . </div>
+                </div>
+
+                <div style="display:flex; flex-flow: row wrap; justify-content: flex-start; align-items: baseline;">
+                  <div style="display: flex;"> via </div>
+                  <div class="input-field"
+                    style=" margin-left: 8px; display: flex; flex-grow: 1;  vertical-align: middle;">
+                    <input id="twitter_handel" type="text" class="input-font-size">
+                    <label for="twitter_handel" class="input-font-size">twitter handle(no @ needed)</label>
+                  </div>
+                </div>
+
+              </h6>
+            </div>
+          </div>
+
+          <div id="tab2" class="col s12">
+            <br>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textareapitch" class="materialize-textarea" rows="3" data-length="220"
+                  style="font-size: 24px;"></textarea>
+                <label for="textareapitch" style="font-size: 24px;">Your freestyle pitch</label>
+              </div>
+              <div class="col s12">
+                <div style="display:flex; flex-flow: row wrap; justify-content: flex-start; align-items: baseline;">
+                  <div style="display: flex;"> via </div>
+                  <div class="input-field"
+                    style=" margin-left: 8px; display: flex; flex-grow: 1;  vertical-align: middle;">
+                    <input id="twitter_handel2" type="text" class="input-font-size">
+                    <label for="twitter_handel2" class="input-font-size">twitter handle(no @ needed)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12" style="padding: 0;">
+            <h6>
+              What is a twit pitch? A pitch optimized for twitter and other social media network posts. It tipically
+              consists of 140 to 280 characters.
+              More details on <a target="_blank" href="https://www.investopedia.com/terms/t/twit-pitch.asp">
+                Investopedia</a>
+            </h6>
+            <h6>
+              Made by <a target="_blank" href="https://trendydots.com/me/"> trendy dots</a>
+            </h6>
+          </div>
+
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="row">
+          <div class="col s1"></div>
+          <div id="with-template-card" class="col s11 center">
+            <br><br>
+            <br>
+            <div class="card" style="border-radius: 6px; overflow: hidden; width: 100%;">
+              <div class="card-content" style="font-size: 18px;">
+                <img src="./twitter.png" style="border-radius: 6px; height: 30px; margin-right: 5px; display: block;" />
+                <span id="with-template-pitch-text">When <span id="problem_statement_text"></span>, <br><span
+                    id="company_name_text"></span> do <span id="solution_statement_text"></span>, <br>so that <span
+                    id="impact_statement_text"></span>.</span><br>
+                <br><br>
+              </div>
+            </div>
+            <a id="tweet-with-template" class="waves-effect waves-light btn-large blue white-text"
+              style="border-radius: 50px; font-weight: 700; max-width: 320px;">
+              Tweet your pitch
+            </a>
+          </div>
+
+          <div id="freestyle-card" class="col s11 center" style="font-size: 18px;">
+            <br><br>
+            <br>
+            <div class="card" style="border-radius: 6px; overflow: hidden; width: 100%;">
+              <div class="card-content">
+                <img src="./twitter.png" style="border-radius: 6px; height: 30px; margin-right: 5px; display: block;" />
+                <span id="freestyle-pitch-text">
+                </span>
+                <br><br>
+              </div>
+            </div>
+            <a id="tweet-freestyle" class="waves-effect waves-light btn-large blue white-text"
+              style="border-radius: 50px; font-weight: 700; max-width: 320px;">
+              Tweet your pitch
+            </a>
+          </div>
+          <a id='twitter-post' target="_blank" style="visibility: hidden; width: 1px;"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    M.AutoInit();
+    $(document).ready(function () {
+      $('input#input_text, textarea#textareapitch').characterCounter();
+
+      $('#with-template-card').show();
+      $('#freestyle-card').hide();
+
+      $('#with-template').click(function () {
+        $('#with-template-card').show();
+        $('#freestyle-card').hide();
+      })
+
+      $('#freestyle').click(function () {
+        $('#with-template-card').hide();
+        $('#freestyle-card').show();
+      })
+
+      let freestylePitch = 'Your freestyle pitch';
+      let twitterHandel2 = '<b>@twitter handel</b>';
+      $("#textareapitch").keyup(function () {
+        freestylePitch = $('#textareapitch').val()
+        $('#freestyle-pitch-text').html(freestylePitch);
+      });
+      $('#twitter_handel2').keyup(function () {
+        twitterHandel2 = $('#twitter_handel2').val();
+        $('#twitter_handel_text2').html(twitterHandel2)
+      });
+
+      let problemStatement = '<b>problem statement</b>';
+      let companyName = '<b>I | We | Company Name</b>';
+      let solutionStatement = '<b>solution statement</b>';
+      let impactStatement = '<b>impact statement</b>';
+      let twitterHandel = '<b>@twitter handel</b>';
+
+      let updateTemplateFields = function () {
+        $('#problem_statement_text').html(problemStatement);
+        $('#company_name_text').html(companyName);
+        $('#solution_statement_text').html(solutionStatement);
+        $('#impact_statement_text').html(impactStatement);
+        $('#twitter_handel_text').html(twitterHandel)
+      };
+
+      updateTemplateFields();
+
+      $("#problem_statement").keyup(function () {
+        problemStatement = $("#problem_statement").val()
+        updateTemplateFields();
+      });
+
+      $('#company_name').keyup(function () {
+        companyName = $('#company_name').val();
+        updateTemplateFields();
+      });
+
+      $('#solution_statement').keyup(function () {
+        solutionStatement = $('#solution_statement').val();
+        updateTemplateFields();
+      });
+
+      $('#impact_statement').keyup(function () {
+        impactStatement = $('#impact_statement').val();
+        updateTemplateFields();
+      });
+
+      $('#twitter_handel').keyup(function () {
+        twitterHandel = $('#twitter_handel').val();
+        updateTemplateFields();
+      });
+
+      $('#tweet-with-template').click(function () {
+        let tweetURL = 'https://twitter.com/intent/tweet?'
+        tweetURL += 'text=' + encodeURI($('#with-template-pitch-text').text().replace(/[\n\r]+|[\s]{2,}/g, ' '));
+
+        if ($('#twitter_handel').val().length > 0)
+          tweetURL += '&via=' + $('#twitter_handel').val();
+
+        console.log($('#with-template-pitch-text').text().replace(/[\n\r]+|[\s]{2,}/g, ' '));
+
+        $('#twitter-post').attr('href', tweetURL);
+        $('#twitter-post')[0].click();
+      });
+
+
+      $('#tweet-freestyle').click(function () {
+        let tweetURL = 'https://twitter.com/intent/tweet?'
+        tweetURL += 'text=' + encodeURI($('#freestyle-pitch-text').text().replace(/[\n\r]+|[\s]{2,}/g, ' '));
+
+        if ($('#twitter_handel2').val().length > 0)
+          tweetURL += '&via=' + $('#twitter_handel2').val();
+
+        console.log($('#freestyle-pitch-text').text().replace(/[\n\r]+|[\s]{2,}/g, ' '));
+
+        $('#twitter-post').attr('href', tweetURL);
+        $('#twitter-post')[0].click();
+      });
+
+
+    });
+  </script>
+</body>
+
+</html>

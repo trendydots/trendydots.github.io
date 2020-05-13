@@ -18,8 +18,6 @@
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="https://trendydots.com/mobile-stitches/public/materialize.min.js"></script>
 
-  <!-- Import ChartJS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
   <style>
     body {
       background: #f7f7f7;
@@ -73,6 +71,7 @@
         </b>
       </div>
 
+      <!-- input text -->
       <div class="col s12 m6">
         <div class="row">
           <div class="col s12">
@@ -81,8 +80,9 @@
               <li id="freestyle" class="tab"><a href="#tab2">Freestyle</a></li>
             </ul>
           </div>
+          <!-- template input text -->
           <div id="tab1" class="col s12">
-            <div class="row" style="min-width: 320px;">
+            <div class="row" style="min-width: 300px;">
               <h6 class="blue-grey-text text-darken-3">
 
                 <div style="display:flex; flex-flow: row wrap; justify-content: flex-start; align-items: baseline;">
@@ -132,13 +132,14 @@
             </div>
           </div>
 
+          <!-- freestyle input text -->
           <div id="tab2" class="col s12">
             <br>
-            <div class="row">
+            <div class="row" style="min-width: 300px;">
               <div class="input-field col s12">
                 <textarea id="textareapitch" class="materialize-textarea" rows="3" data-length="220"
-                  style="font-size: 24px;"></textarea>
-                <label for="textareapitch" style="font-size: 24px;">Your freestyle pitch</label>
+                  style="font-size: 22px;"></textarea>
+                <label for="textareapitch" style="font-size: 22px;">Your freestyle pitch</label>
               </div>
               <div class="col s12">
                 <div style="display:flex; flex-flow: row wrap; justify-content: flex-start; align-items: baseline;">
@@ -167,6 +168,8 @@
 
         </div>
       </div>
+
+      <!-- output pitch -->
       <div class="col s12 m6">
         <div class="row">
           <div class="col s1"></div>
@@ -183,8 +186,13 @@
               </div>
             </div>
             <a id="tweet-with-template" class="waves-effect waves-light btn-large blue white-text"
-              style="border-radius: 50px; font-weight: 700; max-width: 320px;">
+              style="border-radius: 50px; font-weight: 700; max-width: 300px; margin-top: 5px;">
               Tweet your pitch
+            </a>
+
+            <a id="copy-with-template" class="waves-effect waves-light btn-large grey white-text"
+              style="border-radius: 50px; font-weight: 700; max-width: 300px; margin-top: 5px;">
+              Copy to clipboard
             </a>
           </div>
 
@@ -200,8 +208,13 @@
               </div>
             </div>
             <a id="tweet-freestyle" class="waves-effect waves-light btn-large blue white-text"
-              style="border-radius: 50px; font-weight: 700; max-width: 320px;">
+              style="border-radius: 50px; font-weight: 700; max-width: 300px; margin-top: 5px;">
               Tweet your pitch
+            </a>
+
+            <a id="copy-freestyle" class="waves-effect waves-light btn-large grey white-text"
+              style="border-radius: 50px; font-weight: 700; max-width: 300px; margin-top: 5px;">
+              Copy to clipboard
             </a>
           </div>
           <a id='twitter-post' target="_blank" style="visibility: hidden; width: 1px;"></a>
@@ -212,6 +225,23 @@
 
   <script>
     M.AutoInit();
+    function copyStringToClipboard(str) {
+      // Create new element
+      var el = document.createElement('textarea');
+      // Set value (string to be copied)
+      el.value = str;
+      // Set non-editable to avoid focus and move outside of view
+      el.setAttribute('readonly', '');
+      el.style = { position: 'absolute', left: '-9999px', display: 'none' };
+      document.body.appendChild(el);
+      // Select text inside element
+      el.select();
+      // Copy text to clipboard
+      document.execCommand('copy');
+      // Remove temporary element
+      document.body.removeChild(el);
+    }
+
     $(document).ready(function () {
       $('input#input_text, textarea#textareapitch').characterCounter();
 
@@ -280,6 +310,7 @@
         updateTemplateFields();
       });
 
+      // tweeting logic
       $('#tweet-with-template').click(function () {
         let tweetURL = 'https://twitter.com/intent/tweet?'
         tweetURL += 'text=' + encodeURI($('#with-template-pitch-text').text().replace(/[\n\r]+|[\s]{2,}/g, ' '));
@@ -307,6 +338,18 @@
         $('#twitter-post')[0].click();
       });
 
+      //clipboard logic
+      $('#copy-with-template').click(function () {
+        const clipboardStr = $('#with-template-pitch-text').text().replace(/[\n\r]+|[\s]{2,}/g, ' ');
+        copyStringToClipboard(clipboardStr);
+        alert('Copied: ' + clipboardStr);
+      })
+
+      $('#copy-freestyle').click(function () {
+        const clipboardStr = $('#freestyle-pitch-text').text().replace(/[\n\r]+|[\s]{2,}/g, ' ');
+        copyStringToClipboard(clipboardStr);
+        alert('Copied: ' + clipboardStr);
+      })
 
     });
   </script>

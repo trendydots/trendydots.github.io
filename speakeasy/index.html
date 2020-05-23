@@ -1,0 +1,217 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:image" content="https://trendydots.com/invest/assets/img/inE1.png" />
+  <link href=https://trendydots.com/css/stitches.css rel="stylesheet">
+  <link href=https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900 rel="stylesheet">
+  <link rel="stylesheet" href=https://use.fontawesome.com/releases/v5.0.13/css/all.css
+    integrity=sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp crossorigin="anonymous">
+  <title>td. speak easy - turn text to multivoice speech</title>
+  <link rel="shortcut icon" type="image/png" href="https://trendydots.com/logo.png" />
+
+  <style>
+    *:focus {
+      outline: none;
+    }
+
+    .form-style {
+      margin: 0;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .form-style {
+        display: flex;
+        margin: 0;
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+
+
+<body style="background: #f5f5f5;">
+
+  <nav
+    class="font-sans bg-white text-center flex justify-between items-center p-4 container overflow-hidden flex-col md:flex-row"
+    style="box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); max-width: 100%; position: fixed; bottom: 0; z-index: 100;">
+    <div class="flex items-center">
+      <div style="display: inline-block; width:3em"> </div>
+      <a href="http://trendydots.com" class="block text-left" target="_blank">
+        <img src="https://trendydots.com/logo.png" class="rounded-full" style="height: 1.8em" alt="logo" />
+      </a>
+      &nbsp;
+      <b class="text-lg flex text-left" style="font-size: 1.35rem;">
+        speak
+        <span style="color: #FFCA28; display: inline; ">easy
+        </span>
+      </b>
+      <div style="display: inline-block; width:12em"> </div>
+    </div>
+
+    <div class="flex">
+      <div id="cancel-button" style="display: inline-block; cursor: pointer;">
+        <img src="./assets/replay-black-18dp.svg" alt="replay recording"
+          style="height:30px; margin-right: 15px; margin-top: 12px;">
+      </div>
+
+      <div id="play-button"
+        style="display: inline-block; border-radius: 50%; border: 1px solid #ff9800;  cursor: pointer;">
+        <img src="./assets/play_arrow-black-18dp.svg" alt="play recording" style="height:50px">
+      </div>
+
+      <div id="pause-button" style="display: inline-block;  cursor: pointer;">
+        <img src="./assets/pause-black-18dp.svg" alt="replay recording"
+          style="height:30px; margin-left: 15px; margin-top: 12px;">
+      </div>
+
+      <div id="resume-button" style="display: inline-block;  cursor: pointer;">
+        <img src="./assets/get_app-black-18dp.svg" alt="replay recording"
+          style="height:30px; margin-left: 15px; margin-top: 12px;">
+      </div>
+    </div>
+
+    <div class="text-sm list-reset flex items-center">
+
+      <div style="display: inline-block;">
+        <div>Pitch </div>
+        <input type="range" id="pitch" name="pitch" min="0" max="100" value="80" disabled>
+        <div style="color: grey;">disabled</div>
+      </div>
+
+      <div style="display: inline-block; width:4em"> </div>
+
+      <div style="display: inline-block;">
+        <div>Rate </div>
+        <input type="range" id="rate" name="rate" min="0" max="100" value="80" disabled>
+        <div style="color: grey;">disabled</div>
+      </div>
+      <div style="display: inline-block; width:2em"> </div>
+
+    </div>
+  </nav>
+
+  <!-- Language and voice -->
+  <section class="font-sans container m-auto flex flex-row pt-2 max-w-xl text-center px-6 items-center justify-center">
+    <div class="w-2/3 flex items-center justify-center">
+      <div> Select the language: </div>
+      <select id="language-select" style="height: 40px; max-width: 300px; margin-left: 20px;"
+        class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-4 py-2 pr-8 shadow leading-tight focus:outline-none focus:shadow-outline">
+      </select>
+    </div>
+  </section>
+
+  <!-- Top Inputs -->
+  <section class="font-sans container m-auto flex flex-col max-w-xl px-6" style="max-width: 770px;">
+    <div
+      style="top: 32px; width: 64px; height: 64px; background: url(./assets/ai1.png) no-repeat; position: relative; left: -32px;">
+    </div>
+    <div class=" font-sans flex flex-col pb-2 w-full px-6"
+      style="background: #D7CCC8; max-width: 770px; border-radius: 1px 12px 12px 12px;">
+      <div class="max-w-lg w-full leading-loose text-left flex items-end justify-center">
+        <div class="flex w-1/3 mb-2 flex-col" style="margin-right: 0;">
+          <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-2 text-left"> Select a voice</p>
+          <select id="first-voice-select" style="height: 40px;"
+            class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-4 py-2 pr-8 shadow leading-tight focus:outline-none focus:shadow-outline">
+          </select>
+        </div>
+        <div class="w-2/3 mb-2" style="margin-left: 5px;">
+          <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-2 text-left"> Title</p>
+          <input id="title-input" type="text" class="shadow input-field"
+            style="width: 100%; border: 1px solid #E0E0E0; padding:10px;" value=""> </input>
+        </div>
+
+      </div>
+      <div class="max-w-lg w-full leading-loose text-left mb-2">
+        <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-2 text-left"> Main Question/Statement</p>
+        <textarea id="main-statement-input" rows="3" class="shadow input-field"
+          style="width: 100%; border: 1px solid #E0E0E0; padding:10px;">
+
+        </textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusion Inputs -->
+  <section class="font-sans container m-auto flex flex-col max-w-xl px-6 items-end" style="max-width: 770px;">
+    <div style="top:32px;
+    width: 64px;
+    height: 64px;
+    background: url(./assets/ai2.png) no-repeat;
+    position: relative;
+    right: -32px;"></div>
+    <div class="font-sans flex flex-col w-full px-6 items-end"
+      style="background: #CFD8DC; max-width: 770px;border-radius: 12px 1px 12px 12px;">
+      <div class="flex max-w-lg w-full items-end justify-center mt-2">
+        <div class="w-2/3">
+          <p class="mt-1 lg:mt-4 max-w-lg m-auto leading-loose mb-2 text-left"> Conclusions & Remarks </p>
+        </div>
+        <div class="w-1/3">
+          <div class="mb-2"> Select a voice </div>
+          <select id="second-voice-select" style="height: 40px;"
+            class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-4 py-2 pr-8 shadow leading-tight focus:outline-none focus:shadow-outline">
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-1  max-w-lg w-full leading-loose mb-6 text-left">
+        <textarea id="conclusion-input" rows="5" class="shadow input-field"
+          style="width: 100%; border: 1px solid #E0E0E0; padding:10px;">
+          </textarea>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Summary section -->
+  <section id="summarySection" class="font-sans container m-auto flex flex-col py-2 max-w-xl text-center px-6">
+    <div class="px-6 w-full m-auto mb-6 flex flex-wrap md:flex-no-wrap text-center justify-center">
+      <div style="text-align: center;">
+        <span class="text-xs inline-block uppercase text-grey-darkest">Number of words
+        </span>
+        <h3 id="number-of-words" class="inline-block mr-4">0</h3>
+
+        <span class="text-xs inline-block uppercase text-grey-darkest tracking-wide">Audio Length
+        </span>
+        <h3 id="audio-length" class="inline-block">0</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <div style="margin-bottom: 150px; font-size: 12px; text-align: center;">Icons by <a
+      href="https://www.flaticon.com/de/autoren/photo3idea-studio" title="photo3idea_studio">photo3idea_studio</a> and
+    <a href="https://www.flaticon.com/de/autoren/smartline" title="Smartline">Smartline</a> from <a
+      href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- ISO Language Names-->
+  <script type="text/javascript" src="./js/isoLangs.js"></script>
+
+  <!--App Javascript-->
+  <script type="text/javascript" src="./js/app.js"></script>
+
+  <!--Google Analytics-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113784035-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-113784035-1");
+  </script>
+
+</body>
+
+</html>

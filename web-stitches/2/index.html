@@ -159,6 +159,13 @@
     gtag("js", new Date());
 
     gtag("config", "UA-113784035-1");
+
+    if (navigator.appVersion.indexOf("Win") != -1) {
+      var styleSheet = document.createElement("style")
+      styleSheet.type = "text/css"
+      styleSheet.innerText = 'body { zoom: 0.85; }'
+      document.head.appendChild(styleSheet)
+    }
   </script>
 
 </body>

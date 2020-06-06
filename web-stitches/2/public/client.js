@@ -61,7 +61,14 @@
         </div>
     </div>
  
-  <script> M.AutoInit();</script>
+  <script> M.AutoInit();
+  if (navigator.appVersion.indexOf("Win") != -1) {
+    var styleSheet = document.createElement("style")
+    styleSheet.type = "text/css"
+    styleSheet.innerText = 'body { zoom: 0.83; }'
+    document.head.appendChild(styleSheet)
+  }
+  </script>
   </body>
 
 </html>`;const g={authDomain:"td-mobile-stitches.firebaseapp.com",databaseURL:"https://td-mobile-stitches.firebaseio.com",projectId:"td-mobile-stitches",storageBucket:""};let y=[];downloadFromFB=e=>{let t="";for(let n=0;n<e.length;n++)t+=y[e[n]]?y[e[n]].snippet:"";return{data:m(t)}},c.addEventListener("click",e=>{if("BUTTON"===e.target.tagName){c.childNodes.forEach(e=>{"BUTTON"===e.nodeName&&(e.style.borderColor="#fff")});let r=e.target;r.style.borderColor="#abb7bd";const o=r.getAttribute("data-filter");for(var n=0;n<p.length;n++)p[n].style.display=p[n].classList.contains(o)?"block":"none";t(".js-snippets",".js-snippet",0,2,2,1)}}),u.addEventListener("click",()=>{let e=[],t=document.querySelectorAll(".js-droppable > .js-snippet");for(var r=0;r<t.length;r++)e.push(t[r].id);n("stitches.html",downloadFromFB(e).data)}),document.addEventListener("click",function(e){e.target.classList.contains("js-delete-btn")&&document.querySelector(".js-droppable").removeChild(e.target.parentElement)}),window.addEventListener("resize",function(){o(l,function(){t(".js-snippets",".js-snippet",0,2,2,1)})}),window.addEventListener("load",()=>{console.log("page is fully loaded"),i.initializeApp(g);var e=i.database();e.ref("/platformConfig").once("value").then(function(e){e.val()}),e.ref("/templates").once("value").then(function(e){y=e.val(),Object.keys(y).forEach(function(e){let t=y[e],n=document.createElement("figure");n.id=t.name,n.classList="js-snippet w-1/2 p-2 "+t.templateTags.join(" "),n.innerHTML=`

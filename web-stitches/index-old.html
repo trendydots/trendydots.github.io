@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:image" content="https://trendydots.com/web-stitches/images/m-header.png" />
+  <meta name="title" property="og:title" content="td. web stitches" />
+  <meta name="description" property="og:description"
+    content=" A web application that helps you rapidly design a landing page or an editorial website. Join the crowdfunding." />
+  <meta property="og:type" content="article" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@trendydots" />
+  <meta name="twitter:title" content="td. web stitches" />
+  <meta name="twitter:description"
+    content="A web application that helps you rapidly design a landing page or an editorial website. Join the crowdfunding." />
+  <meta name="twitter:image" content="https://trendydots.com/web-stitches/images/m-header.png" />
+
+  <meta name="author" content="trendy dots" />
+
+  <link href="https://trendydots.com/css/stitches.css?v=1234" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin="anonymous">
+  <title>td. web stitches</title>
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- EU Cookies -->
+  <link rel="stylesheet" type="text/css" href="../css/jquery-eu-cookie-law-popup.css" />
+  <script src="../js/jquery-eu-cookie-law-popup.js"></script>
+
+  <!--Load Google Charts via the AJAX API-->
+  <script type="text/javascript" src=https://www.gstatic.com/charts/loader.js> </script>
+  <script>
+    $(window).resize(function () {
+      $(window).trigger("window:resize")
+    })
+  </script>
+</head>
+
+<body class="eupopup eupopup-bottom eupopup-style-compact">
+  <nav
+    class="fixed font-sans md:shadow-none md:bg-transparent bg-white shadow text-center flex justify-between py-4 px-8 overflow-hidden w-full flex-col md:flex-row"
+    style="margin-bottom: 5px; z-index: 10; top:0; padding-left: 3%;
+    padding-right: 3%;">
+    <a class="block md:text-left text-center no-underline text-black"
+      style="line-height:40px; font-weight: 700; font-size: 22px;">
+      <span>td<span style="color:#F2D024">.</span> </span>
+      <span style="font-weight: 600;"> web-stitches</span>
+    </a>
+
+    <ul class="md:text-sm text-xs text-grey-dark list-reset flex items-center flex-row">
+      <li>
+        <a class="btn bg-white border border-red cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mx-4 mb-2 rounded-full shadow inline-flex items-center"
+          href="https://www.patreon.com/bePatron?u=34703537" target="_blank">
+          <img src="../patreon-logo1.png" style="height: 1.5em; vertical-align: middle;" alt="">
+          &nbsp;
+          <span> Become a patron</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.buymeacoffee.com/trendydots" target="_blank"
+          class="btn bg-white border border-blue cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center">
+          <img src="../bmc-logo.svg" style="height: 1.5em; vertical-align: middle;" alt="">
+          &nbsp;&nbsp;
+          <span> Buy me a coffee</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+
+  <!-- header mobile statement-->
+  <section style="margin-bottom: 0; margin-top:110px; "
+    class="font-sans container m-auto max-w-xl flex flex-col lg:flex-row text-center lg:text-left sm:items-center md:px-8">
+    <div class="w-full lg:w-1/2">
+      <img src="./images/m-header.png" alt="" style="margin-top: 20px;" />
+    </div>
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start items-center lg:items-start">
+      <h2 class="my-4 font-normal">
+        <span style="font-weight:600; color:black;"> Easy mobile screens</span>
+      </h2>
+      <h2 class="my-4 font-normal text-grey-darker">
+        Easily drag and drop UI components and build beautiful mobile and web screens.
+        <br> <br>
+        A perfect tool for brainstorming and hackathons <br>
+        <img src="./images/bootstrapCssIcon.png" style="height: 50px;" alt="">
+        <img src="./images/materializeCSSIcon.png" style="height: 50px;" alt="">
+        <img src="./images/chartJsIcon.png" style="height: 50px;" alt="">
+      </h2>
+
+      <a href="./2/" target="_blank"
+        class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center"
+        style="border-color: #F2D024; border-width: 5px;">
+        <span> Try it free</span>
+      </a>
+    </div>
+
+  </section>
+  <!-- header desktop statement-->
+  <section style="margin-bottom: 0; margin-top:70px; "
+    class="font-sans container m-auto max-w-xl flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center md:px-8">
+
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start items-center lg:items-end">
+      <h2 class="my-4 font-normal">
+        <span style="font-weight:600; color:black;"> Easy landing page design</span>
+      </h2>
+      <h2 class="my-4 font-normal text-grey-darker lg:text-right">
+        Experiment with building beautiful landing pages and article designs.
+        <br> <br>
+        Drag and drop web components. <br>
+        Replace. Get creative along side your clients.
+        <br>
+        <img src="./images/tailwindCssIcon.png" style="height: 50px;" alt="">
+        <img src="./images/googleChartsIcon.png" style="height: 50px;" alt="">
+      </h2>
+
+      <a href="./1/" target="_blank"
+        class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center"
+        style="border-color: #F2D024; border-width: 5px;">
+        <span> Try it free</span>
+      </a>
+    </div>
+    <div class="w-full lg:w-1/2">
+      <img src="./images/d-header.png" alt="" style="margin-top: 20px;" />
+    </div>
+  </section>
+
+  <!-- support-->
+  <section class="font-sans m-auto w-full" style="margin-top: 30px;  border-top: 1px dashed #debe22;">
+    <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center">
+      <div style=" z-index: 3;" class="w-full p-8 flex flex-col items-left text-sm font-bold">
+        <div class="w-full flex flex-col items-center justify-center my-8">
+          <h2>
+            <a href="https://twitter.com/trendydots" target="_blank"
+              style="text-decoration: none; color: black; float: right;">
+              <img src="../twitter_black.png" style="vertical-align: middle; height: 1em">
+              @trendydots
+            </a>
+        </div>
+        </h2>
+        <h1 class="leading-normal mb-2 text-center text-grey-dark">
+          If you like the project and want to help it grow, <br> please consider donating and becoming a patron. </h1>
+        <br><br>
+        <div class="flex md:flex-row flex-col items-center justify-center mb-8">
+          <div class="flex flex-col">
+            <a href="https://www.buymeacoffee.com/trendydots" target="_blank"
+              class="btn bg-white border border-blue cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center">
+              <img src="../bmc-logo.svg" style="height: 1.5em; vertical-align: middle;" alt="">
+              &nbsp;&nbsp;
+              <span> Buy me a cofee</span>
+            </a>
+          </div>
+
+          <!-- 
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="flex flex-col">
+            <a href="https://www.paypal.me/trendydots" target="_blank"
+              class="btn bg-white border border-blue cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center">
+              <img src="../paypal-logo.png" style="height: 1.5em; vertical-align: middle;" alt="">
+              &nbsp;&nbsp;
+              <span> Donate one time</span>
+            </a>
+          </div>
+          -->
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="flex flex-col ">
+            <a class="btn bg-white border border-red cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mx-4 mb-2 rounded-full shadow inline-flex items-center"
+              href="https://www.patreon.com/bePatron?u=34703537" target="_blank">
+              <img src="../patreon-logo1.png" style="height: 1.5em; vertical-align: middle;" alt="">
+              &nbsp;
+              <span> Become a patron</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- old upcomming features
+      <div class="w-full flex md:flex-row flex-col items-center justify-center px-8 lg:mx-8">
+        <div class="w-full md:w-1/2 my-4 px-8">
+          <h2 class="leading-normal mb-2 text-center text-grey-dark">I. Components Editing </h2>
+          <img src="./images/card-editor1.png" alt=""
+            style="display:block; margin: 0 auto; margin-top: 10px; max-height: 260px;" />
+          <h4 class="leading-normal mb-2 text-center"> After dragging a component into the mobile
+            preview, a small dedicated editor will allow easy changes to the component’s information. Your prototypes
+            -
+            your data.
+          </h4>
+        </div>
+        <div class="w-full md:w-1/2 my-4 px-8">
+          <h2 class="leading-normal mb-2 text-center text-grey-dark">II. Transitions between sceens </h2>
+          <img src="./images/screen-links.png" alt=""
+            style="display:block; margin: 0 auto; margin-top: 10px; max-height: 260px;" />
+          <h4 class="leading-normal mb-2 text-center "> Transitions between screens will allow you to
+            show and tell user stories. Impress your audience with a clear user experience walkthrough.</h4>
+
+        </div>
+      </div>
+      -->
+  </section>
+  <section class="font-sans w-full px-8 flex flex-col lg:flex-col text-center" style="margin-bottom: 0;">
+    <div class="text-center">
+      <h1 class="leading-normal mb-2 text-center "> Upcoming features for our patrons</h1>
+    </div>
+    <div class="flex flex-col sm:flex-row flex-wrap my-8 w-full items-center justify-around">
+      <div style="background: #F5F5F5; "
+        class="m-2 w-full sm:w-1/2 md:w-1/4 flex flex-col items-center justify-center h-48 md:h-64 border-grey-lightest border-r border-b hover:shadow-md hover:border-0 bg-white hover:transform-scale-subtle transition-normal hover:show-child">
+        <h3 class="mt-4 mb-1">Individual Accounts <br> Multiple private projects</h3>
+        <p class="mt-4 text-center text-grey-darker leading-normal px-6 ">Build multiple private projects. Save & Update
+          them as many times you need.</p>
+      </div>
+      <div style="background: #F5F5F5;"
+        class="m-2 w-full sm:w-1/2 md:w-1/4  flex flex-col items-center justify-center h-48 md:h-64 p-8  border-grey-lightest border-r border-b hover:shadow-md hover:border-0 bg-white hover:transform-scale-subtle transition-normal hover:show-child">
+
+        <h3 class="mt-4 mb-1">Premium Components</h3>
+        <p class="mt-4 text-center text-grey-darker leading-normal ">Get access to exclusive premium components with a
+          high degree of responsiveness, some of which will allow customization</p>
+      </div>
+      <div style="background: #F5F5F5;"
+        class="m-2 w-full sm:w-1/2 md:w-1/4 flex flex-col items-center justify-center h-48 md:h-64 p-8  border-grey-lightest border-b hover:shadow-md hover:border-0 bg-white hover:transform-scale-subtle transition-normal hover:show-child">
+
+        <h3 class="mt-4 mb-1">Mobile & Desktop working together</h3>
+        <p class="mt-4 text-center text-grey-darker leading-normal ">Easily switch between mobile and desktop views and
+          experience your mockups responsiveness. Download both versions in a ready to code bundle.</p>
+      </div>
+
+    </div>
+  </section>
+  <!-- how to use -->
+  <section class="my-8 lg:my-16 font-sans w-full m-auto flex flex-col text-center justify-center items-center"
+    style="background: #F5F5F5;">
+    <div class="w-full lg:w-2/3 flex flex-col justify-center items-center ">
+      <br><br><br><br>
+      <h3 class="leading-normal mb-4 text-grey-darkest text-center p-8">
+        A web application that helps you rapidly design a landing page or an editorial website.
+        Using Google Charts, the data visualization components make it easy to express knowledge in beautiful web
+        pages. <br>
+        It takes seconds to experiment with different layouts.
+      </h3>
+
+      <br><br>
+
+      <iframe class="w-full rounded shadow-md" src="https://www.youtube-nocookie.com/embed/frEiVOU1dak" frameborder="0"
+        allow="autoplay; gyroscope;" allowfullscreen style="height: 450px; max-width: 790px;"></iframe>
+      <br><br>
+      <br><br>
+    </div>
+    <div class="w-full lg:w-2/3 flex flex-col justify-center items-center ">
+      <h1>Helping Europe's creative minds</h1> <br><br>
+      <h3 class="leading-normal mb-4 text-grey-darkest text-center p-8">
+        During 24 - 27 April 2020, web-stitches was used by many teams who participated to the European Commission's
+        #EUvsVirus hackathon. The teams were able to rapidly build presentation pages as well as mobile showcases that
+        demonstrate their awesome ideas on how to create new services and products that help people around the world
+        during the COVID-19 pandemic.
+        <br><br>
+        <img src="./images/euvsvirus.png" style="width: 70%;">
+        <br><br>
+        We'd be super happy to hear from everyone who uses web-stitches at
+
+        <a href="https://twitter.com/trendydots" target="_blank"
+          style="margin-left: 10px; text-decoration: none; color: black;">
+          <img src="../twitter_black.png" style="vertical-align: middle; height: 1em">
+          @trendydots
+        </a>
+      </h3>
+
+      <br><br>
+
+
+    </div>
+  </section>
+
+  <section
+    class="my-8 lg:my-16 font-sans w-full m-auto flex flex-col lg:flex-row text-center justify-center items-center"
+    style="background: #F5F5F5;">
+
+  </section>
+
+
+
+
+
+  <footer class="font-sans bg-white pb-8 px-4" style="z-index: 4">
+    <div class="mx-auto max-w-xl overflow-hidden flex flex-col md:flex-row justify-between items-center">
+      <p class="inline-block py-2 px-3 text-center md:text-left"> ©2020 <strong class="">trendydots.com</strong> <br>
+        All rights reserved.</p>
+
+      <ul class="text-sm text-grey-dark list-reset flex items-center">
+        <li><a href="../privacy-statement.html" target="_blank" class="inline-block py-2 px-3 text-black">Privacy
+            statement</a></li>
+        <li><a href="../terms-of-service.html" target="_blank" class="inline-block py-2 px-3 text-black">Terms of
+            service</a>
+        </li>
+        <li><a href="../imprint.html" target="_blank" class="inline-block py-2 px-3 text-black">
+            Impressum</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113784035-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113784035-1');
+
+  </script>
+</body>
+
+</html>

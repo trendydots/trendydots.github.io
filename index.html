@@ -1,464 +1,365 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta property="og:image" content="https://trendydots.com/invest/assets/img/in3.png" />
-  <meta name="title" property="og:title" content="td. trend research platform">
-  <meta name="description" property="og:description"
-    content="Your first step to market research. Join the crowdfunding.">
-  <meta property="og:type" content="article">
-  <meta name="author" content="trendy dots">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="PRAGMA" content="NO-CACHE">
+  <title>trendy dots</title>
+  <meta name="author" content="Cristian-Dan Baras">
+  <meta name="description"
+    content="Trendy Dots is a project developing fun applications for data science, data visualization and user experience." />
+  <meta name="keywords" content="digital lab, exploratory data analysis, behavioural economics, trend analysis" />
+  <meta property="og:title" content="Trendy Dots" />
+  <meta property="og:description"
+    content="Trendy Dots is a project developing fun applications for data science, data visualization and user experience. " />
+  <meta property="og:image" content="./1.png" />
+
+  <link rel="shortcut icon" href="logo.png">
 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/tailwind.min.css?v=3nov" rel="stylesheet">
-  <link href=https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900 rel="stylesheet">
-  <link rel="stylesheet" href=https://use.fontawesome.com/releases/v5.0.13/css/all.css
-    integrity=sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp crossorigin="anonymous">
-  <title>trendy dots - trend research</title>
-  <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png" />
-  <link rel="stylesheet" href="./assets/css/aos.css" />
 
+  <link href=https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800,900 rel="stylesheet">
+  <link rel="stylesheet" href=https://use.fontawesome.com/releases/v5.6.3/css/all.css
+    integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script async="" defer="" src="//usebasin.com/f/06dcf3d4ebaf/ahoy.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/jquery-eu-cookie-law-popup.css" />
+  <script src="js/jquery-eu-cookie-law-popup.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
-    *:focus {
-      outline: none;
+    .grecaptcha-badge {
+      display: none;
     }
 
-    .form-style {
-      margin: 0;
-      width: 100%;
-    }
-
-    @media (min-width: 768px) {
-      .form-style {
-        display: flex;
-        margin: 0;
-        width: 100%;
-      }
+    .m-0 {
+      margin: 0 !important;
     }
   </style>
-
-  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/jquery-eu-cookie-law-popup.css" />
-  <script src="../js/jquery-eu-cookie-law-popup.js"></script>
-  <script src="https://usebasin.com/f/06dcf3d4ebaf/ahoy.js" async defer></script>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("signupform").submit();
+    }
+  </script>
 </head>
 
-<body class="htmlNoPages eupopup eupopup-bottom eupopup-style-compact" data-aos-easing="ease" data-aos-delay="300"
-  data-aos="fade-in">
+<body style="font-family: Montserrat;" class="eupopup eupopup-bottom eupopup-style-compact">
   <nav
-    class="font-sans bg-white text-center flex md:justify-between items-center md:flex-row flex-col px-4 py-2 container overflow-hidden"
-    style="box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    max-width: 100%; position: fixed; top: 0; z-index: 100; 
-    background: linear-gradient(90deg, #ffffff 0%, #eceff1 100%);">
-    <span class=" flex items-center">
-      <a href="https://trendydots.com" class="block text-left" target="_blank">
-        <img src="assets/img/logo.png" class="h-8 sm:h-8 rounded-full" alt="logo" />
-      </a>
-      &nbsp;
-      <b class="text-lg flex text-left" style="font-size: 1.35rem;">
-        <span style="display: inline; text-indent: 0.2em; font-weight: 700;">trendy dots
-        </span>
-      </b>
-    </span>
-
-
+    class="font-sans md:shadow-none md:bg-transparent bg-white shadow text-center fixed flex justify-between py-4 px-8 overflow-hidden w-full flex-col md:flex-row"
+    style="margin-bottom: 5px; z-index: 10; top:0; padding-left: 3%;
+    padding-right: 3%;">
+    <a href="/" class="block md:text-left text-center no-underline text-black"
+      style="line-height:40px; font-weight: 700; font-size: 22px;">
+      <span>td<span style="color:#F2D024">.</span> </span>
+      <span style="font-weight: 600;"> trendy dots</span>
+    </a>
+    <!-- 
     <ul class="md:text-sm text-xs text-grey-dark list-reset flex items-center flex-row">
       <li>
         <a class="btn bg-white border border-red cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mx-4 mb-2 rounded-full shadow inline-flex items-center"
           href="https://www.patreon.com/bePatron?u=14590376" target="_blank">
-          <img src="../patreon-logo1.png" style="height: 1.5em; vertical-align: middle;" alt="">
+          <img src="./patreon-logo1.png" style="height: 1.5em; vertical-align: middle;" alt="">
           &nbsp;
-          <span> Become a Patron</span>
+          <span> Become a patron</span>
         </a>
       </li>
-      <!-- 
+
       <li>
         <a href="https://www.paypal.me/trendydots" target="_blank"
           class="btn bg-white border border-blue cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center">
-          <img src="../paypal-logo.png" style="height: 1.5em; vertical-align: middle;" alt="">
+          <img src="./paypal-logo.png" style="height: 1.5em; vertical-align: middle;" alt="">
           &nbsp;&nbsp;
           <span> Donate one time</span>
         </a>
       </li>
--->
-    </ul>
 
+    </ul>
+    -->
   </nav>
 
-  <!-- header statement-->
-  <section style="margin-bottom: 0; margin-top:5em; "
-    class="font-sans container m-auto max-w-xl flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
-    <div class="w-full lg:w-2/3">
-      <img src="./assets/img/in3.png" alt="" />
-    </div>
-    <div class="w-full lg:w-1/3 flex flex-col justify-center items-start items-center lg:items-start">
-      <h2 class="my-4 font-normal">
-        <span style="font-weight:500; color:black;">online trend research </span>
-      </h2>
-      <h3 class="my-4 font-normal text-grey-darker">
-        Predicting internet search trends, our application offers a first step to market research
-      </h3>
-
-      <a href="#contact-us" target="_self"
-        class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow inline-flex items-center"
-        style="border-color: pink;">
-        <span> Create your account </span>
-      </a>
-    </div>
-
-  </section>
-
-
-  <!-- we offer -->
-  <section class="font-sans w-full p-8 flex flex-col lg:flex-col text-center"
-    style="background: #F5F5F5; margin-bottom: 0;">
-    <div class="text-center">
-      <h1 class="my-4 font-medium">We offer</h1>
-    </div>
-    <div class="flex flex-col sm:flex-row flex-wrap my-8 w-full items-center justify-around">
-      <div
-        class="m-2 w-full sm:w-1/2 md:w-1/4 flex flex-col items-center justify-center h-48 md:h-64 border-grey-lightest border-r border-b hover:shadow-md hover:border-0 bg-white hover:transform-scale-subtle transition-normal hover:show-child">
-
-        <h3 class="mt-4 mb-1">Performance</h3>
-        <p class="mt-4 text-center text-grey-dark leading-normal px-6 ">Build reports with your keywords in seconds.
-          Take
-          notes about your findings. Revisit your research any time.</p>
-      </div>
-      <div
-        class="m-2 w-full sm:w-1/2 md:w-1/4  flex flex-col items-center justify-center h-48 md:h-64 p-8  border-grey-lightest border-r border-b hover:shadow-md hover:border-0 bg-white hover:transform-scale-subtle transition-normal hover:show-child">
-
-        <h3 class="mt-4 mb-1">Scalability</h3>
-        <p class="mt-4 text-center text-grey-dark leading-normal ">With a growing application marketplace, our platform
-          offers you a multitude of public data interpreters.</p>
-      </div>
-      <div
-        class="m-2 w-full sm:w-1/2 md:w-1/4 flex flex-col items-center justify-center h-48 md:h-64 p-8  border-grey-lightest border-b hover:shadow-md hover:border-0 bg-white hover:transform-scale-subtle transition-normal hover:show-child">
-
-        <h3 class="mt-4 mb-1">Friendly Intergations</h3>
-        <p class="mt-4 text-center text-grey-dark leading-normal ">Build your own apps on top of our system. Your data
-          sources can complement ours so that your results benefit from both.</p>
-      </div>
-
-    </div>
-  </section>
-
-
+  <!-- the story -->
   <section
-    class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
-    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
-      style="min-height:330px; background: url(./assets/img/tn1.png); background-repeat: no-repeat; background-position: center; background-size: contain;">
-      <h1 class="my-4 font-normal text-grey-darker">
-        Predicting search trends
-      </h1>
-      <h2 class="my-4 font-normal">
-        Using a simplified Holt-Winters forecasting algorithm, we predict Google Search trends with elevated accuracy.
-      </h2>
-    </div>
-    <div class="w-full lg:w-1/2">
-      <img src="./assets/img/in4.png" alt="" />
-    </div>
-  </section>
-
-  <section
-    class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
-    <div class="w-full lg:w-1/2">
-      <img src="./assets/img/in5.png" alt="" />
-    </div>
-    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
-      style="min-height:330px; background: url(./assets/img/tn2.png); background-repeat: no-repeat; background-position: center; background-size: contain;">
-      <h1 class="my-4 font-normal text-grey-darker">
-        Sentiment analysis on the internet's most popular headlines
-      </h1>
-      <h2 class="my-4 font-normal">
-        You choose the topics, we show you world press related headlines, annotated with our sentiment analysis so you
-        easily understand the impact.
-      </h2>
-    </div>
-  </section>
-
-
-  <section
-    class="my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
-    <div class="w-full h-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start"
-      style="min-height:330px; background: url(./assets/img/tn3.png); background-repeat: no-repeat; background-position: center; background-size: contain;">
-      <h1 class="my-4 font-normal text-grey-darker">
-        Cross regions comparisons
-      </h1>
-      <h2 class="my-4 font-normal">
-        Compare people's interest in your chosen topics between countries and regions.
-      </h2>
-    </div>
-    <div class="w-full lg:w-1/2">
-      <img src="./assets/img/in6.png" alt="" />
-    </div>
-  </section>
-
-
-  <!-- Form -->
-  <section id="contact-us" class="antialiased font-sans w-full text-left text-black py-2" id="subscribe-section"
-    style="border-top: 1px solid #dddd; border-bottom: 1px solid #dddd">
-    <div class="container mx-auto max-w-xl font-normal leading-normal text-center lg:text-left ">
-      <!-- contact form
-      <div class="w-full flex flex-col text-center items-center justify-center">
-        <div class="container mx-auto max-w-xl py-8 font-normal leading-normal text-center lg:text-left ">
-          <h1 class="my-4 font-normal text-grey-darker">Interested in trying out the platform? Request a free account.
-          </h1>
-          <p class="">
-            Is your company interested in internet behaviour research, consumer needs projections or event impact
-            measurements?
-            Request a free account by filling out this form. We will happily contact you with details.
-          </p>
-        </div>
-        <form id="request-demo" class="w-full max-w-md" accept-charset="UTF-8"
-          action="https://usebasin.com/f/06dcf3d4ebaf" method="POST">
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-user-name">
-                Your Full Name
-              </label>
-              <input
-                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                id="grid-user-name" type="text" name="user-name" placeholder="" required>
-            </div>
-            <div class="w-full md:w-1/2 px-3">
-              <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-                for="grid-user-email">
-                Your business email
-              </label>
-              <input
-                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"
-                id="grid-user-email" type="email" name="business-user-email" placeholder="" required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-            </div>
-          </div>
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3">
-              <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-                for="grid-business-name">
-                The name of the business you represent
-              </label>
-              <input
-                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-grey"
-                id="grid-business-name" type="text" name="business-name" placeholder="" required>
-            </div>
-          </div>
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3">
-              <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-                for="grid-demo-reason">
-                The reason you requested the demo
-              </label>
-              <input
-                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-grey"
-                id="grid-demo-reason" type="text" name="demo-reason" placeholder="">
-            </div>
-          </div>
-          <input type="hidden" name="only_fake_users"><input>
-          <div class="flex flex-wrap -mx-3 mb-2 justify-center">
-            <button type="submit"
-              class="submit btn btn-primary btn-shadow btn-gradient py-2 px-4 mx-4 mb-2 rounded-full shadow inline-flex items-center"
-              style=" font-weight: 800; border:1px solid #FBB82B;">Request Free Account</button>
-          </div>
-        </form>
-      </div>
-      <br>
-    -->
-      <h1 class="my-4 font-normal text-grey-darker">Interested in using the tool?
-      </h1>
-      <p class="">
-        Follow our Patreon posts to keep up with developments. Become a patron and get access to our project.
-        There's no strings attached. You can cancel any time.
-      </p> <br>
-      <div class="container max-w-xl m-auto flex flex-wrap items-start justify-center">
-        <div class="w-full md:w-1/2 lg:w-1/2 flex flex-col mb-8 px-3">
-          <div class="overflow-hidden bg-white rounded-lg text-center">
-            <div class="p-6 flex flex-col justify-between ">
-              <h4 class="font-medium text-grey-darkest mb-4 leading-normal text-center">Basic</h4>
-              <p class="text-center">
-                <span class="text-grey-darker text-3xl">
-                  <b> $24 </b> </span> <br> <span class="text-xl">PER MONTH + tax </span>
-              </p>
-              </p>
-            </div>
-            <img style="max-height: 150px;" src="./supporter-patron.png" alt="supporter patron">
-            <div class="p-6 flex flex-col justify-between ">
-              <p class="text-center text-sm">
-                <b>Up to 100 research reports and all apps. </b> <br>
-                Access exclusive content about our market research trends. <br>
-                Stay in touch with the latest developments. <br>
-                Be among the first to benefit from future offers. <br> <br>
-                You are among the first to be notified about our public research
-                experiments. <b> Thanks for supporting the project!</b>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-full md:w-1/2 lg:w-1/2 flex flex-col mb-8 px-3">
-          <div class="overflow-hidden bg-white rounded-lg text-center">
-            <div class="p-6 flex flex-col justify-between ">
-              <h4 class="font-medium text-grey-darkest mb-4 leading-normal text-center">Innovator</h4>
-              <p class="text-center">
-                <span class="text-grey-darker text-3xl">
-                  <b> $58 </b> </span> <br> <span class="text-xl">PER MONTH + tax </span>
-              </p>
-            </div>
-            <img style="max-height: 150px;" src="./innovator-patron.png" alt="innovator patron">
-            <div class="p-6 flex flex-col justify-between ">
-              <p class="text-center text-sm">
-                <b>Unilimited resarch reports. </b><br>
-                You'll take part in our innovation process. <br>
-                Get early access to the beta platform. <br>
-                Free training videos and webinars. <br>
-                Participate in discussions about future features. <br> <br>
-                You also benefit from all the offers from the Supporter tier, as well as early notifications to my AI &
-                research experiments. <b> Thank you for helping trendy dots grow!</b>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full flex flex-col text-center items-center justify-center mb-6">
-        <a class="btn bg-white border-2 border-red cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-lg"
-          href="https://www.patreon.com/bePatron?u=14590376" target="_blank" style="white-space: nowrap;">
-          <img src="../patreon-logo1.png" style="height: 1.5em; vertical-align: middle;" alt="">
-          &nbsp;
-          <span style="white-space: nowrap;"> Become a Patron</span>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="bg-white py-4 font-sans">
-    <h3 class="font-medium text-grey-darkest mb-4 text-center text-2xl py-4"> Written using td. trend research </h3>
-
-    <div class="container max-w-xl m-auto flex flex-wrap items-center justify-start">
-
-      <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
-        <div
-          class="border overflow-hidden bg-white rounded-lg shadow hover:shadow-raised hover:translateY-2px transition">
-          <img class="w-full" style="padding: 25px 0;" src="./assets/img/candf.png" alt="Sunset in the mountains">
-          <div class="p-6 flex flex-col justify-between ">
-            <h3 class="font-medium text-grey-darkest mb-4 leading-normal text-center">
-              Cleantech & Fintech</h3>
-            <p class="text-center">
-              <a href="https://medium.com/@research.trendydots/cleantech-fintech-275ffb2c0a44" target="_blank"
-                class="bg-green-dark text-white font-bold py-2 px-4 rounded-full text-sm no-underline">Read
-                on Medium</a>
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
-        <div
-          class="border overflow-hidden bg-white rounded-lg shadow hover:shadow-raised hover:translateY-2px transition">
-          <img class="w-full" src="./assets/img/shandha.png" alt="Sunset in the mountains">
-          <div class="p-6 flex flex-col justify-between ">
-            <h3 class="font-medium text-grey-darkest mb-4 leading-normal text-center">
-              Smart Home vs. Home Automation</h3>
-            <p class="text-center">
-              <a href="https://medium.com/@research.trendydots/smart-home-vs-home-automation-403df3b2f7ae"
-                target="_blank"
-                class="bg-green-dark text-white font-bold py-2 px-4 rounded-full text-sm no-underline">Read on
-                Medium</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
-        <div
-          class="border overflow-hidden bg-white rounded-lg shadow hover:shadow-raised hover:translateY-2px transition">
-          <img style="padding: 36px 0;" class="w-full" src="./assets/img/aiandet.png" alt="Sunset in the mountains">
-          <div class="p-6 flex flex-col justify-between ">
-            <h3 class="font-medium text-grey-darkest mb-4 leading-normal text-center">AI and Ethics</h3>
-            <p class="text-center">
-              <a href="https://medium.com/@research.trendydots/ai-and-ethics-eace9f56710e" target="_blank"
-                class="bg-green-dark text-white font-bold py-2 px-4 rounded-full text-sm no-underline">Read on
-                Medium</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section style="margin-top:5em"
-    class="my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
-    <div class="w-full lg:w-1/2" style="box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);">
-      <img src="./assets/img/inE1.png" alt="" />
-    </div>
-    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
-      <h1 class="my-4 font-normal text-grey-darker">
-        FREE! Try out our summarisation tool for free
-      </h1>
-      <br />
-      <p class="leading-normal mb-4 ">
-        With this new experimental tool we aim to summarize a large text into a small paragraph. The experiment succeeds
-        if the summary ratio is less than 60%. If you are interested in our research, please visit our Patreon page.
-      </p>
-      <a href="/research/nlp/" id="summarizeBtn" class="hover:bg-grey-lighter no-underline" target="_blank"
-        style="text-align: center; border: 2px solid black; padding: 1em; box-shadow: 0 1.5em 85px 0 rgba(0,0,0,.2);">
-        Try for free
-      </a>
-    </div>
-  </section>
-
-  <footer class="font-sans bg-white py-8 px-4">
-    <div
-      class="mx-auto container overflow-hidden flex flex-col md:flex-row justify-between pb-4 text-center md:text-left">
-      <a href="" class="block mr-4 w-full md:w-1/4" target="_blank">
-        <img src="./assets/img/logo.png" class="w-24 -ml-8 md:ml-0" alt="logo" />
-      </a>
-      <div class="w-full text-grey-darkest mt-6 md:mt-0 leading-normal">
-        <h4 class="py-2 uppercase font-bold tracking-wide">About</h4>
-        <p>
-          Trendy Dots is a project developing fun applications for data science, data visualization and user experience.
-          It gives insights into behaviour patterns on the internet at scale: people's interests in products, companies,
-          markets, world events, etc. <br> <br> I playfully apply UX and data science best practices to big data, aiming
-          to
-          produce high value tools. <br> <a href="./me/index.html" target="_blank" style="color:#000">More about me</a>
+    class="bg-white font-sans w-full flex flex-col-reverse md:flex-row text-center md:text-left justify-between mt-16 pt-8 md:mt-0 md:pt-0">
+    <div class="w-full md:w-1/2 rounded flex flex-col justify-between items-start items-center md:items-start" style="z-index:2; padding: 2%; padding-left: 6%; padding-right: 6%; 
+      ">
+      <br><br><br>
+      <div>
+        <h1 class="my-4 font-normal" style="font-weight: 700; margin-bottom: 2rem;
+      font-size: 8vh; color: #757575">the story</h1>
+        <p class="leading-normal mb-2 text-base md:text-lg xl:text-xl ">
+          Trendy Dots is an initiative developing fun applications for UX/UI, data science, data visualization and web
+          development.
+          I playfully apply UX and data science best practices to big data, aiming to produce high value tools.
+        </p>
+        <p class="leading-normal mb-4 text-center ">
+          <a target="_blank" href="/me">
+            <img src="./cris.png" style="max-height: 150px; min-height: 100px;" alt="">
+          </a>
         </p>
       </div>
-      <div class="text-grey-dark flex flex-col items-center w-full md:w-1/4 mt-6 md:mt-0">
-        <h4 class="inline-block py-2 px-3 uppercase font-bold tracking-wide text-grey-darkest">
-          Follow
-        </h4>
-        <div class="flex pl-0 md:pl-4 justify-start">
-          <!-- 
-        <a class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline" href="#"><i class="fab fa-github-alt"></i></a>
-          -->
-          <a class="block flex items-center text-grey-darkest hover:text-black mr-6 no-underline" target="_blank"
-            href="https://www.facebook.com/trendydots.research"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col overflow-hidden items-center">
+      <img src="./11.png" alt="" />
+      <a href="https://twitter.com/trendydots" class="mt-4" target="_blank" style="text-decoration: none; color: black">
+        <img src="twitter_black.png" style="vertical-align: middle; height: 1em">
+        @trendydots
+      </a>
+    </div>
+  </section>
 
-          <a class="block flex items-center text-grey-darkest hover:text-black no-underline" target="_blank"
-            href="https://twitter.com/trendydots">
-            <i class="fab fa-twitter"></i>
-          </a>
+  <!-- workflow-->
+  <section class="bg-white font-sans w-full flex flex-col text-center lg:text-left justify-between"
+    style="margin-top: 20px;">
+
+    <div class="w-full rounded flex flex-col justify-between items-center lg:items-start bg-white" style="z-index:2; padding: 2%; padding-left: 6%; padding-right: 6%;
+      ">
+      <div style=" z-index: 3;" class="flex flex-col items-center text-sm font-bold pt-4">
+        <h1 class="my-4 font-normal" style="font-weight: 700;
+      font-size: 8vh; color: #757575;">my workflow</h1>
+        <br><br>
+        <div class="flex lg:flex-row flex-col">
+          <div class="flex flex-col w-full lg:w-1/3  items-center  mb-4">
+            <div class="flex justify-center text-center items-center">
+              <img src="./mw1.png" style="max-height:250px" alt=""> </div>
+            <div class="flex flex-col justify-center text-left px-4">
+              <h3 class="mb-2">1. a big idea - early stage prototyping</h3>
+              <p class="leading-normal mb-2 text-grey-darkest" style="font-weight: 300;">
+                I start brainstorming for ideas
+                until the
+                light
+                bulb shines.
+                then, using the <a href="https://www.gv.com/sprint/" class="text-black" target="_blank">design sprint
+                  method</a>, I
+                challenge
+                myself with building a proof of concept &amp; MVP</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col w-full lg:w-1/3 items-center mb-4">
+            <div class=" flex justify-center text-center items-center">
+              <img src="./mw2.png" style="max-height:250px" alt="">
+            </div>
+            <div class="flex flex-col justify-center text-left px-4">
+              <h3 class="mb-2"> 2. will it work online? - web development </h3>
+              <p class="leading-normal mb-2 text-grey-darkest" style="font-weight: 300;">
+                A large part of my ambition is to create a toolset the functions 100% online, without the need for
+                complicated
+                installations, or configurations.
+                Depending on your donations, the toolset will be freely available, ad free, accessible to as many users
+                as
+                possible.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col w-full lg:w-1/3 mb-4">
+            <div class=" flex justify-center text-center items-center">
+              <img src="./mw3.png" style="max-height:250px" alt="">
+            </div>
+            <div class="flex flex-col justify-center text-left px-4">
+              <h3 class="mb-2"> 3. can I do better? - analytics and feedback based improvements </h3>
+              <p class="leading-normal mb-2 text-grey-darkest" style="font-weight: 300;">
+                Here is where your opinions and contributions are put to good use. I encourage you to become an active
+                <b>patron</b>
+                Please write your feedback and improvement suggestions. I will consider your desired changes.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
-    <div class="pt-4 mt-4 text-grey-darker text-xs border-t border-grey-lighter text-center">
-      ©2020 trendydots.com All rights reserved. &nbsp;
-      <a href="http://trendydots.com/privacy-statement.html" target="_blank" style="color:#000">Privacy statement</a>
-      &nbsp;
-      <a href="http://trendydots.com/terms-of-service.html" target="_blank" style="color:#000"> Terms of service</a>
-      &nbsp;
-      <a href="http://trendydots.com/imprint.html" target="_blank"
-        class="inline-block py-2 px-3 text-black">Impressum</a>
+
+  </section>
+
+  <!-- Projects -->
+  <section class="font-sans w-full bg-white p-8" style="border-top:2px solid #eee">
+    <div class="text-center">
+      <h1 class="my-4 font-normal" style="font-weight: 700;
+      font-size: 6vh; color:#757575">the <span class="font-bold text-black">td<span
+            style="color:#F2D024">.</span></span> toolset
+      </h1>
+    </div>
+  </section>
+
+  <!-- features-1 -->
+  <div class="w-full" style="background: #fff; padding-bottom: 20px;">
+
+    <!-- Pazly-->
+    <section
+      class="bg-white mb-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2">
+        <img class="shadow-md rounded" src="https://pazly.dev/laptop1.jpg" alt="" />
+      </div>
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">web development</label>
+        <h2 class="my-4 font-normal font-bold">Pazly (<a href="https://pazly.dev" target="_blank">pazly.dev</a>)</h2>
+        <p class="leading-normal mb-4 text-grey-darkest">
+          Easily drag and drop UI components and build beautiful mobile and web screens.
+          <br><br>
+          A perfect tool for your client's first impression. These days working remote means sharing screens, showing
+          and telling. When you first meet your client, use pazly to decide on the web developement requirements. Once
+          you both decide on a layout, download the template and start customizing.
+          <br><br>
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="https://pazly.dev" target="_blank" style="white-space: nowrap; border-color: #c37b9f;">
+            <span style="white-space: nowrap;"> Try for FREE </span>
+          </a>
+
+        </p>
+      </div>
+    </section>
+
+    <!-- NPL -->
+    <section
+      class="bg-white my-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">natural language
+          processing</label>
+        <h2 class="my-4 font-normal font-bold">td<span style="color:#F2D024">.</span> nlp research </h2>
+        <p class="leading-normal mb-4 text-grey-darkest">
+          A series of experiments around AI text processing. Summarizing language independent texts, extracting tokens,
+          hashtag autosuggest and so much more.
+          <br><br>
+          The first experiment automatically summarizes text..
+          <br><br>
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="/research/nlp/" target="_blank" style="white-space: nowrap; border-color: #F2D024;">
+            <span style="white-space: nowrap;"> Try for FREE </span>
+          </a>
+        </p>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <img src="./inE1.png" class="shadow-md rounded" alt="" />
+      </div>
+    </section>
+
+    <!-- Trends -->
+    <section
+      class="bg-white my-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2">
+        <img src="./in3.png" class="shadow-md rounded" alt="" />
+      </div>
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">behavioural economics</label>
+        <h2 class="my-4 font-normal font-bold">td<span style="color:#F2D024">.</span> trends research</h2>
+        <p class="leading-normal mb-4 text-grey-darkest">
+          The td<span style="color:#F2D024">.</span> trends research platform platform that aims to offer an intuitive,
+          easy to use way for getting informed about the
+          things that matter.
+          When you are interested in human/consumer behaviour towards companies, products, world events, or innovative
+          concepts, my td<span style="color:#F2D024">.</span> trends research platform can help you with quick and easy
+          insights.
+          <br><br>
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="invest.html" target="_blank" style="white-space: nowrap; border-color: #ff9800;">
+            <span style="white-space: nowrap;"> Check out details </span>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Oskar -->
+    <section
+      class="bg-white my-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">Recommendation AI
+          (concept)</label>
+        <h2 class="my-4 font-normal font-bold">td<span style="color:#F2D024">.</span> Oskar </h2>
+        <p class="leading-normal mb-4 text-grey-darkest">
+          An experiment around the concept of an AI concierge which can suggest apparel combinations based on occasion,
+          time of the day, season and many other parameters.
+          <br><br>
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="/oskar/" target="_blank" style="white-space: nowrap; border-color: blue;">
+            <span style="white-space: nowrap;"> Details </span>
+          </a>
+        </p>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <img src="./osk-big.png" class="shadow-md rounded" alt="" />
+      </div>
+    </section>
+
+    <!-- EUvsVirus-->
+    <section style="border-top:2px solid #eee"
+      class="bg-white mb-8 font-sans container max-w-xl m-auto flex flex-col lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2">
+        <img class="shadow-md rounded" src="./euvsvirus.png" alt="" />
+      </div>
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">Volunteering</label>
+        <h2 class="my-4 font-normal font-bold">
+          <img class="my-2" style="height: 2.2em; vertical-align: middle;" src="./European_Commission.png"
+            alt="natural language processing">
+          EU vs. Virus Hackathon</h2>
+        <p class="leading-normal mb-4 text-grey-darkest">
+          On 24-26 April, the European Commission, led by the European Innovation Council and in close collaboration
+          with the EU member states, hosted a pan-European hackathon to connect civil society, innovators, partners, and
+          investors across Europe in order to develop innovative solutions for coronavirus-related challenges.
+          <br><br>
+
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="https://devpost.com/software/bites-of-culture" target="_blank"
+            style="white-space: nowrap; border-color: blue;">
+            <span style="white-space: nowrap;"> My Devpost Project </span>
+          </a>
+          &nbsp;
+          <a class="btn bg-white border cursor-pointer no-underline text-grey-darkest font-bold py-2 px-4 mb-2 rounded-full shadow-md md:shadow items-center"
+            href="https://www.euvsvirus.org/" target="_blank" style="white-space: nowrap; border-color: blue;">
+            <span style="white-space: nowrap;"> Hackathon Site </span>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Data4Good -->
+    <section
+      class=" bg-white my-8 pt-8 font-sans container max-w-xl m-auto flex flex-col-reverse lg:flex-row text-center lg:text-left sm:items-center">
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-8 items-center lg:items-start">
+        <label for="tagline" class="uppercase tracking-wide text-grey-dark font-bold">Volunteering</label>
+        <img class="my-4" style="height: 3em;" src="./d4g.png" alt="natural language processing">
+
+        <p class="leading-normal mb-4 text-grey-darkest">
+          Helping teams of data scientists, developers
+          and designers working with NGOs and social enterprises to solve complex challenges and identify new
+          social impact opportunities.
+          <br><br>
+        </p>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <img src="./d4g.jpg" class="shadow-md rounded" alt="" />
+      </div>
+    </section>
+  </div>
+
+  <footer class="font-sans bg-white pb-8 px-4" style="z-index: 4">
+    <div class="mx-auto max-w-xl overflow-hidden flex flex-col md:flex-row justify-between items-center">
+      <p class="inline-block py-2 px-3 text-center md:text-left"> ©
+        <script>document.write(new Date().getFullYear());</script>
+        <strong class="">trendydots.com</strong> <br>
+        All rights reserved.</p>
+
+      <ul class="text-sm text-grey-dark list-reset flex items-center">
+        <li><a href="../privacy-statement.html" target="_blank" class="inline-block py-2 px-3 text-black">Privacy
+            statement</a></li>
+        <li><a href="../terms-of-service.html" target="_blank" class="inline-block py-2 px-3 text-black">Terms of
+            service</a>
+        </li>
+        <li><a href="../imprint.html" target="_blank" class="inline-block py-2 px-3 text-black">
+            Impressum</a>
+        </li>
+      </ul>
     </div>
   </footer>
 
-  <script src="./assets/js/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113784035-1"></script>
   <script>
@@ -467,9 +368,10 @@
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag("js", new Date());
+    gtag('js', new Date());
 
-    gtag("config", "UA-113784035-1");
+    gtag('config', 'UA-113784035-1');
+
   </script>
 </body>
 
